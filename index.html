@@ -229,11 +229,11 @@
         親子共學著色活動
       </h1>
       <p id="heroInfo" style="font-size: 1rem; color: var(--primary-dark); font-weight: 700; margin-bottom: 20px;"></p>
-      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">適合幼兒園與國小低年級｜名額有限</p>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 8px;">適合幼兒園大班組與國小低年級｜名額有限</p>
 
       <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 24px;" id="heroQuota">
         <div style="text-align: center;">
-          <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 4px;">幼兒園組</div>
+          <div style="font-size: 0.72rem; color: var(--text-muted); margin-bottom: 4px;">幼兒園大班組</div>
           <span class="quota-badge open" id="quotaK">查詢中</span>
         </div>
         <div style="text-align: center;">
@@ -283,7 +283,7 @@
       <div class="notice notice-pink fade-in" id="noticePink">
         <div class="notice-title">📌 報名須知</div>
         <ul>
-          <li>免費參加，名額有限（幼兒園大班：15名/ 國小低年級組：35名）</li>
+          <li>免費參加，名額有限（幼兒園大班組：15名/ 國小低年級組：35名）</li>
           <li>需家長陪同，全程參與（約 3 小時）</li>
           <li>畫材請自備（蠟筆、彩色筆、色鉛筆、水彩皆可）</li>
         </ul>
@@ -376,7 +376,7 @@
               <label>孩子年級 <span class="required">*</span></label>
               <select id="childAge" class="form-control" required>
                 <option value="">請選擇</option>
-                <option value="幼兒園大班">幼兒園大班</option>
+                <option value="幼兒園大班組">幼兒園大班組</option>
                 <option value="國小低年級">國小低年級</option>
               </select>
             </div>
@@ -536,7 +536,7 @@
 
       // 組別選項
       var limitE = cfg.groups['國小低年級組'] ? cfg.groups['國小低年級組'].displayLimit : '?';
-      $('optK').textContent = '幼兒園組（限 ' + limitK + ' 名）';
+      $('optK').textContent = '幼兒園大班組（限 ' + limitK + ' 名）';
       $('optE').textContent = '國小低年級組（限 ' + limitE + ' 名）';
 
       // 成功卡片
@@ -742,7 +742,7 @@
 
       // 年級與組別連動
       $('childAge').addEventListener('change', function() {
-        if (this.value === '幼兒園大班') $('group').value = '幼兒園大班組';
+        if (this.value === '幼兒園大班組') $('group').value = '幼兒園大班組';
         else if (this.value === '國小低年級') $('group').value = '國小低年級組';
       });
 
