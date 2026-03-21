@@ -449,6 +449,18 @@
   (function() {
     'use strict';
 
+    // ===== 開頁一律從最上方開始，避免停在上次位置或殘留錨點 =====
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    window.addEventListener('pageshow', function() {
+      if (location.hash) {
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+      window.scrollTo(0, 0);
+    });
+
     // ★★★ 這裡填入你的 GAS Web App URL ★★★
     var GAS_URL = 'https://script.google.com/macros/s/AKfycbwqKpnXIKF4WnUND163KJ08VzwosekgN3h-9DrV_iDNjpDqLxi4vNantjMIouznQIc/exec';
 
