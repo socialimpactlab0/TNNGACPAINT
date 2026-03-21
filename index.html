@@ -283,7 +283,7 @@
       <div class="notice notice-pink fade-in" id="noticePink">
         <div class="notice-title">📌 報名須知</div>
         <ul>
-          <li>免費參加，名額有限（幼兒園組：15名/ 國小低年級組：35名）</li>
+          <li>免費參加，名額有限（幼兒園大班：15名/ 國小低年級組：35名）</li>
           <li>需家長陪同，全程參與（約 3 小時）</li>
           <li>畫材請自備（蠟筆、彩色筆、色鉛筆、水彩皆可）</li>
         </ul>
@@ -376,7 +376,7 @@
               <label>孩子年級 <span class="required">*</span></label>
               <select id="childAge" class="form-control" required>
                 <option value="">請選擇</option>
-                <option value="幼兒園">幼兒園</option>
+                <option value="幼兒園大班">幼兒園大班</option>
                 <option value="國小低年級">國小低年級</option>
               </select>
             </div>
@@ -385,7 +385,7 @@
             <label>參賽組別 <span class="required">*</span></label>
             <select id="group" class="form-control" required>
               <option value="">請選擇組別</option>
-              <option value="幼兒園組" id="optK">幼兒園組</option>
+              <option value="幼兒園大班組" id="optK">幼兒園大班組</option>
               <option value="國小低年級組" id="optE">國小低年級組</option>
             </select>
           </div>
@@ -527,7 +527,7 @@
       });
 
       // 報名須知
-      var limitK = cfg.groups['幼兒園組'] ? cfg.groups['幼兒園組'].displayLimit : '?';
+      var limitK = cfg.groups['幼兒園大班組'] ? cfg.groups['幼兒園大班組'].displayLimit : '?';
       document.querySelectorAll('.displayLimitK').forEach(function(el) { el.textContent = limitK; });
 
       // 確認機制
@@ -578,7 +578,7 @@
 
     function updateUI(data) {
       if (!data) return;
-      updateBadge($('quotaK'), data['幼兒園組']);
+      updateBadge($('quotaK'), data['幼兒園大班組']);
       updateBadge($('quotaE'), data['國小低年級組']);
       updateGroupOptions(data);
       updateRegisterSection(data);
@@ -612,7 +612,7 @@
       var title = $('registerTitle');
       var notice = $('waitlistNotice');
       var btn = $('submitBtn');
-      var kWait = data['幼兒園組'] && data['幼兒園組'].status === 'waitlist';
+      var kWait = data['幼兒園大班組'] && data['幼兒園大班組'].status === 'waitlist';
       var eWait = data['國小低年級組'] && data['國小低年級組'].status === 'waitlist';
 
       if (kWait && eWait) {
@@ -742,7 +742,7 @@
 
       // 年級與組別連動
       $('childAge').addEventListener('change', function() {
-        if (this.value === '幼兒園') $('group').value = '幼兒園組';
+        if (this.value === '幼兒園大班') $('group').value = '幼兒園大班組';
         else if (this.value === '國小低年級') $('group').value = '國小低年級組';
       });
 
