@@ -213,7 +213,13 @@
         padding: 12px 16px; padding-bottom: calc(12px + env(safe-area-inset-bottom));
         gap: 12px; z-index: 998; box-shadow: 0 -10px 30px rgba(255, 107, 157, 0.1);
       }
-      .sticky-cta .btn { flex: 1; padding: 14px; font-size: 0.95rem; }
+      .sticky-cta .btn { 
+  flex: 1; 
+  padding: 12px 4px;      /* 縮小按鈕內的左右留白 */
+  font-size: 0.9rem;      /* 將字體稍微縮小 */
+  white-space: nowrap;    /* 強制文字永遠在同一行，絕對不換行 */
+  gap: 6px;               /* 縮小圖示與文字的距離 */
+}
     }
   </style>
 </head>
