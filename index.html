@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <title>乾淨校園我愛我家 - 兒童著色畫比賽</title>
+  <!-- OG / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="親子共學著色活動｜乾淨校園我愛我家">
+  <meta property="og:description" content="免費參加・額滿為止！專屬幼兒園大班與國小低年級的色彩派對，讓孩子用顏色表達對家人的愛，立即搶先報名！">
+  <meta property="og:url" content="https://socialimpactlab0.github.io/TNNGACPAINT/">
+  <meta property="og:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/家長反饋.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="親子共學著色活動｜乾淨校園我愛我家">
+  <meta name="twitter:description" content="免費參加・額滿為止！讓孩子用顏色表達對家人的愛，立即搶先報名！">
+  <meta name="twitter:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/家長反饋.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- 導入高級日系圓體與無襯線體 -->
@@ -201,7 +214,7 @@
     @media (max-width: 767px) {
       .section { padding: 60px 16px; }
       .form-card { padding: 30px 20px; }
-      .card-grid { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: repeat(2, 1fr); }
       .prize-grid { gap: 10px; }
       .prize-card { padding: 16px 8px; }
       .prize-icon { font-size: 1.8rem; }
@@ -230,12 +243,12 @@
     <div style="color: #e91e7a; font-weight: 800; font-size: 1.1rem; font-family: 'Zen Maru Gothic', sans-serif;">準備色彩中...</div>
   </div>
 
-  <div id="posterSection" style="display:none; text-align: center; padding: 80px 20px 0; ">
+  <div id="posterSection" style="display:none; text-align: center; padding: 40px 20px 0; ">
     <img id="posterImg" alt="活動海報" style="max-width: 460px; width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(255,107,157,0.2); margin: 0 auto; border: 4px solid white;">
   </div>
 
   <!-- Hero Section -->
-  <section class="section" id="hero" style="min-height: 90vh;">
+  <section class="section" id="hero" style="min-height: 90vh; padding-top: 24px;">
     <div class="section-content">
       <div style="margin-bottom: 20px;">
         <span class="quota-badge open" style="font-size: 0.9rem; padding: 8px 20px; box-shadow: 0 4px 10px rgba(5,150,105,0.15);">✨ 免費參加・額滿為止</span>
@@ -696,7 +709,8 @@
 
     window.resetForm = function() {
       $('successCard').style.display = 'none'; $('formCard').style.display = 'block'; $('registerTitle').style.display = '';
-      $('noticePink').style.display = ''; $('noticeGreen').style.display = '';
+      // 先預設顯示，loadGroupStatus 完成後 updateRegisterSection 會再依狀態正確調整
+      $('noticePink').style.display = 'block'; $('noticeGreen').style.display = 'block';
       $('registerForm').reset(); hideError();
       var btn = $('submitBtn'); btn.disabled = false; btn.innerHTML = '✨ 確認送出報名表';
       $('progress').classList.remove('show');
