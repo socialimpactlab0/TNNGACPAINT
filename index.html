@@ -235,6 +235,36 @@
   gap: 6px;               /* 縮小圖示與文字的距離 */
 }
     }
+
+    /* 上屆回顧照片 Lightbox */
+    .review-photo img { cursor: zoom-in; }
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 10000;
+      background: rgba(0,0,0,0.88); align-items: center; justify-content: center;
+      padding: 40px 20px; animation: lbFadeIn 0.25s ease;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 100%; max-height: 100%; object-fit: contain;
+      border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      animation: lbZoomIn 0.3s cubic-bezier(0.16,1,0.3,1);
+    }
+    #lightboxClose {
+      position: absolute; top: 20px; right: 20px; width: 44px; height: 44px;
+      border-radius: 50%; background: rgba(255,255,255,0.15); color: white;
+      border: none; font-size: 1.6rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    #lightboxClose:hover { background: rgba(255,255,255,0.3); }
+    #lightboxCaption {
+      position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600;
+      background: rgba(0,0,0,0.4); padding: 6px 16px; border-radius: 50px;
+      max-width: 80%; text-align: center;
+    }
+    @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes lbZoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   </style>
 </head>
 <body>
@@ -288,9 +318,33 @@
         </div>
       </div>
 
+      <!-- 報名截止倒數提示 -->
+      <div id="deadlineBanner" style="display: none; margin: 0 auto 24px; padding: 10px 22px; background: #fffbeb; border: 1px solid #fde68a; border-radius: 50px; max-width: 420px; font-size: 0.95rem; font-weight: 800; color: #92400e; box-shadow: 0 4px 12px rgba(251,191,36,0.15);">
+        <span id="deadlineText">⏰ 報名截止：—</span>
+      </div>
+
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
         <a href="#register" class="btn btn-primary" style="animation: pulse 2s infinite;">🎉 立即搶先報名</a>
         <a href="#highlights" class="btn btn-outline">✨ 了解活動內容</a>
+      </div>
+
+      <!-- 社群分享區 -->
+      <div style="margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700;">覺得不錯？分享給其他家長 👇</div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+          <a id="shareLine" href="#" onclick="shareToLine(event)" aria-label="分享到 LINE"
+             style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: #06C755; color: white; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; box-shadow: 0 4px 12px rgba(6,199,85,0.25); transition: transform 0.2s;">
+            <span>💬</span><span>LINE</span>
+          </a>
+          <a id="shareFb" href="#" onclick="shareToFb(event)" aria-label="分享到 Facebook"
+             style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: #1877F2; color: white; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; box-shadow: 0 4px 12px rgba(24,119,242,0.25); transition: transform 0.2s;">
+            <span>📘</span><span>Facebook</span>
+          </a>
+          <button type="button" onclick="copyShareLink(this)" aria-label="複製連結"
+             style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: white; color: var(--primary-dark); border: 1.5px solid var(--primary); border-radius: 50px; font-weight: 800; font-size: 0.9rem; cursor: pointer; box-shadow: 0 4px 12px rgba(255,107,157,0.15); transition: transform 0.2s;">
+            <span>🔗</span><span id="copyLinkText">複製連結</span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -321,7 +375,7 @@
         <div class="review-photo"><img src="images/得獎孩子領獎的畫面.jpg" alt="得獎頒獎" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
       </div>
 
-      <a href="https://www.ganjingworld.com/s/bzNW8NQKJq" target="_blank" rel="noopener" class="btn btn-outline">🎬 觀看上屆精采內容</a>
+      <a href="https://www.ganjingworld.com/s/bzNW8NQKJq" target="_blank" rel="noopener" class="btn btn-outline">🎬 上屆活動影片（於乾淨世界播放）</a>
 
     <!-- ===== YouTube 影片區 ===== -->
     <div class="fade-up">
@@ -380,6 +434,79 @@
         <p class="section-subtitle fade-in">各組皆設有以下豐富獎勵，鼓勵孩子發揮創意</p>
       </div>
       <div class="prize-grid fade-in" id="prizeGrid"></div>
+    </div>
+  </section>
+
+  <!-- 常見問題 FAQ -->
+  <section class="section" id="faq" style="padding-bottom: 40px;">
+    <div class="section-content">
+      <h2 class="section-title fade-in">常見問題</h2>
+      <p class="section-subtitle fade-in">報名前的疑問，這裡都有答案</p>
+
+      <div style="max-width: 480px; margin: 0 auto;">
+
+        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
+          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
+            <span>🎨 孩子沒畫過畫可以參加嗎？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
+          </div>
+          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
+            可以。這比賽是鼓勵孩子用自己的方式表達對家人的愛。主辦方提供底圖，孩子依自己喜歡的方式上色即可。
+          </div>
+        </div>
+
+        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
+          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
+            <span>👶 家裡兩個孩子都想參加，要怎麼報名？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
+          </div>
+          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
+            請分別填寫兩份報名表單，依各自的年級選擇組別送出即可。
+          </div>
+        </div>
+
+        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
+          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
+            <span>⏰ 當天遲到會怎麼處理？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
+          </div>
+          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
+            活動 09:00 準時開始，08:30 起開放報到。若有特殊情況會遲到，請提前來電告知（陳小姐 0913-837-389）。
+          </div>
+        </div>
+
+        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
+          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
+            <span>🖍️ 需要準備什麼東西？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
+          </div>
+          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
+            <strong style="color: var(--text);">主辦方提供：</strong>著色底圖、桌椅、場地設施。<br>
+            <strong style="color: var(--text);">請自備：</strong>畫材（蠟筆、彩色筆、色鉛筆皆可）。
+          </div>
+        </div>
+
+        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
+          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
+            <span>📱 報名送出後，怎麼知道自己錄取還是候補？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
+          </div>
+          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
+            報名送出後會立即顯示專屬報名序號，即代表進入名單。<strong style="color: var(--primary-dark);">5/27（三）</strong> 主辦方會發送簡訊通知，請於 <strong style="color: var(--primary-dark);">5/28（四）晚上 9 點前</strong> 回覆確認，逾時未回覆將釋出名額給候補家庭。
+          </div>
+        </div>
+
+        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
+          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
+            <span>🏆 曾經得過名次的孩子還能報名嗎？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
+          </div>
+          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
+            可以。曾獲前三名的舊生仍歡迎參加，享有完整活動體驗，但不列入本次得獎評選。
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -513,79 +640,6 @@
     </div>
   </section>
 
-  <!-- 常見問題 FAQ -->
-  <section class="section" id="faq" style="padding-bottom: 40px;">
-    <div class="section-content">
-      <h2 class="section-title fade-in">常見問題</h2>
-      <p class="section-subtitle fade-in">報名前的疑問，這裡都有答案</p>
-
-      <div style="max-width: 480px; margin: 0 auto;">
-
-        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
-          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>🎨 孩子沒畫過畫可以參加嗎？</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
-          </div>
-          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            可以。這比賽是鼓勵孩子用自己的方式表達對家人的愛。主辦方提供底圖，孩子依自己喜歡的方式上色即可。
-          </div>
-        </div>
-
-        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
-          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>👶 家裡兩個孩子都想參加，要怎麼報名？</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
-          </div>
-          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            請分別填寫兩份報名表單，依各自的年級選擇組別送出即可。
-          </div>
-        </div>
-
-        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
-          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>⏰ 當天遲到會怎麼處理？</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
-          </div>
-          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            活動 09:00 準時開始，08:30 起開放報到。若有特殊情況會遲到，請提前來電告知（陳小姐 0913-837-389）。
-          </div>
-        </div>
-
-        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
-          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>🖍️ 需要準備什麼東西？</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
-          </div>
-          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            <strong style="color: var(--text);">主辦方提供：</strong>著色底圖、桌椅、場地設施。<br>
-            <strong style="color: var(--text);">請自備：</strong>畫材（蠟筆、彩色筆、色鉛筆皆可）。
-          </div>
-        </div>
-
-        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
-          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>📱 報名送出後，怎麼知道自己錄取還是候補？</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
-          </div>
-          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            報名送出後會立即顯示專屬報名序號，即代表進入名單。<strong style="color: var(--primary-dark);">5/27（三）</strong> 主辦方會發送簡訊通知，請於 <strong style="color: var(--primary-dark);">5/28（四）晚上 9 點前</strong> 回覆確認，逾時未回覆將釋出名額給候補家庭。
-          </div>
-        </div>
-
-        <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
-          <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>🏆 曾經得過名次的孩子還能報名嗎？</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
-          </div>
-          <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            可以。曾獲前三名的舊生仍歡迎參加，享有完整活動體驗，但不列入本次得獎評選。
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- 聯絡資訊 -->
   <section class="section" id="contact" style="padding-bottom: 80px;">
     <div class="section-content">
@@ -681,6 +735,37 @@
       
       $('confirmSendDateText').textContent = cfg.confirmSendDate;
       $('confirmDeadlineText').textContent = cfg.confirmDeadline;
+
+      // 報名截止顯示（使用 cfg.registrationDeadline）
+      if (cfg.registrationDeadline) {
+        try {
+          var dl = new Date(cfg.registrationDeadline);
+          if (!isNaN(dl.getTime())) {
+            var now = new Date();
+            var diffMs = dl.getTime() - now.getTime();
+            var diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+            var WEEK = ['日','一','二','三','四','五','六'];
+            var dlStr = (dl.getMonth() + 1) + '/' + dl.getDate() + '（' + WEEK[dl.getDay()] + '）' +
+                        String(dl.getHours()).padStart(2,'0') + ':' + String(dl.getMinutes()).padStart(2,'0');
+            var txt = '';
+            if (diffMs <= 0) {
+              txt = '⏰ 報名已截止';
+              $('deadlineBanner').style.background = '#fef2f2';
+              $('deadlineBanner').style.borderColor = '#fecaca';
+              $('deadlineBanner').style.color = '#dc2626';
+            } else if (diffDays <= 3) {
+              txt = '🔥 倒數 ' + diffDays + ' 天・' + dlStr + ' 截止報名';
+              $('deadlineBanner').style.background = '#fff1f2';
+              $('deadlineBanner').style.borderColor = '#fecdd3';
+              $('deadlineBanner').style.color = '#be123c';
+            } else {
+              txt = '⏰ 報名截止：' + dlStr + '（還有 ' + diffDays + ' 天）';
+            }
+            $('deadlineText').textContent = txt;
+            $('deadlineBanner').style.display = 'inline-block';
+          }
+        } catch(e) { /* 忽略錯誤，保持隱藏 */ }
+      }
       
       var limitK = cfg.groups['幼兒園大班組'] ? cfg.groups['幼兒園大班組'].displayLimit : '?';
       var limitE = cfg.groups['國小低年級組'] ? cfg.groups['國小低年級組'].displayLimit : '?';
@@ -838,6 +923,42 @@
       loadGroupStatus();
     };
 
+    // ===== 社群分享 =====
+    function getShareInfo() {
+      var url = window.location.href.split('#')[0]; // 去除 anchor
+      var title = (cfg && cfg.eventName) ? cfg.eventName : document.title;
+      var text = title + '｜免費親子著色活動，名額有限，歡迎家長帶孩子一起參加！';
+      return { url: url, title: title, text: text };
+    }
+    window.shareToLine = function(e) {
+      e.preventDefault();
+      var s = getShareInfo();
+      var lineUrl = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(s.url) + '&text=' + encodeURIComponent(s.text);
+      window.open(lineUrl, '_blank', 'noopener,width=600,height=600');
+    };
+    window.shareToFb = function(e) {
+      e.preventDefault();
+      var s = getShareInfo();
+      var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(s.url);
+      window.open(fbUrl, '_blank', 'noopener,width=600,height=600');
+    };
+    window.copyShareLink = function(btn) {
+      var s = getShareInfo();
+      var done = function() {
+        var label = $('copyLinkText');
+        var orig = label.textContent;
+        label.textContent = '✅ 已複製！';
+        setTimeout(function() { label.textContent = orig; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(s.url).then(done).catch(function() {
+          var ta = document.createElement('textarea'); ta.value = s.url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();
+        });
+      } else {
+        var ta = document.createElement('textarea'); ta.value = s.url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();
+      }
+    };
+
     document.addEventListener('DOMContentLoaded', function() {
       loadConfig();
       $('childAge').addEventListener('change', function() {
@@ -909,6 +1030,40 @@
 
     setTimeout(function() { var loader = $('loader'); if (loader && loader.style.display !== 'none') loader.style.display = 'none'; }, 5000);
   })();
+  </script>
+
+  <!-- 照片 Lightbox -->
+  <div id="lightbox" onclick="if(event.target.id==='lightbox')closeLightbox()">
+    <button id="lightboxClose" type="button" onclick="closeLightbox()" aria-label="關閉">×</button>
+    <img id="lightboxImg" alt="">
+    <div id="lightboxCaption"></div>
+  </div>
+  <script>
+    (function(){
+      // 為所有上屆回顧照片加上點擊事件
+      document.querySelectorAll('.review-photo img').forEach(function(img){
+        img.addEventListener('click', function(){
+          var lb = document.getElementById('lightbox');
+          var lbImg = document.getElementById('lightboxImg');
+          var cap = document.getElementById('lightboxCaption');
+          lbImg.src = img.src;
+          lbImg.alt = img.alt || '';
+          cap.textContent = img.alt || '';
+          lb.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      window.closeLightbox = function(){
+        document.getElementById('lightbox').classList.remove('open');
+        document.body.style.overflow = '';
+      };
+      // ESC 關閉
+      document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape' && document.getElementById('lightbox').classList.contains('open')) {
+          window.closeLightbox();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
