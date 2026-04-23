@@ -236,35 +236,6 @@
 }
     }
 
-    /* 上屆回顧照片 Lightbox */
-    .review-photo img { cursor: zoom-in; }
-    #lightbox {
-      display: none; position: fixed; inset: 0; z-index: 10000;
-      background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
-      padding: 0; animation: lbFadeIn 0.25s ease;
-    }
-    #lightbox.open { display: flex; }
-    #lightbox img {
-      width: 100vw; height: 100vh; object-fit: contain;
-      display: block;
-      animation: lbZoomIn 0.3s cubic-bezier(0.16,1,0.3,1);
-    }
-    #lightboxClose {
-      position: fixed; top: 16px; right: 16px; width: 48px; height: 48px;
-      border-radius: 50%; background: rgba(0,0,0,0.55); color: white;
-      border: 1px solid rgba(255,255,255,0.25); font-size: 1.8rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; line-height: 1;
-      transition: background 0.2s; z-index: 10001;
-    }
-    #lightboxClose:hover { background: rgba(0,0,0,0.75); }
-    #lightboxCaption {
-      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-      color: rgba(255,255,255,0.95); font-size: 0.9rem; font-weight: 600;
-      background: rgba(0,0,0,0.55); padding: 8px 18px; border-radius: 50px;
-      max-width: calc(100% - 40px); text-align: center; z-index: 10001;
-    }
-    @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes lbZoomIn { from { transform: scale(0.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   </style>
 </head>
 <body>
@@ -328,24 +299,6 @@
         <a href="#highlights" class="btn btn-outline">✨ 了解活動內容</a>
       </div>
 
-      <!-- 社群分享區 -->
-      <div style="margin-top: 28px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 700;">覺得不錯？分享給其他家長 👇</div>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-          <a id="shareLine" href="#" onclick="shareToLine(event)" aria-label="分享到 LINE"
-             style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: #06C755; color: white; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; box-shadow: 0 4px 12px rgba(6,199,85,0.25); transition: transform 0.2s;">
-            <span>💬</span><span>LINE</span>
-          </a>
-          <a id="shareFb" href="#" onclick="shareToFb(event)" aria-label="分享到 Facebook"
-             style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: #1877F2; color: white; border-radius: 50px; font-weight: 800; font-size: 0.9rem; text-decoration: none; box-shadow: 0 4px 12px rgba(24,119,242,0.25); transition: transform 0.2s;">
-            <span>📘</span><span>Facebook</span>
-          </a>
-          <button type="button" onclick="copyShareLink(this)" aria-label="複製連結"
-             style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; background: white; color: var(--primary-dark); border: 1.5px solid var(--primary); border-radius: 50px; font-weight: 800; font-size: 0.9rem; cursor: pointer; box-shadow: 0 4px 12px rgba(255,107,157,0.15); transition: transform 0.2s;">
-            <span>🔗</span><span id="copyLinkText">複製連結</span>
-          </button>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -983,55 +936,6 @@
       loadGroupStatus();
     };
 
-    // ===== 社群分享 =====
-    function getShareInfo() {
-      var url = window.location.href.split('#')[0]; // 去除 anchor
-      var title = (cfg && cfg.eventName) ? cfg.eventName : document.title;
-      var text = title + '｜免費親子著色活動，名額有限，歡迎家長帶孩子一起參加！';
-      return { url: url, title: title, text: text };
-    }
-
-    // 在手機上優先使用原生分享選單（Web Share API），用完自動回原網站
-    // 桌面或不支援時，退回網頁版分享視窗
-    window.shareToLine = function(e) {
-      e.preventDefault();
-      var s = getShareInfo();
-      // 手機原生分享（iOS Safari、Android Chrome 都支援）
-      if (navigator.share) {
-        navigator.share({ title: s.title, text: s.text, url: s.url }).catch(function(){ /* 使用者取消，忽略 */ });
-        return;
-      }
-      // 退回：LINE 網頁分享（同頁跳轉最穩定）
-      window.location.href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(s.url) + '&text=' + encodeURIComponent(s.text);
-    };
-
-    window.shareToFb = function(e) {
-      e.preventDefault();
-      var s = getShareInfo();
-      if (navigator.share) {
-        navigator.share({ title: s.title, text: s.text, url: s.url }).catch(function(){ /* 使用者取消 */ });
-        return;
-      }
-      window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(s.url);
-    };
-
-    window.copyShareLink = function(btn) {
-      var s = getShareInfo();
-      var done = function() {
-        var label = $('copyLinkText');
-        var orig = label.textContent;
-        label.textContent = '✅ 已複製！';
-        setTimeout(function() { label.textContent = orig; }, 2000);
-      };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(s.url).then(done).catch(function() {
-          var ta = document.createElement('textarea'); ta.value = s.url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();
-        });
-      } else {
-        var ta = document.createElement('textarea'); ta.value = s.url; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();
-      }
-    };
-
     document.addEventListener('DOMContentLoaded', function() {
       loadConfig();
       $('childAge').addEventListener('change', function() {
@@ -1105,38 +1009,5 @@
   })();
   </script>
 
-  <!-- 照片 Lightbox -->
-  <div id="lightbox" onclick="if(event.target.id==='lightbox')closeLightbox()">
-    <button id="lightboxClose" type="button" onclick="closeLightbox()" aria-label="關閉">×</button>
-    <img id="lightboxImg" alt="">
-    <div id="lightboxCaption"></div>
-  </div>
-  <script>
-    (function(){
-      // 為所有上屆回顧照片加上點擊事件
-      document.querySelectorAll('.review-photo img').forEach(function(img){
-        img.addEventListener('click', function(){
-          var lb = document.getElementById('lightbox');
-          var lbImg = document.getElementById('lightboxImg');
-          var cap = document.getElementById('lightboxCaption');
-          lbImg.src = img.src;
-          lbImg.alt = img.alt || '';
-          cap.textContent = img.alt || '';
-          lb.classList.add('open');
-          document.body.style.overflow = 'hidden';
-        });
-      });
-      window.closeLightbox = function(){
-        document.getElementById('lightbox').classList.remove('open');
-        document.body.style.overflow = '';
-      };
-      // ESC 關閉
-      document.addEventListener('keydown', function(e){
-        if (e.key === 'Escape' && document.getElementById('lightbox').classList.contains('open')) {
-          window.closeLightbox();
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
