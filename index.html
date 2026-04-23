@@ -240,31 +240,31 @@
     .review-photo img { cursor: zoom-in; }
     #lightbox {
       display: none; position: fixed; inset: 0; z-index: 10000;
-      background: rgba(0,0,0,0.88); align-items: center; justify-content: center;
-      padding: 40px 20px; animation: lbFadeIn 0.25s ease;
+      background: rgba(0,0,0,0.92); align-items: center; justify-content: center;
+      padding: 0; animation: lbFadeIn 0.25s ease;
     }
     #lightbox.open { display: flex; }
     #lightbox img {
-      max-width: 100%; max-height: 100%; object-fit: contain;
-      border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      width: 100vw; height: 100vh; object-fit: contain;
+      display: block;
       animation: lbZoomIn 0.3s cubic-bezier(0.16,1,0.3,1);
     }
     #lightboxClose {
-      position: absolute; top: 20px; right: 20px; width: 44px; height: 44px;
-      border-radius: 50%; background: rgba(255,255,255,0.15); color: white;
-      border: none; font-size: 1.6rem; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
+      position: fixed; top: 16px; right: 16px; width: 48px; height: 48px;
+      border-radius: 50%; background: rgba(0,0,0,0.55); color: white;
+      border: 1px solid rgba(255,255,255,0.25); font-size: 1.8rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; line-height: 1;
+      transition: background 0.2s; z-index: 10001;
     }
-    #lightboxClose:hover { background: rgba(255,255,255,0.3); }
+    #lightboxClose:hover { background: rgba(0,0,0,0.75); }
     #lightboxCaption {
-      position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-      color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 600;
-      background: rgba(0,0,0,0.4); padding: 6px 16px; border-radius: 50px;
-      max-width: 80%; text-align: center;
+      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,0.95); font-size: 0.9rem; font-weight: 600;
+      background: rgba(0,0,0,0.55); padding: 8px 18px; border-radius: 50px;
+      max-width: calc(100% - 40px); text-align: center; z-index: 10001;
     }
     @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes lbZoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes lbZoomIn { from { transform: scale(0.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
   </style>
 </head>
 <body>
@@ -990,18 +990,31 @@
       var text = title + '｜免費親子著色活動，名額有限，歡迎家長帶孩子一起參加！';
       return { url: url, title: title, text: text };
     }
+
+    // 在手機上優先使用原生分享選單（Web Share API），用完自動回原網站
+    // 桌面或不支援時，退回網頁版分享視窗
     window.shareToLine = function(e) {
       e.preventDefault();
       var s = getShareInfo();
-      var lineUrl = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(s.url) + '&text=' + encodeURIComponent(s.text);
-      window.open(lineUrl, '_blank', 'noopener,width=600,height=600');
+      // 手機原生分享（iOS Safari、Android Chrome 都支援）
+      if (navigator.share) {
+        navigator.share({ title: s.title, text: s.text, url: s.url }).catch(function(){ /* 使用者取消，忽略 */ });
+        return;
+      }
+      // 退回：LINE 網頁分享（同頁跳轉最穩定）
+      window.location.href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(s.url) + '&text=' + encodeURIComponent(s.text);
     };
+
     window.shareToFb = function(e) {
       e.preventDefault();
       var s = getShareInfo();
-      var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(s.url);
-      window.open(fbUrl, '_blank', 'noopener,width=600,height=600');
+      if (navigator.share) {
+        navigator.share({ title: s.title, text: s.text, url: s.url }).catch(function(){ /* 使用者取消 */ });
+        return;
+      }
+      window.location.href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(s.url);
     };
+
     window.copyShareLink = function(btn) {
       var s = getShareInfo();
       var done = function() {
