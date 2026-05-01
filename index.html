@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>ä¹¾æ·¨æ ¡åæææå®¶ - åç«¥èè²ç«æ¯è³½</title>
+  <title>乾淨校園我愛我家 - 兒童著色畫比賽</title>
   <!-- OG / Social Meta Tags -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="è¦ªå­å±å­¸èè²(å¬ç)æ´»åï½ä¹¾æ·¨æ ¡åæææå®¶">
-  <meta property="og:description" content="åè²»åå ã»é¡æ»¿çºæ­¢ï¼å°å±¬å¹¼ååå¤§ç­èåå°ä½å¹´ç´çè²å½©æ´¾å°ï¼è®å­©å­ç¨é¡è²è¡¨éå°å®¶äººçæï¼ç«å³æ¶åå ±åï¼">
+  <meta property="og:title" content="親子共學著色(公益)活動｜乾淨校園我愛我家">
+  <meta property="og:description" content="免費參加・額滿為止！專屬幼兒園大班與國小低年級的色彩派對，讓孩子用顏色表達對家人的愛，立即搶先報名！">
   <meta property="og:url" content="https://socialimpactlab0.github.io/TNNGACPAINT/">
   <meta property="og:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/banner.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="è¦ªå­å±å­¸èè²(å¬ç)æ´»åï½ä¹¾æ·¨æ ¡åæææå®¶">
-  <meta name="twitter:description" content="åè²»åå ã»é¡æ»¿çºæ­¢ï¼è®å­©å­ç¨é¡è²è¡¨éå°å®¶äººçæï¼ç«å³æ¶åå ±åï¼">
+  <meta name="twitter:title" content="親子共學著色(公益)活動｜乾淨校園我愛我家">
+  <meta name="twitter:description" content="免費參加・額滿為止！讓孩子用顏色表達對家人的愛，立即搶先報名！">
   <meta name="twitter:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/banner.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- å°å¥é«ç´æ¥ç³»åé«èç¡è¥¯ç·é« -->
+  <!-- 導入高級日系圓體與無襯線體 -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -56,7 +56,7 @@
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; text-decoration: none; }
     
-    /* ç»çæ¬ç©é¢¨å¡çå±ç¨è¨­å® */
+    /* 玻璃擬物風卡片共用設定 */
     .glass-panel {
       background: var(--glass-bg);
       backdrop-filter: blur(12px);
@@ -68,7 +68,7 @@
     .section { padding: 80px 20px; display: flex; align-items: center; justify-content: center; position: relative; }
     .section-content { max-width: 560px; width: 100%; text-align: center; position: relative; z-index: 2; }
     
-    /* è³ªææ¼¸å±¤æ¨é¡ */
+    /* 質感漸層標題 */
     .section-title { 
       font-size: clamp(1.6rem, 5vw, 2.2rem); 
       font-weight: 900; 
@@ -80,7 +80,7 @@
     }
     .section-subtitle { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 36px; font-weight: 600; letter-spacing: 0.5px; }
     
-    /* é«ç´ææé */
+    /* 高級感按鈕 */
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
       padding: 16px 32px; font-size: 1rem; font-weight: 800; border-radius: 50px;
@@ -104,7 +104,7 @@
     .btn-outline:hover { background: white; border-color: var(--primary); transform: translateY(-3px); box-shadow: 0 8px 15px rgba(255,107,157,0.15); }
     .btn-sm { padding: 10px 22px; font-size: 0.9rem; }
     
-    /* ç¹è²ç¶²æ ¼ */
+    /* 特色網格 */
     .card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
     .card {
       background: var(--glass-bg); border: 1px solid var(--border); box-shadow: var(--glass-shadow);
@@ -116,7 +116,7 @@
     .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 800; color: var(--primary-dark); }
     .card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; }
     
-    /* é ç¥åå¡ */
+    /* 須知區塊 */
     .notice { border-radius: var(--radius); padding: 20px 24px; margin-bottom: 24px; text-align: left; position: relative; overflow: hidden; }
     .notice::before { content:''; position: absolute; left: 0; top: 0; bottom: 0; width: 6px; }
     .notice-pink { background: linear-gradient(135deg, #fffafb 0%, #fff0f5 100%); border: 1px solid #ffd1e3; box-shadow: 0 4px 15px rgba(255,107,157,0.05); }
@@ -129,9 +129,9 @@
     .notice-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
     .notice ul { list-style: none; padding: 0; margin: 0; }
     .notice li { font-size: 0.9rem; font-weight: 600; color: var(--text); margin-bottom: 8px; padding-left: 20px; position: relative; line-height: 1.6; }
-    .notice li::before { content: 'â¨'; position: absolute; left: 0; top: 2px; font-size: 0.7rem; }
+    .notice li::before { content: '✨'; position: absolute; left: 0; top: 2px; font-size: 0.7rem; }
     
-    /* è¡¨å®ç¾å */
+    /* 表單美化 */
     .form-card {
       background: var(--glass-bg); border: 1px solid var(--border); box-shadow: 0 20px 40px rgba(255, 107, 157, 0.12);
       border-radius: var(--radius-lg); padding: 40px 30px; position: relative; backdrop-filter: blur(15px);
@@ -148,7 +148,7 @@
     .form-control:focus { outline: none; border-color: var(--primary); background: #ffffff; box-shadow: 0 0 0 4px rgba(255, 107, 157, 0.15); }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     
-    /* é²åº¦æ¢ */
+    /* 進度條 */
     .progress { height: 6px; background: #ffe4ef; border-radius: 10px; margin-bottom: 20px; overflow: hidden; display: none; }
     .progress.show { display: block; }
     .progress-bar {
@@ -156,7 +156,7 @@
       background-size: 200% 100%; animation: progressAnim 1.5s ease infinite; border-radius: 10px;
     }
     
-    /* åæ¸çæåå¡ */
+    /* 倒數狀態區塊 */
     .quota-countdown { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; flex-wrap: wrap; }
     .quota-countdown-item {
       background: #ffffff; border: 1px solid var(--border); border-radius: 20px; padding: 16px 24px; 
@@ -174,7 +174,7 @@
     .quota-badge { display: inline-block; padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.5px; }
     .quota-badge.open { background: #ecfdf5; color: #059669; }
 
-    /* æéè»¸ */
+    /* 時間軸 */
     .timeline { max-width: 500px; margin: 0 auto; position: relative; padding-left: 20px; }
     .timeline::before { content: ''; position: absolute; left: 38px; top: 20px; bottom: 20px; width: 4px; background: var(--primary-light); border-radius: 4px; }
     .timeline-item { display: flex; gap: 20px; margin-bottom: 24px; position: relative; }
@@ -184,7 +184,7 @@
     .timeline-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 4px; }
     .timeline-desc { color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; }
 
-    /* çé è¨­è¨ (éå±¬è³ªæ) */
+    /* 獎項設計 (金屬質感) */
     .prize-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .prize-card { border-radius: 20px; padding: 24px 10px; text-align: center; transition: all 0.4s; position: relative; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border: 1px solid rgba(255,255,255,0.6); }
     .prize-card::after { content:''; position: absolute; top:0; left:-100%; width:50%; height:100%; background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%); transform: skewX(-20deg); transition: 0.5s; }
@@ -199,7 +199,7 @@
     .prize-name { font-weight: 900; font-size: 0.9rem; margin-bottom: 4px; }
     .prize-amount { font-weight: 900; font-size: 1.1rem; }
 
-    /* ç§ççèè¦è­ */
+    /* 照片牆與見證 */
     .review-photo { border-radius: 20px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 3px solid white; }
     .testimonial-card { background: white; border-radius: var(--radius); padding: 24px; text-align: left; box-shadow: 0 10px 30px rgba(255,107,157,0.08); position: relative; border: 1px solid var(--border); }
     
@@ -208,7 +208,7 @@
     
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 107, 157, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(255, 107, 157, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 107, 157, 0); } }
 
-    /* æåå¡ç */
+    /* 成功卡片 */
     #successCard { display: none; background: white; border-radius: 24px; padding: 40px 30px; box-shadow: 0 20px 50px rgba(255, 107, 157, 0.15); text-align: center; border: 1px solid var(--border); }
     
     @media (max-width: 767px) {
@@ -229,327 +229,646 @@
       }
       .sticky-cta .btn { 
   flex: 1; 
-  padding: 12px 4px;      /* ç¸®å°æéå§çå·¦å³çç½ */
-  font-size: 0.9rem;      /* å°å­é«ç¨å¾®ç¸®å° */
-  white-space: nowrap;    /* å¼·å¶æå­æ°¸é å¨åä¸è¡ï¼çµå°ä¸æè¡ */
-  gap: 6px;               /* ç¸®å°åç¤ºèæå­çè·é¢ */
+  padding: 12px 4px;      /* 縮小按鈕內的左右留白 */
+  font-size: 0.9rem;      /* 將字體稍微縮小 */
+  white-space: nowrap;    /* 強制文字永遠在同一行，絕對不換行 */
+  gap: 6px;               /* 縮小圖示與文字的距離 */
 }
     }
 
-  
-    /* ===== 2026-05 重新設計：粉紅底、品牌感首頁、提高報名吸引力 ===== */
+
+    /* ===== 重新設計：粉紅底・更有報名吸引力・避免首頁資訊過滿 ===== */
     :root {
-      --primary: #ff6b9d; --primary-dark: #d91b6b; --primary-light: #ffe6f0;
-      --peach: #ff9a72; --cream: #fffaf2; --rose-bg: #fff3f7;
-      --text: #3f3542; --text-muted: #766b78;
-      --border: rgba(255, 202, 220, 0.55); --glass-bg: rgba(255,255,255,.82);
-      --glass-shadow: 0 18px 50px rgba(255,107,157,.12); --radius: 24px; --radius-lg: 34px;
+      --primary: #ff5f93;
+      --primary-dark: #d91f6a;
+      --primary-light: #ffe3ee;
+      --secondary: #ff9b7a;
+      --accent: #fff1b8;
+      --text: #3f3342;
+      --text-muted: #746874;
+      --border: rgba(255, 255, 255, 0.88);
+      --glass-bg: rgba(255, 255, 255, 0.78);
+      --glass-shadow: 0 18px 50px rgba(216, 31, 106, 0.10);
+      --radius: 24px;
+      --radius-lg: 34px;
     }
+
     body {
-      background: radial-gradient(circle at 12% 10%, rgba(255,157,183,.24), transparent 34%), radial-gradient(circle at 90% 12%, rgba(255,196,130,.24), transparent 31%), radial-gradient(circle at 70% 86%, rgba(255,214,229,.34), transparent 34%), linear-gradient(180deg,#fff7fa 0%,#fff0f6 44%,#fffaf6 100%);
-      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(255, 178, 197, 0.42), transparent 34%),
+        radial-gradient(circle at 90% 18%, rgba(255, 202, 150, 0.30), transparent 32%),
+        linear-gradient(180deg, #fff4f8 0%, #fff8f4 42%, #fff3f8 100%);
+      background-attachment: fixed;
     }
-    body::before { content:''; position:fixed; inset:0; pointer-events:none; background-image:radial-gradient(rgba(255,107,157,.13) 1px, transparent 1px); background-size:26px 26px; mask-image:linear-gradient(to bottom, rgba(0,0,0,.32), transparent 70%); z-index:0; }
-    .section { padding:84px 20px; }
-    .section-content { max-width:1080px; }
-    .site-brand { position:fixed; top:18px; left:18px; z-index:20; display:flex; align-items:center; gap:10px; padding:8px 13px 8px 8px; border-radius:999px; background:rgba(255,255,255,.78); border:1px solid rgba(255,255,255,.9); box-shadow:0 12px 34px rgba(255,107,157,.13); backdrop-filter:blur(12px); }
-    .site-brand img { width:42px; height:42px; object-fit:contain; }
-    .site-brand span { font-size:.82rem; font-weight:900; color:var(--primary-dark); letter-spacing:.03em; }
-    .hero-redesign { min-height:92vh; padding-top:105px; overflow:hidden; }
-    .hero-wrap { width:min(1120px,100%); display:grid; grid-template-columns:1.02fr .9fr; gap:46px; align-items:center; text-align:left; position:relative; z-index:2; }
-    .hero-copy { max-width:590px; }
-    .eyebrow-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:18px; }
-    .soft-pill { display:inline-flex; align-items:center; gap:6px; padding:8px 15px; border-radius:999px; font-size:.86rem; font-weight:900; background:rgba(255,255,255,.84); border:1px solid rgba(255,198,216,.78); color:var(--primary-dark); box-shadow:0 8px 22px rgba(255,107,157,.10); white-space:nowrap; }
-    .soft-pill.green { color:#07835c; border-color:rgba(187,247,208,.9); background:#f0fdf4; }
-    .hero-title { font-size:clamp(2.35rem,6.4vw,4.85rem); line-height:1.08; font-weight:900; letter-spacing:-.04em; color:#352b38; margin:0 0 18px; text-shadow:none; }
-    .hero-title .accent-text { display:inline-block; background:linear-gradient(135deg,var(--primary-dark),#ff7b4d); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
-    .hero-subtitle { font-size:clamp(1.06rem,2.4vw,1.32rem); color:#66596b; font-weight:700; line-height:1.8; margin:0 0 18px; max-width:540px; }
-    #heroInfo.hero-info-pill { display:inline-flex; max-width:100%; margin:4px 0 22px; padding:11px 18px; border-radius:999px; background:rgba(255,255,255,.9); color:#d64a71; font-weight:900; font-size:.96rem; box-shadow:0 12px 34px rgba(255,107,157,.10); border:1px solid rgba(255,255,255,.9); }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:14px; margin:6px 0 22px; }
-    .hero-actions .btn { padding:15px 26px; }
-    .hero-proof-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:18px; }
-    .hero-proof { padding:14px; border-radius:18px; background:rgba(255,255,255,.72); border:1px solid rgba(255,255,255,.85); box-shadow:0 10px 26px rgba(255,107,157,.08); }
-    .hero-proof strong { display:block; color:var(--primary-dark); font-size:.92rem; margin-bottom:3px; }
-    .hero-proof span { display:block; color:var(--text-muted); font-size:.8rem; line-height:1.55; font-weight:700; }
-    .hero-media { position:relative; }
-    .poster-card { position:relative; padding:14px; border-radius:34px; background:rgba(255,255,255,.78); box-shadow:0 26px 70px rgba(255,107,157,.22); border:1px solid rgba(255,255,255,.92); transform:rotate(1.2deg); }
-    .poster-card::before { content:''; position:absolute; inset:-18px; z-index:-1; border-radius:42px; background:linear-gradient(135deg, rgba(255,107,157,.25), rgba(255,154,114,.18), rgba(255,255,255,.4)); filter:blur(4px); }
-    .poster-card img { width:100%; border-radius:24px; border:0; box-shadow:none; object-fit:cover; }
-    .floating-note { position:absolute; right:-20px; bottom:26px; width:180px; padding:16px 18px; border-radius:22px; background:white; box-shadow:0 20px 42px rgba(92,50,71,.15); color:var(--text); font-weight:900; line-height:1.45; text-align:center; transform:rotate(-3deg); }
-    .floating-note small { display:block; margin-top:4px; font-size:.76rem; color:var(--text-muted); font-weight:800; }
-    .quota-countdown { justify-content:flex-start; gap:12px; margin:18px 0 10px; }
-    .quota-countdown-item { min-width:142px; padding:15px 18px; border-radius:20px; background:rgba(255,255,255,.82); box-shadow:0 13px 34px rgba(255,107,157,.1); }
-    .quota-countdown-number { font-size:1.85rem; }
-    .section-title { letter-spacing:-.02em; }
-    .card, .form-card, #successCard, .glass-panel, .testimonial-card { background:rgba(255,255,255,.82); border:1px solid rgba(255,255,255,.92); box-shadow:0 18px 50px rgba(255,107,157,.12); }
-    .why-section .section-content { max-width:1060px; }
-    .why-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; margin-top:26px; }
-    .why-card { text-align:left; background:rgba(255,255,255,.82); border:1px solid rgba(255,255,255,.95); border-radius:26px; padding:24px; box-shadow:0 16px 44px rgba(255,107,157,.10); }
-    .why-card .icon { font-size:2rem; margin-bottom:12px; }
-    .why-card h3 { color:#3b303e; font-size:1.12rem; margin-bottom:8px; }
-    .why-card p { color:var(--text-muted); font-weight:700; line-height:1.75; font-size:.93rem; }
-    .review-photo { border-radius:24px; border:5px solid white; box-shadow:0 18px 48px rgba(80,50,64,.12); }
-    .sticky-cta { display:none; }
-    @media (max-width:900px){ .hero-redesign{padding-top:92px}.hero-wrap{grid-template-columns:1fr;gap:26px;text-align:center}.hero-copy{max-width:100%}.eyebrow-row,.hero-actions,.quota-countdown{justify-content:center}.hero-subtitle{margin-left:auto;margin-right:auto}.hero-proof-grid{max-width:560px;margin-left:auto;margin-right:auto}.poster-card{max-width:430px;margin:0 auto;transform:none}.floating-note{right:8px;bottom:18px;width:160px}.why-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto} }
-    @media (max-width:767px){ .site-brand{top:10px;left:10px;padding-right:10px}.site-brand img{width:36px;height:36px}.site-brand span{font-size:.74rem}.hero-redesign{min-height:auto;padding:86px 16px 44px}.hero-title{font-size:clamp(2.05rem,12vw,3.25rem)}.hero-subtitle{font-size:1rem}#heroInfo.hero-info-pill{border-radius:18px;line-height:1.55}.hero-proof-grid{grid-template-columns:1fr;gap:10px}.quota-countdown{display:grid;grid-template-columns:1fr 1fr}.quota-countdown-item{min-width:0;padding:13px 10px}.floating-note{position:static;width:auto;margin:12px auto 0;transform:none}.poster-card{padding:10px;border-radius:26px}.poster-card img{border-radius:18px}.section{padding:58px 16px}.sticky-cta{display:flex} }
+
+    .section { padding: 86px 20px; }
+    .section-content { max-width: 1040px; }
+
+    .hero-redesign {
+      min-height: 92vh;
+      padding: 96px 20px 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-redesign::before {
+      content: "";
+      position: absolute;
+      inset: 28px;
+      border-radius: 44px;
+      background: rgba(255,255,255,0.36);
+      border: 1px solid rgba(255,255,255,0.68);
+      z-index: 0;
+    }
+
+    .hero-wrap {
+      width: min(1120px, 100%);
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.86fr);
+      gap: 44px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-logo {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 10;
+      background: rgba(255,255,255,.82);
+      border: 1px solid rgba(255,255,255,.9);
+      box-shadow: 0 10px 28px rgba(216,31,106,.10);
+      border-radius: 22px;
+      padding: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand-logo img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .hero-copy {
+      text-align: left;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--primary-dark);
+      font-size: .94rem;
+      font-weight: 900;
+      box-shadow: 0 10px 25px rgba(216,31,106,.10);
+      border: 1px solid rgba(255,255,255,.9);
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: 'Zen Maru Gothic', 'Noto Sans TC', sans-serif;
+      font-size: clamp(2.25rem, 5.4vw, 4.9rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 18px;
+      text-shadow: none;
+    }
+
+    .hero-title .highlight {
+      color: var(--primary-dark);
+      background: linear-gradient(180deg, transparent 55%, rgba(255, 225, 120, .72) 0);
+      padding: 0 .05em;
+    }
+
+    .hero-lead {
+      font-size: clamp(1.05rem, 2.1vw, 1.28rem);
+      color: var(--text-muted);
+      font-weight: 700;
+      line-height: 1.85;
+      max-width: 560px;
+      margin-bottom: 20px;
+    }
+
+    #heroInfo {
+      font-size: 1rem !important;
+      color: var(--primary-dark) !important;
+      background: rgba(255,255,255,.88) !important;
+      border: 1px solid rgba(255,255,255,.9);
+      box-shadow: 0 10px 25px rgba(216,31,106,.09) !important;
+      margin-bottom: 20px !important;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      margin: 24px 0 24px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff5f93 0%, #ff8a66 100%);
+      box-shadow: 0 16px 28px -12px rgba(216,31,106,.55);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,.78);
+      color: var(--primary-dark);
+      border: 2px solid rgba(255, 157, 187, .42);
+    }
+
+    .hero-note-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      max-width: 620px;
+      margin-top: 24px;
+    }
+
+    .mini-note {
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 20px;
+      padding: 14px 14px;
+      box-shadow: 0 12px 26px rgba(216,31,106,.07);
+      backdrop-filter: blur(10px);
+    }
+
+    .mini-note strong {
+      display: block;
+      color: var(--text);
+      font-weight: 900;
+      font-size: .93rem;
+      margin-bottom: 4px;
+    }
+
+    .mini-note span {
+      color: var(--text-muted);
+      font-size: .8rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .poster-card {
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 36px;
+      padding: 14px;
+      box-shadow: 0 28px 70px rgba(216,31,106,.18);
+      backdrop-filter: blur(14px);
+      transform: rotate(1deg);
+    }
+
+    #posterImg {
+      max-width: 100% !important;
+      width: 100% !important;
+      border-radius: 26px !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+    }
+
+    .floating-card {
+      position: absolute;
+      left: -28px;
+      bottom: 32px;
+      background: rgba(255,255,255,.90);
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 24px;
+      padding: 16px 18px;
+      box-shadow: 0 18px 40px rgba(216,31,106,.14);
+      max-width: 220px;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.45;
+      backdrop-filter: blur(12px);
+    }
+
+    .floating-card span {
+      display: block;
+      margin-top: 5px;
+      font-size: .8rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .quota-countdown {
+      justify-content: flex-start;
+      margin: 4px 0 0;
+      gap: 12px;
+    }
+
+    .quota-countdown-item {
+      background: rgba(255,255,255,.78);
+      min-width: 150px;
+      padding: 14px 18px;
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgba(216,31,106,.08);
+    }
+
+    #deadlineBanner {
+      margin: 16px 0 0 !important;
+      display: none;
+    }
+
+    .why-section {
+      padding-top: 30px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .why-card {
+      text-align: left;
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 28px;
+      padding: 26px 24px;
+      box-shadow: 0 16px 44px rgba(216,31,106,.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .why-icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #fff0f6, #fff9e5);
+      font-size: 1.7rem;
+      margin-bottom: 14px;
+    }
+
+    .why-card h3 {
+      color: var(--text);
+      font-size: 1.12rem;
+      margin-bottom: 8px;
+      font-weight: 900;
+    }
+
+    .why-card p {
+      color: var(--text-muted);
+      font-size: .94rem;
+      line-height: 1.75;
+      font-weight: 650;
+    }
+
+    .section-title {
+      background: none;
+      -webkit-text-fill-color: initial;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .card, .glass-panel, .form-card, .timeline-content {
+      background: rgba(255,255,255,.74);
+      border: 1px solid rgba(255,255,255,.92);
+      box-shadow: 0 16px 42px rgba(216,31,106,.08);
+    }
+
+    @media (max-width: 900px) {
+      .hero-redesign { padding-top: 108px; min-height: auto; }
+      .hero-redesign::before { inset: 14px; border-radius: 30px; }
+      .hero-wrap { grid-template-columns: 1fr; gap: 30px; }
+      .hero-copy { text-align: center; }
+      .hero-lead { margin-left: auto; margin-right: auto; }
+      .hero-actions, .quota-countdown { justify-content: center; }
+      .hero-note-row { margin-left: auto; margin-right: auto; }
+      .floating-card { left: 12px; bottom: 18px; }
+    }
+
+    @media (max-width: 767px) {
+      .section { padding: 60px 16px; }
+      .hero-redesign { padding: 100px 16px 50px; }
+      .hero-note-row, .why-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: clamp(2.15rem, 11vw, 3.2rem); }
+      .hero-lead { font-size: 1rem; }
+      .poster-card { transform: none; border-radius: 28px; }
+      .floating-card { position: static; margin: 14px auto 0; max-width: 100%; }
+      .quota-countdown-item { min-width: 138px; }
+      .brand-logo { top: 16px; left: 16px; }
+    }
 
   </style>
 </head>
 <body>
-  <!-- è¼å¥åç«ä¿çä¸è® -->
+  <!-- 載入動畫保留不變 -->
   <div id="loader" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff5f8; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.4s;">
-    <div style="font-size: 3.5rem; margin-bottom: 16px; animation: bounce 1s ease infinite;">ð¨</div>
-    <div style="color: #e91e7a; font-weight: 800; font-size: 1.1rem; font-family: 'Zen Maru Gothic', sans-serif;">æºåè²å½©ä¸­...</div>
+    <div style="font-size: 3.5rem; margin-bottom: 16px; animation: bounce 1s ease infinite;">🎨</div>
+    <div style="color: #e91e7a; font-weight: 800; font-size: 1.1rem; font-family: 'Zen Maru Gothic', sans-serif;">準備色彩中...</div>
   </div>
 
-    <!-- Logo (左上角品牌識別) -->
-  <div class="site-brand">
+
+  <!-- Logo (左上角品牌識別) -->
+  <div class="brand-logo">
     <img src="images/logo.png" alt="乾淨校園推廣團隊">
-    <span>乾淨校園推廣團隊</span>
   </div>
 
-  <!-- Hero Section：重新設計成更有吸引力的粉紅品牌首頁 -->
-  <section class="section hero-redesign" id="hero">
+  <!-- Hero Section：重新設計版 -->
+  <section class="hero-redesign" id="hero">
     <div class="hero-wrap">
       <div class="hero-copy">
-        <div class="eyebrow-row">
-          <span class="soft-pill green">免費參加</span>
-          <span class="soft-pill">名額有限・額滿候補</span>
-          <span class="soft-pill">家長陪同</span>
-        </div>
-        <h1 class="hero-title">讓孩子用色彩，<br><span class="accent-text">畫出家的溫暖</span></h1>
-        <p class="hero-subtitle">乾淨校園「我愛我家」公益兒童著色畫比賽，陪孩子完成一段安靜、專注又溫暖的親子時光。</p>
-        <p id="heroInfo" class="hero-info-pill"></p>
+        <div class="hero-badge">免費參加・額滿為止</div>
+
+        <h1 class="hero-title">
+          讓孩子用色彩，<br>
+          畫出家的<span class="highlight">溫暖</span>
+        </h1>
+
+        <p class="hero-lead">
+          乾淨校園「我愛我家」公益兒童著色畫比賽，邀請家長陪孩子一起完成一段安靜、專注又溫暖的親子時光。
+        </p>
+
+        <p id="heroInfo"></p>
+
         <div class="hero-actions">
           <a href="#register" class="btn btn-primary">立即報名參加</a>
           <a href="#highlights" class="btn btn-outline">看活動內容</a>
         </div>
-        <div class="hero-proof-grid">
-          <div class="hero-proof"><strong>不用畫得很厲害</strong><span>孩子願意表達，就是最好的作品。</span></div>
-          <div class="hero-proof"><strong>適合小小孩參加</strong><span>幼兒園大班與國小低年級專屬。</span></div>
-          <div class="hero-proof"><strong>公益免費活動</strong><span>名額有限，請確認可到再報名。</span></div>
-        </div>
+
         <div class="quota-countdown" id="quotaCountdown">
-          <div class="quota-countdown-item"><div class="quota-countdown-label">幼兒園大班組</div><div class="quota-countdown-number open" id="countdownK">—</div><div class="quota-countdown-sub" id="countdownKSub">查詢中...</div><div style="margin-top:8px;"><span class="quota-badge open" id="quotaK">查詢中</span></div></div>
-          <div class="quota-countdown-item"><div class="quota-countdown-label">國小低年級組</div><div class="quota-countdown-number open" id="countdownE">—</div><div class="quota-countdown-sub" id="countdownESub">查詢中...</div><div style="margin-top:8px;"><span class="quota-badge open" id="quotaE">查詢中</span></div></div>
+          <div class="quota-countdown-item">
+            <div class="quota-countdown-label">幼兒園大班組</div>
+            <div class="quota-countdown-number open" id="countdownK">—</div>
+            <div class="quota-countdown-sub" id="countdownKSub">查詢中...</div>
+            <div style="margin-top:8px;"><span class="quota-badge open" id="quotaK">查詢中</span></div>
+          </div>
+          <div class="quota-countdown-item">
+            <div class="quota-countdown-label">國小低年級組</div>
+            <div class="quota-countdown-number open" id="countdownE">—</div>
+            <div class="quota-countdown-sub" id="countdownESub">查詢中...</div>
+            <div style="margin-top:8px;"><span class="quota-badge open" id="quotaE">查詢中</span></div>
+          </div>
         </div>
-        <div id="deadlineBanner" style="display:none;margin:12px 0 0;padding:10px 18px;background:#fffbeb;border:1px solid #fde68a;border-radius:999px;max-width:460px;font-size:.92rem;font-weight:900;color:#92400e;box-shadow:0 4px 12px rgba(251,191,36,.15);text-align:center;"><span id="deadlineText">⏰ 報名截止：—</span></div>
+
+        <div id="deadlineBanner">
+          <span id="deadlineText">報名截止：—</span>
+        </div>
+
+        <div class="hero-note-row">
+          <div class="mini-note">
+            <strong>不用畫得很厲害</strong>
+            <span>孩子願意表達，就是最珍貴的作品。</span>
+          </div>
+          <div class="mini-note">
+            <strong>家長陪同參與</strong>
+            <span>不是把孩子送來，而是一起留下回憶。</span>
+          </div>
+          <div class="mini-note">
+            <strong>公益免費活動</strong>
+            <span>名額有限，額滿後僅開放候補。</span>
+          </div>
+        </div>
       </div>
-      <div class="hero-media">
-        <div id="posterSection" class="poster-card"><img id="posterImg" src="images/banner.png?v=3" alt="活動海報"></div>
-        <div class="floating-note">親子一起完成作品<small>不是考試，是一次美好的陪伴</small></div>
+
+      <div class="hero-visual">
+        <div id="posterSection" class="poster-card">
+          <img id="posterImg" src="images/banner.png?v=3" alt="活動海報">
+        </div>
+        <div class="floating-card">
+          親子共學・現場完成
+          <span>適合幼兒園大班與國小低年級孩子</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 為什麼值得來 -->
+  <!-- 為什麼值得帶孩子來 -->
   <section class="section why-section" id="why">
     <div class="section-content">
       <h2 class="section-title fade-in">為什麼值得帶孩子來？</h2>
-      <p class="section-subtitle fade-in">不只是畫畫，更是一段孩子與家人共同完成的回憶</p>
+      <p class="section-subtitle fade-in">不只是畫畫，而是一段讓孩子表達愛、家長陪伴孩子的時間。</p>
       <div class="why-grid fade-in">
-        <div class="why-card"><div class="icon">🎨</div><h3>孩子容易投入</h3><p>主辦方提供著色底圖，孩子只要帶著畫材，用自己喜歡的方式上色即可。</p></div>
-        <div class="why-card"><div class="icon">👨‍👩‍👧</div><h3>家長能陪在旁邊</h3><p>活動設計重視陪伴，讓家長和孩子一起完成一段有溫度的親子時間。</p></div>
-        <div class="why-card"><div class="icon">🌷</div><h3>公益免費參加</h3><p>免費報名、名額有限；希望把機會留給真正能到場的家庭。</p></div>
+        <div class="why-card">
+          <div class="why-icon">🎨</div>
+          <h3>孩子容易投入</h3>
+          <p>現場提供著色底圖，孩子不用有畫畫基礎，也能用自己的方式完成作品。</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">💗</div>
+          <h3>親子一起完成</h3>
+          <p>家長陪在旁邊，不只是觀看比賽，而是陪孩子一起度過安靜溫暖的時光。</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">🌱</div>
+          <h3>公益免費參加</h3>
+          <p>活動免費，名額有限，讓更多孩子有機會透過色彩表達對家庭的愛。</p>
+        </div>
       </div>
     </div>
   </section>
 
-
-  <!-- ç¹è²åå¡ -->
+  <!-- 特色區塊 -->
   <section class="section" id="highlights">
     <div class="section-content">
-      <h2 class="section-title fade-in">æ´»åæå¸¶çµ¦å­©å­ä»éº¼ï¼</h2>
-      <p class="section-subtitle fade-in">ç°¡å®ãå®å¿ãæº«æï¼è®å­©å­å¨åµä½ä¸­è¡¨éå°å®¶çæ</p>
+      <h2 class="section-title fade-in">活動特色</h2>
+      <p class="section-subtitle fade-in">讓孩子用顏色表達對家人的愛，共創美好回憶</p>
       <div class="card-grid fade-in" id="highlightsGrid"></div>
     </div>
   </section>
 
-  <!-- ä¸å±æ´»ååé¡§ -->
+  <!-- 上屆活動回顧 -->
   <div class="section fade-in" style="padding-top: 20px;">
     <div class="section-content" style="max-width: 900px;">
       <div style="margin-bottom: 32px;">
-        <span class="quota-badge" style="background: var(--primary); color: white; font-size: 0.9rem; padding: 8px 20px;">ð¸ ä¸å±æ´»ååé¡§</span>
-        <h2 style="font-size: 1.8rem; font-weight: 900; color: var(--text); margin: 16px 0 8px; font-family: 'Zen Maru Gothic', sans-serif;">åæ»¿æ­¡ç¬çç²¾å½©ç¬é</h2>
+        <span class="quota-badge" style="background: var(--primary); color: white; font-size: 0.9rem; padding: 8px 20px;">📸 上屆活動回顧</span>
+        <h2 style="font-size: 1.8rem; font-weight: 900; color: var(--text); margin: 16px 0 8px; font-family: 'Zen Maru Gothic', sans-serif;">充滿歡笑的精彩瞬間</h2>
       </div>
 
       <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 36px;">
-        <div class="review-photo"><img src="images/å­©å­å°å¿ç«ç«çç¹å¯«.jpg" alt="å­©å­å°å¿åµä½" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <div class="review-photo"><img src="images/è¦ªå­ä¸èµ·åµä½çç«é¢.jpg" alt="è¦ªå­å±å­¸" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <div class="review-photo"><img src="images/æ­¡æ¨æ°£æ°ç§.jpg" alt="æ­¡æ¨æ°£æ°" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <div class="review-photo"><img src="images/ç¾å ´å¨æ¯.jpg" alt="ç¾å ´å¨æ¯" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <div class="review-photo"><img src="images/ä½åå±ç¤º.jpg" alt="ä½åå±ç¤º" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
-        <div class="review-photo"><img src="images/å¾çå­©å­é ççç«é¢.jpg" alt="å¾çé ç" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div class="review-photo"><img src="images/孩子專心畫畫的特寫.jpg" alt="孩子專心創作" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div class="review-photo"><img src="images/親子一起創作的畫面.jpg" alt="親子共學" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div class="review-photo"><img src="images/歡樂氣氛照.jpg" alt="歡樂氣氛" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div class="review-photo"><img src="images/現場全景.jpg" alt="現場全景" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div class="review-photo"><img src="images/作品展示.jpg" alt="作品展示" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
+        <div class="review-photo"><img src="images/得獎孩子領獎的畫面.jpg" alt="得獎頒獎" style="width:100%; aspect-ratio:4/3; object-fit:cover; transition: transform 0.4s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></div>
       </div>
 
-      <a href="https://www.ganjingworld.com/s/bzNW8NQKJq" target="_blank" rel="noopener" class="btn btn-outline">ð¬ ä¸å±æ´»åå½±çï¼æ¼ä¹¾æ·¨ä¸çæ­æ¾ï¼</a>
+      <a href="https://www.ganjingworld.com/s/bzNW8NQKJq" target="_blank" rel="noopener" class="btn btn-outline">🎬 上屆活動影片（於乾淨世界播放）</a>
 
-    <!-- ===== YouTube å½±çå ===== -->
+    <!-- ===== YouTube 影片區 ===== -->
     <div class="fade-up">
-      <div class="divider mb-6"><span>æ´»åè±çµ®å½±ç</span></div>
+      <div class="divider mb-6"><span>活動花絮影片</span></div>
       <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-        <h2 class="font-serif text-lg font-bold mb-5">ä¹¾æ·¨æ ¡åã»æææå®¶èè²ç«æ¯è³½ï½å®¶é·åé¥</h2>
+        <h2 class="font-serif text-lg font-bold mb-5">乾淨校園・我愛我家著色畫比賽｜家長反饋</h2>
         <div class="video-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
           <div>
             <div class="rounded-xl overflow-hidden aspect-video">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/eAzaLqsKM9s" title="å®¶é·åé¥ 01" frameborder="0" allowfullscreen></iframe>
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/eAzaLqsKM9s" title="家長反饋 01" frameborder="0" allowfullscreen></iframe>
             </div>
-            <p class="mt-2 text-sm text-center text-slate-500">å®¶é·åé¥ 01</p>
+            <p class="mt-2 text-sm text-center text-slate-500">家長反饋 01</p>
           </div>
           <div>
             <div class="rounded-xl overflow-hidden aspect-video">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/lLwVAWexeHY" title="å®¶é·åé¥ 02" frameborder="0" allowfullscreen></iframe>
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/lLwVAWexeHY" title="家長反饋 02" frameborder="0" allowfullscreen></iframe>
             </div>
-            <p class="mt-2 text-sm text-center text-slate-500">å®¶é·åé¥ 02</p>
+            <p class="mt-2 text-sm text-center text-slate-500">家長反饋 02</p>
           </div>
           <div>
             <div class="rounded-xl overflow-hidden aspect-video">
-              <iframe class="w-full h-full" src="https://www.youtube.com/embed/ygb8VG0eUrc" title="å®¶é·åé¥ 03" frameborder="0" allowfullscreen></iframe>
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/ygb8VG0eUrc" title="家長反饋 03" frameborder="0" allowfullscreen></iframe>
             </div>
-            <p class="mt-2 text-sm text-center text-slate-500">å®¶é·åé¥ 03</p>
+            <p class="mt-2 text-sm text-center text-slate-500">家長反饋 03</p>
           </div>
         </div>
       </div>
     </div>
 
-      <!-- ===== è§ç¾è¿´é¿ ===== -->
+      <!-- ===== 觀眾迴響 ===== -->
       <div style="margin-top: 60px;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; text-align: left;">
           <div class="testimonial-card">
-            <div style="font-size: 2.5rem; color: #ffe4ef; position: absolute; top: 10px; right: 20px; font-family: serif;">â</div>
-            <p style="font-size: 0.95rem; color: var(--text); line-height: 1.8; margin-bottom: 16px; font-weight: 600; position: relative; z-index: 1;">æ¨åè¾¦çå¾ç¨å¿ï¼æå®¶é·åé¥å¸æè½å¤è¾¦å¤å¤åçå¾ªç°ï¼ä¸ä¾çå­©å­é½å¾ä¹ï¼ç«ç«çèæ¯é³æ¨é¸çå¾å¥½ï¼</p>
-            <div style="font-size: 0.85rem; color: var(--primary-dark); font-weight: 800;">â­â­â­â­â­ ä¸å±åèå®¶é·</div>
+            <div style="font-size: 2.5rem; color: #ffe4ef; position: absolute; top: 10px; right: 20px; font-family: serif;">❝</div>
+            <p style="font-size: 0.95rem; color: var(--text); line-height: 1.8; margin-bottom: 16px; font-weight: 600; position: relative; z-index: 1;">您們辦的很用心，有家長回饋希望能多辦多多善的循環，且來的孩子都很乖，畫畫的背景音樂選的很好！</p>
+            <div style="font-size: 0.85rem; color: var(--primary-dark); font-weight: 800;">⭐⭐⭐⭐⭐ 上屆參與家長</div>
           </div>
           <div class="review-photo" style="border: none; box-shadow: 0 10px 30px rgba(255,107,157,0.15);">
-            <img src="images/å®¶é·åé¥.jpg" alt="å®¶é·çå¯¦åé¥" style="width: 100%; height: 100%; object-fit: cover;">
+            <img src="images/家長反饋.jpg" alt="家長真實反饋" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- æµç¨èçé  -->
+  <!-- 流程與獎項 -->
   <section class="section" id="schedule">
     <div class="section-content">
-      <h2 class="section-title fade-in">æ´»åæµç¨</h2>
+      <h2 class="section-title fade-in">活動流程</h2>
       <p class="section-subtitle fade-in" id="scheduleSubtitle"></p>
       <div class="timeline fade-in" id="timelineContainer"></div>
-      <p style="margin-top: 24px; font-size: 0.8rem; color: #a196a3; font-weight: 600;">ï¼æ´»åæµç¨åä¾åèï¼ä¸»è¾¦å®ä½ä¿çèª¿æ´æ¬å©</p>
+      <p style="margin-top: 24px; font-size: 0.8rem; color: #a196a3; font-weight: 600;">＊活動流程僅供參考，主辦單位保留調整權利</p>
       
       <div style="margin: 60px 0 20px;">
-        <h2 class="section-title fade-in">å°å±¬çé </h2>
-        <p class="section-subtitle fade-in">åçµçè¨­æä»¥ä¸è±å¯çåµï¼é¼åµå­©å­ç¼æ®åµæ</p>
+        <h2 class="section-title fade-in">專屬獎項</h2>
+        <p class="section-subtitle fade-in">各組皆設有以下豐富獎勵，鼓勵孩子發揮創意</p>
       </div>
       <div class="prize-grid fade-in" id="prizeGrid"></div>
     </div>
   </section>
 
-  <!-- å¸¸è¦åé¡ FAQ -->
+  <!-- 常見問題 FAQ -->
   <section class="section" id="faq" style="padding-bottom: 40px;">
     <div class="section-content">
-      <h2 class="section-title fade-in">å¸¸è¦åé¡</h2>
-      <p class="section-subtitle fade-in">å ±ååççåï¼éè£¡é½æç­æ¡</p>
+      <h2 class="section-title fade-in">常見問題</h2>
+      <p class="section-subtitle fade-in">報名前的疑問，這裡都有答案</p>
 
       <div style="max-width: 480px; margin: 0 auto;">
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð¨ å­©å­æ²ç«éç«å¯ä»¥åå åï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>🎨 孩子沒畫過畫可以參加嗎？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            å¯ä»¥ãéæ¯è³½æ¯é¼åµå­©å­ç¨èªå·±çæ¹å¼è¡¨éå°å®¶äººçæãä¸»è¾¦æ¹æä¾åºåï¼å­©å­ä¾èªå·±åæ­¡çæ¹å¼ä¸è²å³å¯ã
+            可以。這比賽是鼓勵孩子用自己的方式表達對家人的愛。主辦方提供底圖，孩子依自己喜歡的方式上色即可。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð¶ å®¶è£¡å©åå­©å­é½æ³åå ï¼è¦æéº¼å ±åï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>👶 家裡兩個孩子都想參加，要怎麼報名？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            è«åå¥å¡«å¯«å©ä»½å ±åè¡¨å®ï¼ä¾åèªçå¹´ç´é¸æçµå¥éåºå³å¯ã
+            請分別填寫兩份報名表單，依各自的年級選擇組別送出即可。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>â° ç¶å¤©é²å°ææéº¼èçï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>⏰ 當天遲到會怎麼處理？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            æ´»å 09:00 æºæéå§ï¼08:30 èµ·éæ¾å ±å°ãè¥æç¹æ®ææ³æé²å°ï¼è«æåä¾é»åç¥ï¼é³å°å§ 0913-837-389ï¼ã
+            活動 09:00 準時開始，08:30 起開放報到。若有特殊情況會遲到，請提前來電告知（陳小姐 0913-837-389）。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ðï¸ éè¦æºåä»éº¼æ±è¥¿ï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>🖍️ 需要準備什麼東西？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            <strong style="color: var(--text);">ä¸»è¾¦æ¹æä¾ï¼</strong>èè²åºåãæ¡æ¤ãå ´å°è¨­æ½ã<br>
-            <strong style="color: var(--text);">è«èªåï¼</strong>ç«æï¼è ç­ãå½©è²ç­ãè²éç­çå¯ï¼ã
+            <strong style="color: var(--text);">主辦方提供：</strong>著色底圖、桌椅、場地設施。<br>
+            <strong style="color: var(--text);">請自備：</strong>畫材（蠟筆、彩色筆、色鉛筆皆可）。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð± å ±åéåºå¾ï¼æéº¼ç¥éèªå·±éåéæ¯åè£ï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>📱 報名送出後，怎麼知道自己錄取還是候補？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            å ±åéåºå¾æç«å³é¡¯ç¤ºå°å±¬å ±ååºèï¼å³ä»£è¡¨é²å¥åå®ã<strong style="color: var(--primary-dark);">5/27ï¼ä¸ï¼</strong> ä¸»è¾¦æ¹æç¼éç°¡è¨éç¥ï¼è«æ¼ <strong style="color: var(--primary-dark);">5/28ï¼åï¼æä¸ 9 é»å</strong> åè¦ç¢ºèªï¼é¾ææªåè¦å°éåºåé¡çµ¦åè£å®¶åº­ã
+            報名送出後會立即顯示專屬報名序號，即代表進入名單。<strong style="color: var(--primary-dark);">5/27（三）</strong> 主辦方會發送簡訊通知，請於 <strong style="color: var(--primary-dark);">5/28（四）晚上 9 點前</strong> 回覆確認，逾時未回覆將釋出名額給候補家庭。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð æ¾ç¶å¾éåæ¬¡çå­©å­éè½å ±ååï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>🏆 曾經得過名次的孩子還能報名嗎？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            å¯ä»¥ãæ¾ç²åä¸åçèçä»æ­¡è¿åå ï¼äº«æå®æ´æ´»åé«é©ï¼ä½ä¸åå¥æ¬æ¬¡å¾çè©é¸ã
+            可以。曾獲前三名的舊生仍歡迎參加，享有完整活動體驗，但不列入本次得獎評選。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð° åå è²»ç¨æ¯å¤å°ï¼åé¡æå¤å°ï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>💰 參加費用是多少？名額有多少？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            åè²»åå ãåé¡æéï¼<strong style="color: var(--text);">å¹¼ååå¤§ç­çµ 15 åï¼åå°ä½å¹´ç´çµ 35 å</strong>ã
+            免費參加。名額有限：<strong style="color: var(--text);">幼兒園大班組 15 名／國小低年級組 35 名</strong>。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð¨âð©âð§ å¯ä»¥å¹¾ä½å®¶é·ä¸èµ·éªåå­©å­å¥å ´åï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>👨‍👩‍👧 可以幾位家長一起陪同孩子入場嗎？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            èéå ´å°ç©ºéæéï¼æ¯ä½å­©å­éä¸ä½å®¶é·éªåå¥å ´ã
+            考量場地空間有限，每位孩子限一位家長陪同入場。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð ä»éº¼æ¯èçï¼èçéåæä»éº¼ç¹å¥è¦åï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>🎓 什麼是舊生？舊生錄取有什麼特別規則？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            æ¾åå éæ¬æ´»åèçºèçãçºè®æ´å¤å­©å­ææ©æåèï¼æ¯çµåä¿ç <strong style="color: var(--text);">20%</strong> åé¡åªåéåèçï¼å¶é¤èçå°åçºåè£ã
+            曾參加過本活動者為舊生。為讓更多孩子有機會參與，每組僅保留 <strong style="color: var(--text);">20%</strong> 名額優先錄取舊生，其餘舊生將列為候補。
           </div>
         </div>
 
         <div class="glass-panel faq-item fade-in" style="border-radius: 18px; margin-bottom: 12px; overflow: hidden;">
           <div class="faq-q" style="padding: 18px 20px; cursor: pointer; font-weight: 800; color: var(--text); font-size: 0.98rem; display: flex; justify-content: space-between; align-items: center; gap: 12px; user-select: none; line-height: 1.5;">
-            <span>ð éå°åå¸æ°å¯ä»¥å ±ååï¼</span>
-            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">ï¼</span>
+            <span>📍 非台南市民可以報名嗎？</span>
+            <span class="faq-icon" style="font-size: 1.4rem; color: var(--primary); transition: transform 0.3s; flex-shrink: 0;">＋</span>
           </div>
           <div class="faq-a" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-muted);">
-            å¯ä»¥ãä½æ¬æ´»ååªåéåå°åå¸æ°ï¼éå°åå¸æ°å¯è½æè¢«åçºåè£ã
+            可以。但本活動優先錄取台南市民，非台南市民可能會被列為候補。
           </div>
         </div>
 
@@ -557,61 +876,61 @@
     </div>
   </section>
 
-  <!-- å ±åè¡¨å® -->
+  <!-- 報名表單 -->
   <section class="section" id="register" style="padding-bottom: 120px;">
     <div class="section-content" style="max-width: 520px;">
-      <h2 class="section-title fade-in" id="registerTitle" style="margin-bottom: 24px;">ç«å³å ±ååå </h2>
+      <h2 class="section-title fade-in" id="registerTitle" style="margin-bottom: 24px;">🖍️ 立即報名參加</h2>
       
       <div class="notice notice-pink fade-in" id="noticePink" style="padding: 14px 18px;">
-        <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.95rem; margin: 0;">ð éåºåè«ç¢ºèªï¼å­©å­çµå¥ãå®¶é·ææ©ãå­©å­å§åå¡«å¯«æ­£ç¢º</div>
-        <div style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600; margin-top: 6px;">æ´å¤æ´»åç´°ç¯è«åèä¸æ¹<a href="#faq" style="color: var(--primary-dark); font-weight: 800; text-decoration: underline;">å¸¸è¦åé¡</a></div>
+        <div style="font-weight: 800; color: var(--primary-dark); font-size: 0.95rem; margin: 0;">📌 送出前請確認：孩子組別、家長手機、孩子姓名填寫正確</div>
+        <div style="font-size: 0.82rem; color: var(--text-muted); font-weight: 600; margin-top: 6px;">更多活動細節請參考上方<a href="#faq" style="color: var(--primary-dark); font-weight: 800; text-decoration: underline;">常見問題</a></div>
       </div>
       <div class="notice notice-green fade-in" id="noticeGreen">
-        <div class="notice-title">â åºå¸­ç¢ºèªæ©å¶</div>
+        <div class="notice-title">✅ 出席確認機制</div>
         <ul>
-          <li><strong style="color:#059669;" id="confirmSendDateText"></strong> å°ç¼éç¢ºèªç°¡è¨</li>
-          <li>è«æ¼ <strong style="color:#059669;" id="confirmDeadlineText"></strong> ååè¦ç¢ºèª</li>
-          <li>é¾ææªåè¦å°èªåéåºåé¡çµ¦åè£å®¶åº­</li>
+          <li><strong style="color:#059669;" id="confirmSendDateText"></strong> 將發送確認簡訊</li>
+          <li>請於 <strong style="color:#059669;" id="confirmDeadlineText"></strong> 前回覆確認</li>
+          <li>逾時未回覆將自動釋出名額給候補家庭</li>
         </ul>
       </div>
       <div class="notice notice-yellow fade-in" id="waitlistNotice" style="display: none;">
-        <div class="notice-title">ð åè£èªªæ</div>
+        <div class="notice-title">📋 候補說明</div>
         <ul>
-          <li>ç®ååé¡å·²æ»¿ï¼éæ¾åè£ç»è¨ä¸­</li>
-          <li>è¥æåé¡éåºï¼å°ä¾åºä»¥ç°¡è¨éç¥</li>
+          <li>目前名額已滿，開放候補登記中</li>
+          <li>若有名額釋出，將依序以簡訊通知</li>
         </ul>
       </div>
 
-      <!-- æåå¡ç (ä¿çåæ¬ID) -->
+      <!-- 成功卡片 (保留原本ID) -->
       <div id="successCard">
-        <div style="font-size: 4rem; margin-bottom: 16px;" id="successIcon">ð</div>
-        <div style="font-size: 1.8rem; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px; font-family: 'Zen Maru Gothic', sans-serif;" id="successTitle">å ±åæåï¼</div>
-        <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">æ¨çå°å±¬å ±ååºè</div>
-        <div id="successRid" onclick="copyRid()" title="é»æè¤è£½åºè" style="display: inline-block; background: #fff0f5; color: var(--primary-dark); padding: 10px 24px; border-radius: 12px; font-family: 'Nunito', monospace; font-weight: 900; font-size: 1.2rem; letter-spacing: 2px; margin: 12px 0; cursor: pointer; border: 2px dashed #ffb6d3; transition: all 0.3s;">---</div>
-        <div id="copyRidMsg" style="font-size: 0.85rem; color: #059669; font-weight: 700; display: none;">â åºèå·²è¤è£½ï¼</div>
+        <div style="font-size: 4rem; margin-bottom: 16px;" id="successIcon">🎉</div>
+        <div style="font-size: 1.8rem; font-weight: 900; color: var(--primary-dark); margin-bottom: 12px; font-family: 'Zen Maru Gothic', sans-serif;" id="successTitle">報名成功！</div>
+        <div style="font-size: 0.9rem; color: var(--text-muted); font-weight: 600;">您的專屬報名序號</div>
+        <div id="successRid" onclick="copyRid()" title="點擊複製序號" style="display: inline-block; background: #fff0f5; color: var(--primary-dark); padding: 10px 24px; border-radius: 12px; font-family: 'Nunito', monospace; font-weight: 900; font-size: 1.2rem; letter-spacing: 2px; margin: 12px 0; cursor: pointer; border: 2px dashed #ffb6d3; transition: all 0.3s;">---</div>
+        <div id="copyRidMsg" style="font-size: 0.85rem; color: #059669; font-weight: 700; display: none;">✅ 序號已複製！</div>
         
         <div id="successInfo" style="background: #fdfbfb; border-radius: 16px; padding: 20px; text-align: left; margin: 20px 0; font-size: 0.9rem; line-height: 1.8; color: #5a4b5d; border: 1px solid #eee;"></div>
         
         <div id="successConfirmBox" style="background: #ecfdf5; border-left: 4px solid #10b981; border-radius: 12px; padding: 16px; text-align: left; margin-bottom: 24px;">
-          <p style="font-weight: 800; color: #065f46; margin-bottom: 8px;">ð± çæææ©ç°¡è¨</p>
+          <p style="font-weight: 800; color: #065f46; margin-bottom: 8px;">📱 留意手機簡訊</p>
           <p id="successConfirmText1" style="font-size: 0.85rem; color: #065f46; margin-bottom: 4px;"></p>
           <p id="successConfirmText2" style="font-size: 0.85rem; color: #065f46;"></p>
         </div>
         
         <div id="successWaitlistBox" style="display: none; background: #fffbeb; border-left: 4px solid #f59e0b; border-radius: 12px; padding: 16px; text-align: left; margin-bottom: 24px;">
-          <p style="font-weight: 800; color: #92400e; margin-bottom: 8px;">ð åè£éç¥</p>
-          <p style="font-size: 0.85rem; color: #92400e;">æ¨ç®ååçºåè£ï¼è¥æåé¡éåºå°ä»¥ç°¡è¨éç¥ãè«ä¿æææ©æ¢éï¼</p>
+          <p style="font-weight: 800; color: #92400e; margin-bottom: 8px;">📋 候補通知</p>
+          <p style="font-size: 0.85rem; color: #92400e;">您目前列為候補，若有名額釋出將以簡訊通知。請保持手機暢通！</p>
         </div>
         
         <div style="display: flex; flex-direction: column; gap: 12px;">
-          <a href="thanks.html" id="successThanksLink" class="btn btn-primary">ð æ¥çå®æ´å ±åè³è¨</a>
-          <button type="button" class="btn btn-outline" onclick="resetForm()">åå ±åä¸ä½å­©å­</button>
+          <a href="thanks.html" id="successThanksLink" class="btn btn-primary">👉 查看完整報名資訊</a>
+          <button type="button" class="btn btn-outline" onclick="resetForm()">再報名一位孩子</button>
         </div>
       </div>
 
-      <!-- è¡¨å®æ¬é« -->
+      <!-- 表單本體 -->
       <div class="form-card fade-in" id="formCard">
-        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: white; padding: 4px 16px; border-radius: 50px; font-size: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee;">âï¸</div>
+        <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); background: white; padding: 4px 16px; border-radius: 50px; font-size: 1.5rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #eee;">✍️</div>
         
         <div class="progress" id="progress"><div class="progress-bar"></div></div>
         <div id="formError" style="background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; padding: 16px; border-radius: 16px; margin-bottom: 20px; display: none; font-size: 0.9rem; font-weight: 700; text-align: left;"></div>
@@ -621,88 +940,88 @@
           
           <div class="form-row">
             <div class="form-group">
-              <label>è½å¨ç¨åèåï¼ <span class="required">*</span></label>
+              <label>能全程參與嗎？ <span class="required">*</span></label>
               <select id="fullJoin" class="form-control" required>
-                <option value="">è«é¸æ</option><option value="æ¯">æ¯ï¼æ²åé¡</option><option value="å¦">å¦</option>
+                <option value="">請選擇</option><option value="是">是，沒問題</option><option value="否">否</option>
               </select>
-              <div style="font-size: 0.75rem; color: #a196a3; margin-top: 4px; font-weight: 600;">ï¼åä¾çµ±è¨ï¼</div>
+              <div style="font-size: 0.75rem; color: #a196a3; margin-top: 4px; font-weight: 600;">（僅供統計）</div>
             </div>
             <div class="form-group">
-              <label>æ¯å¦çºå°åå¸æ° <span class="required">*</span></label>
+              <label>是否為台南市民 <span class="required">*</span></label>
               <select id="resident" class="form-control" required>
-                <option value="">è«é¸æ</option><option value="æ¯">æ¯</option><option value="å¦">å¦</option>
+                <option value="">請選擇</option><option value="是">是</option><option value="否">否</option>
               </select>
-              <div style="font-size: 0.75rem; color: #d97706; margin-top: 4px; font-weight: 700;">â­ å°åå¸æ°äº«æåªåéåæ¬</div>
+              <div style="font-size: 0.75rem; color: #d97706; margin-top: 4px; font-weight: 700;">⭐ 台南市民享有優先錄取權</div>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>å®¶é·å§å <span class="required">*</span></label>
-              <input type="text" id="parentName" class="form-control" required placeholder="ä¾å¦ï¼çå°æ">
+              <label>家長姓名 <span class="required">*</span></label>
+              <input type="text" id="parentName" class="form-control" required placeholder="例如：王小明">
             </div>
             <div class="form-group">
-              <label>è¯çµ¡ææ© <span class="required">*</span></label>
+              <label>聯絡手機 <span class="required">*</span></label>
               <input type="tel" id="phone" class="form-control" required placeholder="09xxxxxxxx" inputmode="numeric" maxlength="10">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>å­©å­å§å <span class="required">*</span></label>
-              <input type="text" id="childName" class="form-control" required placeholder="ä¾å¦ï¼çå¤§å¯¶">
+              <label>孩子姓名 <span class="required">*</span></label>
+              <input type="text" id="childName" class="form-control" required placeholder="例如：王大寶">
             </div>
             <div class="form-group">
-              <label>å­©å­å¹´ç´ <span class="required">*</span></label>
+              <label>孩子年級 <span class="required">*</span></label>
               <select id="childAge" class="form-control" required>
-                <option value="">è«é¸æ</option>
-                <option value="å¹¼ååå¤§ç­çµ">å¹¼ååï¼å¤§ç­ï¼</option>
-                <option value="åå°ä½å¹´ç´">åå°ï¼ä¸ãäºå¹´ç´ï¼</option>
+                <option value="">請選擇</option>
+                <option value="幼兒園大班組">幼兒園（大班）</option>
+                <option value="國小低年級">國小（一、二年級）</option>
               </select>
             </div>
           </div>
           <div class="form-group">
-            <label>åè³½çµå¥ <span class="required">*</span></label>
+            <label>參賽組別 <span class="required">*</span></label>
             <select id="group" class="form-control" required>
-              <option value="">ç³»çµ±å°èªåå¸¶å¥çµå¥</option>
-              <option value="å¹¼ååå¤§ç­çµ" id="optK">å¹¼ååå¤§ç­çµ</option>
-              <option value="åå°ä½å¹´ç´çµ" id="optE">åå°ä½å¹´ç´çµ</option>
+              <option value="">系統將自動帶入組別</option>
+              <option value="幼兒園大班組" id="optK">幼兒園大班組</option>
+              <option value="國小低年級組" id="optE">國小低年級組</option>
             </select>
           </div>
           <div class="form-group">
-            <label>å°±è®å­¸æ ¡ <span style="color:#a196a3; font-weight:normal; font-size:0.8rem;">(é¸å¡«)</span></label>
-            <input type="text" id="school" class="form-control" placeholder="ä¾å¦ï¼å°åå¸ââåå°">
+            <label>就讀學校 <span style="color:#a196a3; font-weight:normal; font-size:0.8rem;">(選填)</span></label>
+            <input type="text" id="school" class="form-control" placeholder="例如：台南市○○國小">
           </div>
           <div class="form-group" style="margin-bottom: 30px;">
-            <label>åè¨»çè¨ <span style="color:#a196a3; font-weight:normal; font-size:0.8rem;">(é¸å¡«)</span></label>
-            <textarea id="note" class="form-control" rows="2" placeholder="æä»éº¼æ³åè¨´æåçåï¼"></textarea>
+            <label>備註留言 <span style="color:#a196a3; font-weight:normal; font-size:0.8rem;">(選填)</span></label>
+            <textarea id="note" class="form-control" rows="2" placeholder="有什麼想告訴我們的嗎？"></textarea>
           </div>
           
-          <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; font-size: 1.1rem; padding: 18px;">ç¢ºèªéåºå ±åè¡¨</button>
+          <button type="submit" class="btn btn-primary" id="submitBtn" style="width: 100%; font-size: 1.1rem; padding: 18px;">確認送出報名表</button>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- è¯çµ¡è³è¨ -->
+  <!-- 聯絡資訊 -->
   <section class="section" id="contact" style="padding-bottom: 80px;">
     <div class="section-content">
-      <h2 class="section-title fade-in" style="margin-bottom: 30px;">è¯çµ¡æå</h2>
+      <h2 class="section-title fade-in" style="margin-bottom: 30px;">聯絡我們</h2>
       <div class="glass-panel fade-in" style="border-radius: 24px; padding: 30px 20px; max-width: 420px; margin: 0 auto 20px;">
-        <div style="font-size: 2.5rem; margin-bottom: 12px;">ð</div>
+        <div style="font-size: 2.5rem; margin-bottom: 12px;">📍</div>
         <div style="font-size: 1.2rem; font-weight: 900; color: var(--primary-dark); margin-bottom: 8px; font-family: 'Zen Maru Gothic', sans-serif;" id="venueText"></div>
         <div style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; font-weight: 600;" id="addressText"></div>
         <div style="display: flex; justify-content: center; gap: 12px;">
-          <button type="button" class="btn btn-outline btn-sm" id="copyAddressBtn" style="background: white;">ð è¤è£½å°å</button>
-          <a href="#" class="btn btn-primary btn-sm" id="mapLink" target="_blank" style="box-shadow: none;">ðºï¸ éåå°èª</a>
+          <button type="button" class="btn btn-outline btn-sm" id="copyAddressBtn" style="background: white;">📋 複製地址</button>
+          <a href="#" class="btn btn-primary btn-sm" id="mapLink" target="_blank" style="box-shadow: none;">🗺️ 開啟導航</a>
         </div>
       </div>
       
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 420px; margin: 0 auto;" class="fade-in">
         <div class="glass-panel" style="border-radius: 20px; padding: 20px;">
-          <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">ä¸»è¾¦å®ä½</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">主辦單位</div>
           <div style="font-weight: 800; font-size: 0.95rem; color: var(--text);" id="organizerText"></div>
         </div>
         <div class="glass-panel" style="border-radius: 20px; padding: 20px;">
-          <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">æ´»åæ´½è©¢</div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 700; margin-bottom: 8px;">活動洽詢</div>
           <div style="font-weight: 800; font-size: 1rem; color: var(--primary-dark);" id="contactText"></div>
         </div>
       </div>
@@ -715,32 +1034,32 @@
 
     <div style="max-width: 520px; margin: 0 auto; display: grid; gap: 12px; font-size: 0.85rem; line-height: 1.7; color: var(--text-muted); font-weight: 600;">
       <div>
-        <span style="color: var(--text); font-weight: 800;">ä¸»è¾¦å®ä½ï¼</span><span id="footerOrganizer"></span>
+        <span style="color: var(--text); font-weight: 800;">主辦單位：</span><span id="footerOrganizer"></span>
       </div>
       <div>
-        <span style="color: var(--text); font-weight: 800;">åè¾¦å®ä½ï¼</span><span id="footerCoOrganizer"></span>
+        <span style="color: var(--text); font-weight: 800;">協辦單位：</span><span id="footerCoOrganizer"></span>
       </div>
       <div>
-        <span style="color: var(--text); font-weight: 800;">åè¾¦å®ä½ï¼</span><span id="footerCoOrganizerSub"></span>
+        <span style="color: var(--text); font-weight: 800;">協辦單位：</span><span id="footerCoOrganizerSub"></span>
       </div>
       <div>
-        <span style="color: var(--text); font-weight: 800;">æ´»åæ´½è©¢ï¼</span>
+        <span style="color: var(--text); font-weight: 800;">活動洽詢：</span>
         <a id="footerPhoneLink" href="#" style="color: var(--primary-dark); font-weight: 800; text-decoration: none;"><span id="footerContact"></span></a>
       </div>
     </div>
 
     <div style="margin-top: 28px; padding-top: 20px; border-top: 1px solid #f3e8ec; font-size: 0.78rem; color: #b0a4b3; font-weight: 600;">
-      Â© 2026 ä¹¾æ·¨æ ¡åæ¨å»£åéï¼ä¿çæææ¬å©
+      © 2026 乾淨校園推廣團隊．保留所有權利
     </div>
   </footer>
 
-  <!-- Sticky CTA (ææ©çåºé¨æ¸æµ®æé) -->
+  <!-- Sticky CTA (手機版底部懸浮按鈕) -->
   <div class="sticky-cta">
-    <a href="#register" class="btn btn-primary">ð ç«å³å ±å</a>
-    <a href="#" class="btn btn-outline" id="stickyPhone">ð å°ç·æ´½è©¢</a>
+    <a href="#register" class="btn btn-primary">立即報名</a>
+    <a href="#" class="btn btn-outline" id="stickyPhone">專線洽詢</a>
   </div>
 
-  <!-- ====== JS éè¼¯åå®å¨ä¿çä¸è® ====== -->
+  <!-- ====== JS 邏輯區完全保留不變 ====== -->
   <script>
   (function() {
     'use strict';
@@ -770,12 +1089,12 @@
           setInterval(loadGroupStatus, 30000);
           logView();
         })
-        .catch(function(err) { console.error('è¼å¥è¨­å®å¤±æ', err); hideLoader(); });
+        .catch(function(err) { console.error('載入設定失敗', err); hideLoader(); });
     }
 
     function renderPage() {
       if (!cfg) return;
-      $('heroInfo').textContent = cfg.eventDate + ' ï½ ' + cfg.eventVenue;
+      $('heroInfo').textContent = cfg.eventDate + ' ｜ ' + cfg.eventVenue;
       $('posterSection').style.display = 'block';
       if (cfg.posterImage) { $('posterImg').src = cfg.posterImage; }
       
@@ -784,7 +1103,7 @@
         hGrid.innerHTML += '<div class="card"><div class="card-icon">' + h.icon + '</div><h3>' + h.title + '</h3><p>' + h.desc + '</p></div>';
       });
       
-      $('scheduleSubtitle').textContent = cfg.eventDate + ' ï½ ' + cfg.eventTime;
+      $('scheduleSubtitle').textContent = cfg.eventDate + ' ｜ ' + cfg.eventTime;
       var tl = $('timelineContainer'); tl.innerHTML = '';
       cfg.schedule.forEach(function(s) {
         tl.innerHTML += '<div class="timeline-item"><div class="timeline-dot">' + s.icon + '</div><div class="timeline-content"><div class="timeline-time">' + s.time + '</div><div class="timeline-title">' + s.title + '</div><div class="timeline-desc">' + s.desc + '</div></div></div>';
@@ -798,7 +1117,7 @@
       $('confirmSendDateText').textContent = cfg.confirmSendDate;
       $('confirmDeadlineText').textContent = cfg.confirmDeadline;
 
-      // å ±åæªæ­¢é¡¯ç¤ºï¼ä½¿ç¨ cfg.registrationDeadlineï¼
+      // 報名截止顯示（使用 cfg.registrationDeadline）
       if (cfg.registrationDeadline) {
         try {
           var dl = new Date(cfg.registrationDeadline);
@@ -806,43 +1125,43 @@
             var now = new Date();
             var diffMs = dl.getTime() - now.getTime();
             var diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-            var WEEK = ['æ¥','ä¸','äº','ä¸','å','äº','å­'];
-            var dlStr = (dl.getMonth() + 1) + '/' + dl.getDate() + 'ï¼' + WEEK[dl.getDay()] + 'ï¼' +
+            var WEEK = ['日','一','二','三','四','五','六'];
+            var dlStr = (dl.getMonth() + 1) + '/' + dl.getDate() + '（' + WEEK[dl.getDay()] + '）' +
                         String(dl.getHours()).padStart(2,'0') + ':' + String(dl.getMinutes()).padStart(2,'0');
             var txt = '';
             if (diffMs <= 0) {
-              txt = 'â° å ±åå·²æªæ­¢';
+              txt = '⏰ 報名已截止';
               $('deadlineBanner').style.background = '#fef2f2';
               $('deadlineBanner').style.borderColor = '#fecaca';
               $('deadlineBanner').style.color = '#dc2626';
             } else if (diffDays <= 3) {
-              txt = 'ð¥ åæ¸ ' + diffDays + ' å¤©ã»' + dlStr + ' æªæ­¢å ±å';
+              txt = '🔥 倒數 ' + diffDays + ' 天・' + dlStr + ' 截止報名';
               $('deadlineBanner').style.background = '#fff1f2';
               $('deadlineBanner').style.borderColor = '#fecdd3';
               $('deadlineBanner').style.color = '#be123c';
             } else {
-              txt = 'â° å ±åæªæ­¢ï¼' + dlStr + 'ï¼éæ ' + diffDays + ' å¤©ï¼';
+              txt = '⏰ 報名截止：' + dlStr + '（還有 ' + diffDays + ' 天）';
             }
             $('deadlineText').textContent = txt;
             $('deadlineBanner').style.display = 'inline-block';
           }
-        } catch(e) { /* å¿½ç¥é¯èª¤ï¼ä¿æé±è */ }
+        } catch(e) { /* 忽略錯誤，保持隱藏 */ }
       }
       
-      var limitK = cfg.groups['å¹¼ååå¤§ç­çµ'] ? cfg.groups['å¹¼ååå¤§ç­çµ'].displayLimit : '?';
-      var limitE = cfg.groups['åå°ä½å¹´ç´çµ'] ? cfg.groups['åå°ä½å¹´ç´çµ'].displayLimit : '?';
-      $('optK').textContent = 'å¹¼ååå¤§ç­çµï¼é ' + limitK + ' åï¼';
-      $('optE').textContent = 'åå°ä½å¹´ç´çµï¼é ' + limitE + ' åï¼';
+      var limitK = cfg.groups['幼兒園大班組'] ? cfg.groups['幼兒園大班組'].displayLimit : '?';
+      var limitE = cfg.groups['國小低年級組'] ? cfg.groups['國小低年級組'].displayLimit : '?';
+      $('optK').textContent = '幼兒園大班組（限 ' + limitK + ' 名）';
+      $('optE').textContent = '國小低年級組（限 ' + limitE + ' 名）';
       
-      $('successInfo').innerHTML = 'ð <strong>' + cfg.eventDate + '</strong>ï¼' + cfg.eventTime + 'ï¼<br>ð ' + cfg.eventVenue + '<br>ð£ 08:30 éå§å ±å°ï¼è«æºæå°å ´<br>ðï¸ è«èªåç«æï¼å½©è²ç­ãè ç­ç­ï¼';
-      $('successConfirmText1').textContent = cfg.confirmSendDate + ' å°ç¼éç°¡è¨ç¢ºèªåºå¸­ã';
-      $('successConfirmText2').textContent = cfg.confirmDeadline + ' åæªåè¦å°è¦çºåæ¶ï¼åé¡éåºçµ¦åè£èã';
+      $('successInfo').innerHTML = '📅 <strong>' + cfg.eventDate + '</strong>（' + cfg.eventTime + '）<br>📍 ' + cfg.eventVenue + '<br>🕣 08:30 開始報到，請準時到場<br>🖍️ 請自備畫材（彩色筆、蠟筆等）';
+      $('successConfirmText1').textContent = cfg.confirmSendDate + ' 將發送簡訊確認出席。';
+      $('successConfirmText2').textContent = cfg.confirmDeadline + ' 前未回覆將視為取消，名額釋出給候補者。';
       $('venueText').textContent = cfg.eventVenue;
       $('addressText').textContent = cfg.eventAddress;
       $('mapLink').href = cfg.eventMapUrl;
       $('organizerText').textContent = cfg.organizer;
       $('contactText').textContent = cfg.contactName + ' ' + cfg.contactPhone;
-      $('footerText').textContent = 'ð ' + cfg.eventName + ' æå¾æ¨çåè';
+      $('footerText').textContent = '💕 ' + cfg.eventName + ' 期待您的參與';
       $('footerOrganizer').textContent = cfg.organizer || '';
       $('footerCoOrganizer').textContent = cfg.coOrganizer || '';
       $('footerCoOrganizerSub').textContent = cfg.coOrganizerSub || '';
@@ -852,21 +1171,21 @@
       document.title = cfg.eventName;
     }
 
-    var STATUS_DISPLAY = { open: 'ð¢ ç±çå ±åä¸­', almostFull: 'ð¥ å³å°é¡æ»¿', waitlist: 'â ï¸ å·²æ»¿(åè£ä¸­)' };
+    var STATUS_DISPLAY = { open: '🟢 熱烈報名中', almostFull: '🔥 即將額滿', waitlist: '⚠️ 已滿(候補中)' };
 
     function loadGroupStatus() {
       fetch(GAS_URL + '?action=checkStatus')
         .then(function(r) { return r.json(); })
         .then(function(data) { updateUI(data); })
-        .catch(function() { console.log('ç¡æ³åå¾çæ'); });
+        .catch(function() { console.log('無法取得狀態'); });
     }
 
     function updateUI(data) {
       if (!data) return;
-      updateBadge($('quotaK'), data['å¹¼ååå¤§ç­çµ']);
-      updateBadge($('quotaE'), data['åå°ä½å¹´ç´çµ']);
-      updateCountdown($('countdownK'), $('countdownKSub'), data['å¹¼ååå¤§ç­çµ']);
-      updateCountdown($('countdownE'), $('countdownESub'), data['åå°ä½å¹´ç´çµ']);
+      updateBadge($('quotaK'), data['幼兒園大班組']);
+      updateBadge($('quotaE'), data['國小低年級組']);
+      updateCountdown($('countdownK'), $('countdownKSub'), data['幼兒園大班組']);
+      updateCountdown($('countdownE'), $('countdownESub'), data['國小低年級組']);
       updateGroupOptions(data);
       updateRegisterSection(data);
     }
@@ -876,21 +1195,21 @@
       numEl.className = 'quota-countdown-number';
       if (info.status === 'waitlist') {
         numEl.textContent = '0'; numEl.style.color = '#dc2626';
-        if (subEl) subEl.textContent = 'åé¡å·²æ»¿';
+        if (subEl) subEl.textContent = '名額已滿';
       } else if (info.status === 'almostFull') {
         var remain = info.displayLimit - info.displayCount;
-        numEl.textContent = remain > 0 ? remain : 'â'; numEl.style.color = '#d97706';
-        if (subEl) subEl.textContent = 'åé¡å³å°é¡æ»¿';
+        numEl.textContent = remain > 0 ? remain : '—'; numEl.style.color = '#d97706';
+        if (subEl) subEl.textContent = '名額即將額滿';
       } else {
         var remain2 = info.displayLimit - info.displayCount;
-        numEl.textContent = remain2 > 0 ? remain2 : 'â'; numEl.classList.add('open');
-        if (subEl) subEl.textContent = 'åé¡å©é¤';
+        numEl.textContent = remain2 > 0 ? remain2 : '—'; numEl.classList.add('open');
+        if (subEl) subEl.textContent = '名額剩餘';
       }
     }
 
     function updateBadge(el, info) {
       if (!el || !info) return;
-      el.textContent = STATUS_DISPLAY[info.status] || 'æ¥è©¢ä¸­';
+      el.textContent = STATUS_DISPLAY[info.status] || '查詢中';
       el.className = 'quota-badge';
       if (info.status === 'open') { el.classList.add('open'); el.style.background='#ecfdf5'; el.style.color='#059669'; }
       else if (info.status === 'almostFull') { el.style.background='#fffbeb'; el.style.color='#d97706'; }
@@ -904,9 +1223,9 @@
         var info = data[opt.value];
         if (info) {
           var suffix = '';
-          if (info.status === 'open') suffix = 'ï¼é ' + info.displayLimit + ' åï¼';
-          else if (info.status === 'almostFull') suffix = 'ï¼å³å°é¡æ»¿ï¼';
-          else if (info.status === 'waitlist') suffix = 'ï¼å·²é¡æ»¿ï¼æ¥ååè£ï¼';
+          if (info.status === 'open') suffix = '（限 ' + info.displayLimit + ' 名）';
+          else if (info.status === 'almostFull') suffix = '（即將額滿）';
+          else if (info.status === 'waitlist') suffix = '（已額滿，接受候補）';
           opt.textContent = opt.value + suffix;
         }
       });
@@ -914,17 +1233,17 @@
 
     function updateRegisterSection(data) {
       var title = $('registerTitle'); var notice = $('waitlistNotice'); var btn = $('submitBtn');
-      var kWait = data['å¹¼ååå¤§ç­çµ'] && data['å¹¼ååå¤§ç­çµ'].status === 'waitlist';
-      var eWait = data['åå°ä½å¹´ç´çµ'] && data['åå°ä½å¹´ç´çµ'].status === 'waitlist';
+      var kWait = data['幼兒園大班組'] && data['幼兒園大班組'].status === 'waitlist';
+      var eWait = data['國小低年級組'] && data['國小低年級組'].status === 'waitlist';
       if (kWait && eWait) {
-        if (title) title.textContent = 'â ï¸ åé¡å·²æ»¿ï½éæ¾åè£ç»è¨';
+        if (title) title.textContent = '⚠️ 名額已滿｜開放候補登記';
         if (notice) notice.style.display = 'block';
-        if (btn) btn.innerHTML = 'ð ç»è¨åè£';
+        if (btn) btn.innerHTML = '📋 登記候補';
       } else if (kWait || eWait) {
-        if (title) title.textContent = 'ð¥ é¨åçµå¥å³å°é¡æ»¿';
+        if (title) title.textContent = '🔥 部分組別即將額滿';
         if (notice) notice.style.display = 'block';
       } else {
-        if (title) title.textContent = 'ç«å³å ±ååå ';
+        if (title) title.textContent = '🖍️ 立即報名參加';
         if (notice) notice.style.display = 'none';
       }
     }
@@ -933,21 +1252,21 @@
 
     function validateForm() {
       var errors =[];
-      if (!$('fullJoin').value) errors.push('è«é¸ææ¯å¦è½å¨ç¨åè');
-      if ($('fullJoin').value === 'å¦') errors.push('å æ´»åæµç¨é£è²«ï¼å»ºè­°è½å¨ç¨åèãè¥æéæå°é£ï¼æ­¡è¿åä¾é»è¯ç¹«é³å°å§ 0913-837-389');
-      if (!$('resident').value) errors.push('è«é¸ææ¯å¦çºå°åå¸æ°');
-      if (!$('parentName').value.trim()) errors.push('è«å¡«å¯«å®¶é·å§å');
-      if (!$('phone').value.trim()) errors.push('è«å¡«å¯«è¯çµ¡ææ©');
-      if ($('phone').value && !/^09\d{8}$/.test($('phone').value.trim())) errors.push('ææ©èç¢¼æ ¼å¼é¯èª¤ï¼09xxxxxxxxï¼');
-      if (!$('childName').value.trim()) errors.push('è«å¡«å¯«å­©å­å§å');
-      if (!$('childAge').value) errors.push('è«é¸æå­©å­å¹´ç´');
-      if (!$('group').value) errors.push('è«é¸æåè³½çµå¥');
+      if (!$('fullJoin').value) errors.push('請選擇是否能全程參與');
+      if ($('fullJoin').value === '否') errors.push('因活動流程連貫，建議能全程參與。若時間有困難，歡迎先來電聯繫陳小姐 0913-837-389');
+      if (!$('resident').value) errors.push('請選擇是否為台南市民');
+      if (!$('parentName').value.trim()) errors.push('請填寫家長姓名');
+      if (!$('phone').value.trim()) errors.push('請填寫聯絡手機');
+      if ($('phone').value && !/^09\d{8}$/.test($('phone').value.trim())) errors.push('手機號碼格式錯誤（09xxxxxxxx）');
+      if (!$('childName').value.trim()) errors.push('請填寫孩子姓名');
+      if (!$('childAge').value) errors.push('請選擇孩子年級');
+      if (!$('group').value) errors.push('請選擇參賽組別');
       return errors;
     }
 
     function showError(messages) {
       var el = $('formError');
-      el.innerHTML = messages.map(function(m) { return '<p>â ï¸ ' + m + '</p>'; }).join('');
+      el.innerHTML = messages.map(function(m) { return '<p>⚠️ ' + m + '</p>'; }).join('');
       el.style.display = 'block'; el.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
     function hideError() { $('formError').style.display = 'none'; }
@@ -961,11 +1280,11 @@
       var thanksUrl = 'thanks.html?rid=' + encodeURIComponent(regId) + '&status=' + encodeURIComponent(status);
       $('successThanksLink').href = thanksUrl;
       
-      if (status === 'åè£') {
-        $('successIcon').textContent = 'ð'; $('successTitle').textContent = 'åè£ç»è¨æåï¼'; $('successTitle').style.color = '#d97706';
+      if (status === '候補') {
+        $('successIcon').textContent = '📋'; $('successTitle').textContent = '候補登記成功！'; $('successTitle').style.color = '#d97706';
         $('successConfirmBox').style.display = 'none'; $('successWaitlistBox').style.display = 'block';
       } else {
-        $('successIcon').textContent = 'ð'; $('successTitle').textContent = 'å ±åæåï¼'; $('successTitle').style.color = 'var(--primary-dark)';
+        $('successIcon').textContent = '🎉'; $('successTitle').textContent = '報名成功！'; $('successTitle').style.color = 'var(--primary-dark)';
         $('successConfirmBox').style.display = 'block'; $('successWaitlistBox').style.display = 'none';
       }
       card.style.display = 'block';
@@ -981,10 +1300,10 @@
 
     window.resetForm = function() {
       $('successCard').style.display = 'none'; $('formCard').style.display = 'block'; $('registerTitle').style.display = '';
-      // åé è¨­é¡¯ç¤ºï¼loadGroupStatus å®æå¾ updateRegisterSection æåä¾çææ­£ç¢ºèª¿æ´
+      // 先預設顯示，loadGroupStatus 完成後 updateRegisterSection 會再依狀態正確調整
       $('noticePink').style.display = 'block'; $('noticeGreen').style.display = 'block';
       $('registerForm').reset(); hideError();
-      var btn = $('submitBtn'); btn.disabled = false; btn.innerHTML = 'ç¢ºèªéåºå ±åè¡¨';
+      var btn = $('submitBtn'); btn.disabled = false; btn.innerHTML = '確認送出報名表';
       $('progress').classList.remove('show');
       document.getElementById('register').scrollIntoView({ behavior: 'smooth', block: 'start' });
       loadGroupStatus();
@@ -993,14 +1312,14 @@
     document.addEventListener('DOMContentLoaded', function() {
       loadConfig();
       $('childAge').addEventListener('change', function() {
-        if (this.value === 'å¹¼ååå¤§ç­çµ') $('group').value = 'å¹¼ååå¤§ç­çµ';
-        else if (this.value === 'åå°ä½å¹´ç´') $('group').value = 'åå°ä½å¹´ç´çµ';
+        if (this.value === '幼兒園大班組') $('group').value = '幼兒園大班組';
+        else if (this.value === '國小低年級') $('group').value = '國小低年級組';
       });
       $('copyAddressBtn').addEventListener('click', function() {
         var btn = this; var address = cfg ? cfg.eventAddress : '';
         if(navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(address).then(function() { btn.textContent = 'â å·²è¤è£½'; setTimeout(function() { btn.textContent = 'ð è¤è£½å°å'; }, 2000); });
-        } else { alert('è«æåè¤è£½ï¼' + address); }
+          navigator.clipboard.writeText(address).then(function() { btn.textContent = '✅ 已複製'; setTimeout(function() { btn.textContent = '📋 複製地址'; }, 2000); });
+        } else { alert('請手動複製：' + address); }
       });
       
       var fadeEls = document.querySelectorAll('.fade-in');
@@ -1011,7 +1330,7 @@
         fadeEls.forEach(function(el) { obs.observe(el); });
       } else { fadeEls.forEach(function(el) { el.classList.add('visible'); }); }
 
-      // FAQ å±éï¼æ¶å
+      // FAQ 展開／收合
       document.querySelectorAll('.faq-q').forEach(function(q) {
         q.addEventListener('click', function() {
           var item = q.parentElement;
@@ -1036,7 +1355,7 @@
         if (errors.length > 0) { showError(errors); return; }
         hideError();
         var btn = $('submitBtn'); var originalText = btn.innerHTML;
-        btn.disabled = true; btn.textContent = 'ð è³æå³éä¸­ï¼è«ç¨å...';
+        btn.disabled = true; btn.textContent = '🚀 資料傳送中，請稍候...';
         $('progress').classList.add('show');
         var formData = {
           honeypot: $('honeypot').value, fullJoin: $('fullJoin').value, resident: $('resident').value,
@@ -1049,11 +1368,11 @@
         .then(function(result) {
           $('progress').classList.remove('show');
           if (result.success) { showSuccessCard(result.regId, result.status); } 
-          else { showError([result.error || 'å ±åå¤±æï¼è«ç¨å¾åè©¦']); btn.disabled = false; btn.innerHTML = originalText; }
+          else { showError([result.error || '報名失敗，請稍後再試']); btn.disabled = false; btn.innerHTML = originalText; }
         })
         .catch(function() {
           $('progress').classList.remove('show');
-          showError(['ç³»çµ±ç¶²è·¯é¯èª¤ï¼è«ç¨å¾åè©¦æè¯ç¹«ä¸»è¾¦å®ä½']);
+          showError(['系統網路錯誤，請稍後再試或聯繫主辦單位']);
           btn.disabled = false; btn.innerHTML = originalText;
         });
       });
