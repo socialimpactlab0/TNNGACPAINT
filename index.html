@@ -269,6 +269,14 @@
     .photo-heading-v9 p { color: #736576; font-weight: 700; line-height: 1.7; max-width: 420px; }
     @media (max-width: 980px) { .hero-shell-v9 { grid-template-columns: 1fr; gap: 30px; } .hero-copy-v9 { text-align: center; } .hero-lead-v9 { margin-left: auto; margin-right: auto; } .hero-actions-v9 { justify-content: center; } .trust-row-v9 { margin-left: auto; margin-right: auto; } .quota-countdown.v9-quota { justify-content: center; } .quick-grid-v9 { grid-template-columns: repeat(2,minmax(0,1fr)); } .why-grid-v9 { grid-template-columns: 1fr; } .photo-heading-v9 { display: block; text-align: center; } }
 
+
+    .hero-note-v9 {
+      margin-top: 10px;
+      color: #8b7280;
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
     @media (max-width: 767px) {
       .brand-mini-v9 { position: relative; top: auto; left: auto; width: max-content; margin: 14px auto 0; }
       .hero-v9 { padding: 24px 16px 52px; min-height: auto; }
@@ -335,6 +343,7 @@
           <a href="#register" class="btn btn-primary">立即報名參加</a>
           <a href="#reviewGallery" class="btn btn-outline">看活動照片</a>
         </div>
+        <p class="hero-note-v9">表單約 1 分鐘完成，送出後會立即取得報名序號。</p>
         <div class="trust-row-v9">
           <div class="trust-item-v9"><b>不用畫得很厲害</b><span>孩子願意表達，就是最好的作品。</span></div>
           <div class="trust-item-v9"><b>家長陪同參與</b><span>陪孩子一起完成溫暖的親子時光。</span></div>
@@ -349,7 +358,7 @@
       <div class="hero-visual-v9">
         <div class="hero-image-card-v9">
           <img src="images/hero-family-coloring.png" alt="親子一起著色畫畫">
-          <div class="hero-image-caption-v9">孩子專心畫畫，家長安心陪伴<br>一段溫暖又有紀念感的親子時光</div>
+          <div class="hero-image-caption-v9">圖為親子共學情境示意<br>活動現場將由家長陪同孩子完成創作</div>
         </div>
       </div>
     </div>
@@ -367,42 +376,6 @@
         <div class="quick-card-v9"><div class="num">3</div><h3>家長陪同</h3><p>每位孩子限一位家長陪同入場。</p></div>
         <div class="quick-card-v9"><div class="num">4</div><h3>自備畫具</h3><p>蠟筆、彩色筆、色鉛筆皆可。</p></div>
         <div class="quick-card-v9"><div class="num">5</div><h3>報名結果</h3><p>送出後取得序號，後續以簡訊確認。</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 活動海報與重點資訊 -->
-  <section class="poster-section-v9" id="posterInfo">
-    <div id="posterSection" class="poster-layout-v9">
-      <img id="posterImg" src="images/banner.png?v=3" alt="活動海報">
-      <div class="poster-copy-v9">
-        <span class="section-kicker-v9">活動海報</span>
-        <h2>完整活動資訊，一次看清楚</h2>
-        <p>首頁先用親子畫畫情境吸引家長，這裡再放正式活動海報，讓家長確認活動名稱、對象與報名重點。</p>
-        <div class="poster-points-v9">
-          <div class="poster-point-v9"><span>✓</span><span>免費參加，名額有限，額滿後開放候補。</span></div>
-          <div class="poster-point-v9"><span>✓</span><span>幼兒園大班與國小低年級孩子皆可報名。</span></div>
-          <div class="poster-point-v9"><span>✓</span><span>家長陪同參與，現場完成著色作品。</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 為什麼值得帶孩子來 -->
-  <section class="section" id="highlights">
-    <div class="section-content" style="max-width: 980px;">
-      <span class="section-kicker-v9">為什麼值得帶孩子來</span>
-      <h2 class="section-title fade-in">不是才藝壓力，而是一段親子陪伴</h2>
-      <p class="section-subtitle fade-in">我們希望孩子感受到：表達愛，比畫得像不像更重要。</p>
-      <div class="why-grid-v9 fade-in">
-        <div class="why-card-v9"><div class="icon">🖍️</div><h3>孩子容易投入</h3><p>主辦方提供著色底圖，孩子只要帶著畫具與輕鬆的心情來，就能開始創作。</p></div>
-        <div class="why-card-v9"><div class="icon">🤍</div><h3>家長陪在旁邊</h3><p>不是把孩子送去上課，而是家長一起陪伴，留下更有溫度的共同回憶。</p></div>
-        <div class="why-card-v9"><div class="icon">🌷</div><h3>公益免費參加</h3><p>活動免費，但名額有限。請確認能出席再報名，讓機會留給真正能來的家庭。</p></div>
-      </div>
-      <div style="margin-top: 46px;">
-        <h2 class="section-title fade-in">活動特色</h2>
-        <p class="section-subtitle fade-in">讓孩子用顏色表達對家人的愛，共創美好回憶</p>
-        <div class="card-grid fade-in" id="highlightsGrid"></div>
       </div>
     </div>
   </section>
@@ -472,6 +445,43 @@
       </div>
     </div>
   </div>
+
+
+  <!-- 活動海報與重點資訊 -->
+  <section class="poster-section-v9" id="posterInfo">
+    <div id="posterSection" class="poster-layout-v9">
+      <img id="posterImg" src="images/banner.png?v=3" alt="活動海報">
+      <div class="poster-copy-v9">
+        <span class="section-kicker-v9">活動海報</span>
+        <h2>完整活動資訊，一次看清楚</h2>
+        <p>這裡保留正式活動海報，方便家長確認活動名稱、對象與報名重點。</p>
+        <div class="poster-points-v9">
+          <div class="poster-point-v9"><span>✓</span><span>免費參加，名額有限，額滿後開放候補。</span></div>
+          <div class="poster-point-v9"><span>✓</span><span>幼兒園大班與國小低年級孩子皆可報名。</span></div>
+          <div class="poster-point-v9"><span>✓</span><span>家長陪同參與，現場完成著色作品。</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 為什麼值得帶孩子來 -->
+  <section class="section" id="highlights">
+    <div class="section-content" style="max-width: 980px;">
+      <span class="section-kicker-v9">為什麼值得帶孩子來</span>
+      <h2 class="section-title fade-in">不是才藝壓力，而是一段親子陪伴</h2>
+      <p class="section-subtitle fade-in">我們希望孩子感受到：表達愛，比畫得像不像更重要。</p>
+      <div class="why-grid-v9 fade-in">
+        <div class="why-card-v9"><div class="icon">🖍️</div><h3>孩子容易投入</h3><p>主辦方提供著色底圖，孩子只要帶著畫具與輕鬆的心情來，就能開始創作。</p></div>
+        <div class="why-card-v9"><div class="icon">🤍</div><h3>家長陪在旁邊</h3><p>不是把孩子送去上課，而是家長一起陪伴，留下更有溫度的共同回憶。</p></div>
+        <div class="why-card-v9"><div class="icon">🌷</div><h3>公益免費參加</h3><p>活動免費，但名額有限。請確認能出席再報名，讓機會留給真正能來的家庭。</p></div>
+      </div>
+      <div style="margin-top: 46px;">
+        <h2 class="section-title fade-in">活動特色</h2>
+        <p class="section-subtitle fade-in">讓孩子用顏色表達對家人的愛，共創美好回憶</p>
+        <div class="card-grid fade-in" id="highlightsGrid"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- 流程與獎項 -->
   <section class="section" id="schedule">
