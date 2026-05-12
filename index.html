@@ -268,7 +268,7 @@
   <!-- Loader -->
   <div id="loader" style="position:fixed; inset:0; background:#fff7fa; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:9999; transition:opacity .35s;">
     <div style="font-size:3.3rem; margin-bottom:14px; animation:bounce 1s ease infinite;">🎨</div>
-    <div style="font-size:1.05rem; color:var(--primary-dark); font-weight:900; font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;">準備色彩中...</div>
+    <div style="font-size:1.05rem; color:var(--primary-dark); font-weight:900; font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;">活動資料載入中，請稍候...</div>
   </div>
 
   <!-- Topbar -->
@@ -566,6 +566,7 @@
     var GAS_URL = 'https://script.google.com/macros/s/AKfycbwqKpnXIKF4WnUND163KJ08VzwosekgN3h-9DrV_iDNjpDqLxi4vNantjMIouznQIc/exec';
     var cfg = null;
     var groupStatus = null;
+    var loaderHidden = false;
     var $ = function(id){ return document.getElementById(id); };
 
     var STATUS_DISPLAY = { open:'🟢 熱烈報名中', almostFull:'🔥 即將額滿', waitlist:'⚠️ 已滿（候補中）' };
@@ -576,6 +577,8 @@
     function hide(el){ if(el) el.style.display = 'none'; }
 
     function hideLoader(){
+      if(loaderHidden) return;
+      loaderHidden = true;
       var loader = $('loader');
       if(loader){ loader.style.opacity = '0'; setTimeout(function(){ loader.style.display = 'none'; }, 350); }
     }
@@ -587,17 +590,28 @@
     }
 
     function loadConfig(){
-      fetch(GAS_URL + '?action=getConfig')
+      fetch(GAS_URL + '?action=getConfig&v=fast')
         .then(function(r){ return r.json(); })
         .then(function(data){
+          if(data && data.error){ throw new Error(data.error); }
           cfg = data || {};
           renderPage();
+
+          // 設定資料回來後也關閉 loader；若 1.2 秒保護機制已先關閉，這裡不會重複執行
           hideLoader();
-          loadGroupStatus();
-          setInterval(loadGroupStatus, 30000);
-          logView();
+
+          // 名額狀態與瀏覽紀錄放在畫面顯示後再跑，避免拖慢第一屏
+          setTimeout(function(){
+            loadGroupStatus();
+            setInterval(loadGroupStatus, 30000);
+            logView();
+          }, 50);
         })
-        .catch(function(err){ console.error('載入設定失敗', err); hideLoader(); renderFallback(); });
+        .catch(function(err){
+          console.error('載入設定失敗', err);
+          renderFallback();
+          hideLoader();
+        });
     }
 
     function renderFallback(){
@@ -940,8 +954,19 @@
       } else { fadeEls.forEach(function(el){ el.classList.add('visible'); }); }
     }
 
-    document.addEventListener('DOMContentLoaded', function(){ setupEvents(); loadConfig(); });
-    setTimeout(function(){ var loader=$('loader'); if(loader && loader.style.display !== 'none') loader.style.display='none'; }, 5000);
+    document.addEventListener('DOMContentLoaded', function(){
+      setupEvents();
+
+      // 最多顯示載入畫面 1.2 秒，避免手機使用者以為網頁卡住
+      setTimeout(function(){
+        hideLoader();
+      }, 1200);
+
+      loadConfig();
+    });
+
+    // 最後保險：若特殊瀏覽器或網路錯誤導致 loader 沒關，5 秒後仍強制關閉
+    setTimeout(function(){ hideLoader(); }, 5000);
   })();
   </script>
 </body>
