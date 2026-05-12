@@ -542,10 +542,10 @@
   <footer>
     <p class="footer-title" id="footerText">💕 乾淨校園我愛我家 期待您的參與</p>
     <div class="footer-grid">
-      <div><strong>主辦單位：</strong><span id="footerOrganizer"></span></div>
-      <div><strong>協辦單位：</strong><span id="footerCoOrganizer"></span></div>
-      <div><strong>協力單位：</strong><span id="footerCoOrganizerSub"></span></div>
-      <div><strong>活動洽詢：</strong><a id="footerPhoneLink" href="tel:0913837389" style="color:var(--primary-dark); font-weight:900;"><span id="footerContact"></span></a></div>
+      <div><strong>主辦單位：</strong><span id="footerOrganizer">乾淨校園推廣團隊</span></div>
+      <div><strong>協辦單位：</strong><span id="footerCoOrganizer">台灣自媒體應用科技學會</span></div>
+      <div><strong>協力單位：</strong><span id="footerCoOrganizerSub">—</span></div>
+      <div><strong>活動洽詢：</strong><a id="footerPhoneLink" href="tel:0913837389" style="color:var(--primary-dark); font-weight:900;"><span id="footerContact">陳小姐 0913-837-389</span></a></div>
     </div>
     <div class="footer-copy">© 2026 乾淨校園推廣團隊．保留所有權利</div>
   </footer>
@@ -566,18 +566,31 @@
     var GAS_URL = 'https://script.google.com/macros/s/AKfycbwqKpnXIKF4WnUND163KJ08VzwosekgN3h-9DrV_iDNjpDqLxi4vNantjMIouznQIc/exec';
     var cfg = null;
     var groupStatus = null;
-    var loaderHidden = false;
     var $ = function(id){ return document.getElementById(id); };
 
     var STATUS_DISPLAY = { open:'🟢 熱烈報名中', almostFull:'🔥 即將額滿', waitlist:'⚠️ 已滿（候補中）' };
 
-    function setText(id, value){ var el=$(id); if(el) el.textContent = value || ''; }
-    function setHref(id, value){ var el=$(id); if(el && value) el.href = value; }
+    function hasValue(value){
+      return value !== undefined && value !== null && String(value).trim() !== '';
+    }
+
+    // 不讓空值把 HTML 裡的預設文字覆蓋掉，避免 GAS 還沒回來時畫面出現空白。
+    function setText(id, value){
+      var el = $(id);
+      if (el && hasValue(value)) el.textContent = value;
+    }
+
+    function setHref(id, value){
+      var el = $(id);
+      if (el && hasValue(value)) el.href = value;
+    }
+
     function show(el){ if(el) el.style.display = ''; }
     function hide(el){ if(el) el.style.display = 'none'; }
 
+    var loaderHidden = false;
     function hideLoader(){
-      if(loaderHidden) return;
+      if (loaderHidden) return;
       loaderHidden = true;
       var loader = $('loader');
       if(loader){ loader.style.opacity = '0'; setTimeout(function(){ loader.style.display = 'none'; }, 350); }
@@ -590,22 +603,23 @@
     }
 
     function loadConfig(){
-      fetch(GAS_URL + '?action=getConfig&v=fast')
-        .then(function(r){ return r.json(); })
+      fetch(GAS_URL + '?action=getConfig')
+        .then(function(r){
+          if(!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
         .then(function(data){
-          if(data && data.error){ throw new Error(data.error); }
+          if(data && data.error) throw new Error(data.error);
           cfg = data || {};
           renderPage();
-
-          // 設定資料回來後也關閉 loader；若 1.2 秒保護機制已先關閉，這裡不會重複執行
           hideLoader();
 
-          // 名額狀態與瀏覽紀錄放在畫面顯示後再跑，避免拖慢第一屏
+          // 名額狀態和瀏覽紀錄不阻擋首屏顯示，延後一點點再跑。
           setTimeout(function(){
             loadGroupStatus();
             setInterval(loadGroupStatus, 30000);
             logView();
-          }, 50);
+          }, 150);
         })
         .catch(function(err){
           console.error('載入設定失敗', err);
@@ -739,8 +753,8 @@
       setText('contactText', ((cfg.contactName || '陳小姐') + ' ' + (cfg.contactPhone || '0913-837-389')).trim());
       setText('footerText', '💕 ' + (cfg.eventName || '乾淨校園我愛我家兒童著色畫比賽') + ' 期待您的參與');
       setText('footerOrganizer', cfg.organizer || '乾淨校園推廣團隊');
-      setText('footerCoOrganizer', cfg.coOrganizer || '');
-      setText('footerCoOrganizerSub', cfg.coOrganizerSub || '');
+      setText('footerCoOrganizer', cfg.coOrganizer || '台灣自媒體應用科技學會');
+      setText('footerCoOrganizerSub', cfg.coOrganizerSub || '—');
       setText('footerContact', ((cfg.contactName || '陳小姐') + ' ' + (cfg.contactPhone || '0913-837-389')).trim());
       var tel = cfg.contactPhoneTel || (cfg.contactPhone || '0913837389').replace(/[^0-9]/g, '');
       setHref('footerPhoneLink', 'tel:' + tel);
@@ -957,16 +971,17 @@
     document.addEventListener('DOMContentLoaded', function(){
       setupEvents();
 
-      // 最多顯示載入畫面 1.2 秒，避免手機使用者以為網頁卡住
-      setTimeout(function(){
-        hideLoader();
-      }, 1200);
+      // 先把可用的預設內容畫出來，避免 GAS 還沒回來時區塊空白。
+      renderFallback();
+
+      // 載入畫面最多顯示約 1.2 秒，讓家長先看到首頁內容。
+      setTimeout(hideLoader, 1200);
 
       loadConfig();
     });
 
-    // 最後保險：若特殊瀏覽器或網路錯誤導致 loader 沒關，5 秒後仍強制關閉
-    setTimeout(function(){ hideLoader(); }, 5000);
+    // 保險機制：任何異常狀況下，最多 3 秒也要關閉載入畫面。
+    setTimeout(hideLoader, 3000);
   })();
   </script>
 </body>
