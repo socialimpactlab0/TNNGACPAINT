@@ -531,26 +531,26 @@
             <div style="display:flex; flex-wrap:wrap; gap:10px;"><button type="button" class="btn btn-outline btn-sm" id="copyAddressBtn">📋 複製地址</button><a href="#" class="btn btn-primary btn-sm" id="mapLink" target="_blank" rel="noopener">🗺️ 開啟導航</a></div>
           </div>
           <div class="contact-mini">
-  <div class="surface contact-mini-item">
-    <strong>主辦單位</strong>
-    <span id="organizerText">乾淨校園推廣團隊</span>
-  </div>
+            <div class="surface contact-mini-item">
+              <strong>主辦單位</strong>
+              <span id="organizerText">乾淨校園推廣團隊</span>
+            </div>
 
-  <div class="surface contact-mini-item" id="coOrganizerBox">
-    <strong>協辦單位</strong>
-    <span id="coOrganizerText">協辦單位載入中...</span>
-  </div>
+            <div class="surface contact-mini-item" id="coOrganizerBox" style="display:none;">
+              <strong>協辦單位</strong>
+              <span id="coOrganizerText"></span>
+            </div>
 
-  <div class="surface contact-mini-item" id="coOrganizerSubBox">
-    <strong>協力單位</strong>
-    <span id="coOrganizerSubText">協力單位載入中...</span>
-  </div>
+            <div class="surface contact-mini-item" id="coOrganizerSubBox" style="display:none;">
+              <strong>協力單位</strong>
+              <span id="coOrganizerSubText"></span>
+            </div>
 
-  <div class="surface contact-mini-item">
-    <strong>活動洽詢</strong>
-    <span id="contactText">陳小姐 0913-837-389</span>
-  </div>
-</div>
+            <div class="surface contact-mini-item">
+              <strong>活動洽詢</strong>
+              <span id="contactText">陳小姐 0913-837-389</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -763,15 +763,33 @@
       setText('venueText', cfg.eventVenue || '彰南里活動中心 大禮堂');
       setText('addressText', cfg.eventAddress || '台南市南區彰南街一段107號');
       setHref('mapLink', cfg.eventMapUrl || '#');
+
+      // 主辦單位
       setText('organizerText', cfg.organizer || '乾淨校園推廣團隊');
+
+      // 協辦單位：有資料才顯示，沒有就隱藏
+      if (hasValue(cfg.coOrganizer)) {
+        setText('coOrganizerText', cfg.coOrganizer);
+        show($('coOrganizerBox'));
+      } else {
+        hide($('coOrganizerBox'));
+      }
+
+      // 協力單位：有資料才顯示，沒有就隱藏
+      if (hasValue(cfg.coOrganizerSub)) {
+        setText('coOrganizerSubText', cfg.coOrganizerSub);
+        show($('coOrganizerSubBox'));
+      } else {
+        hide($('coOrganizerSubBox'));
+      }
+
+      // 活動洽詢
       setText('contactText', ((cfg.contactName || '陳小姐') + ' ' + (cfg.contactPhone || '0913-837-389')).trim());
+
+      // Footer 簡化，不再重複列主辦／協辦／電話
       setText('footerText', '💕 ' + (cfg.eventName || '乾淨校園我愛我家兒童著色畫比賽') + ' 期待您的參與');
-      setText('footerOrganizer', cfg.organizer || '乾淨校園推廣團隊');
-      setText('footerCoOrganizer', cfg.coOrganizer || '台灣自媒體應用科技學會');
-      setText('footerCoOrganizerSub', cfg.coOrganizerSub || '—');
-      setText('footerContact', ((cfg.contactName || '陳小姐') + ' ' + (cfg.contactPhone || '0913-837-389')).trim());
+
       var tel = cfg.contactPhoneTel || (cfg.contactPhone || '0913837389').replace(/[^0-9]/g, '');
-      setHref('footerPhoneLink', 'tel:' + tel);
       setHref('stickyPhone', 'tel:' + tel);
       setHref('faqPhoneLink', 'tel:' + tel);
     }
