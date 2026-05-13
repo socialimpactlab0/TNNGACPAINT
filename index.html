@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>5/30 免費親子著色活動｜兒童著色畫比賽</title>
+  <title>5/30 免費兒童著色活動｜不用會畫畫也沒關係</title>
 
   <!-- OG / Social -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="週末不知道帶孩子去哪？｜5/30 免費親子著色活動">
-  <meta property="og:description" content="5/30 免費親子著色活動，現場提供底圖，自備畫材即可。適合幼兒園大班與國小低年級，完成作品可參與評選。">
+  <meta property="og:title" content="5/30 免費兒童著色活動｜不用會畫畫也沒關係">
+  <meta property="og:description" content="免費參加，現場提供著色底圖，自備畫材即可。適合幼兒園大班與國小低年級，不用畫得很厲害，完成作品就很棒。">
   <meta property="og:url" content="https://socialimpactlab0.github.io/TNNGACPAINT/">
   <meta property="og:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/banner.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="週末不知道帶孩子去哪？｜5/30 免費親子著色活動">
-  <meta name="twitter:description" content="現場提供底圖，自備畫材即可。適合幼兒園大班與國小低年級，完成作品可參與評選。">
+  <meta name="twitter:title" content="5/30 免費兒童著色活動｜不用會畫畫也沒關係">
+  <meta name="twitter:description" content="現場提供著色底圖，自備畫材即可。不用畫得很厲害，完成作品就很棒。">
   <meta name="twitter:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/banner.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -126,6 +126,21 @@
     .feature-icon{ width:48px; height:48px; border-radius:16px; display:flex; align-items:center; justify-content:center; background:#fff0f5; font-size:1.5rem; margin-bottom:12px; }
     .feature-card h3{ font-size:1.05rem; font-weight:900; color:#3f3442; margin-bottom:6px; }
     .feature-card p{ color:var(--text-muted); font-size:.9rem; font-weight:700; line-height:1.75; }
+
+    .coloring-preview-wrap{ display:grid; grid-template-columns:1.05fr .95fr; gap:18px; align-items:start; margin-top:28px; }
+    .coloring-message{ padding:28px 24px; border-radius:28px; position:relative; overflow:hidden; }
+    .coloring-message::after{ content:'🖍️'; position:absolute; right:18px; bottom:2px; font-size:4.2rem; opacity:.12; transform:rotate(-12deg); }
+    .coloring-message h3{ font-size:1.35rem; font-weight:900; color:#3f3442; margin-bottom:10px; }
+    .coloring-message p{ color:var(--text-muted); font-size:.96rem; font-weight:700; line-height:1.9; margin-bottom:14px; }
+    .coloring-message ul{ list-style:none; display:grid; gap:8px; margin-top:12px; }
+    .coloring-message li{ color:#55485a; font-size:.9rem; font-weight:800; padding-left:26px; position:relative; }
+    .coloring-message li::before{ content:'✓'; position:absolute; left:0; top:0; color:var(--green); font-weight:900; }
+    .coloring-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+    .coloring-card{ background:#fff; border:1px solid var(--line); border-radius:22px; padding:12px; box-shadow:0 12px 28px rgba(255,107,157,.08); overflow:hidden; }
+    .coloring-card a{ display:block; }
+    .coloring-card img{ width:100%; aspect-ratio:1 / 1.25; object-fit:cover; border-radius:16px; border:3px solid #fff; background:#fff8fb; }
+    .coloring-card-title{ margin-top:9px; color:#4a3f4c; font-size:.88rem; font-weight:900; line-height:1.5; text-align:center; }
+    .coloring-placeholder{ aspect-ratio:1 / 1.25; border-radius:16px; border:2px dashed #ffc6dc; background:linear-gradient(135deg,#fffafd,#fff1f7); display:flex; align-items:center; justify-content:center; text-align:center; padding:18px; color:#b14d78; font-size:.86rem; font-weight:900; line-height:1.7; }
 
     .review-layout{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:20px; align-items:start; }
     .video-card{ padding:20px; border-radius:28px; }
@@ -244,6 +259,7 @@
       .hero-info-pill,.deadline-banner{ margin-left:auto; margin-right:auto; }
       .trust-strip{ grid-template-columns:1fr; }
       .features-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+      .coloring-preview-wrap{ grid-template-columns:1fr; }
       .photo-grid{ grid-template-columns:repeat(3, minmax(0,1fr)); }
     }
     @media (max-width: 767px){
@@ -254,6 +270,8 @@
       .hero-meta{ justify-content:center; }
       .hero-mini-grid{ grid-template-columns:1fr; }
       .features-grid,.photo-grid,.prize-grid,.form-grid{ grid-template-columns:1fr; }
+      .coloring-grid{ grid-template-columns:1fr 1fr; gap:10px; }
+      .coloring-message{ padding:22px 18px; }
       .section{ padding:56px 0; }
       .timeline{ padding-left:8px; }
       .timeline::before{ left:20px; }
@@ -291,8 +309,8 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">5/30 免費親子活動・名額有限</div>
-          <h1 class="hero-title">週末不知道<br><span class="accent">帶孩子去哪？</span></h1>
-          <p class="hero-lead">5/30 免費親子著色活動，適合幼兒園大班與國小低年級。現場提供著色底圖，孩子自備畫材即可參加，完成作品還可參與評選。</p>
+          <h1 class="hero-title">不用會畫畫<br><span class="accent">也能快樂完成作品</span></h1>
+          <p class="hero-lead">5/30 免費兒童著色活動，適合幼兒園大班與國小低年級。現場提供著色底圖，自備畫材即可；不用畫得很厲害，孩子願意動手完成作品，就很棒。</p>
 
           <div class="hero-meta">
             <span id="heroDateChip">📅 5/30（六）09:00–12:00</span>
@@ -308,7 +326,7 @@
             <a href="#reviewGallery" class="btn btn-outline">看活動實景</a>
           </div>
 
-          <p class="hero-note">表單約 1 分鐘完成，送出後立即取得報名序號</p>
+          <p class="hero-note">表單約 1 分鐘完成，送出後立即取得報名序號；名額有限，額滿後開放候補。</p>
 
           <div class="trust-strip">
             <div class="trust-item"><strong>主辦單位</strong><span id="heroOrganizerMini">乾淨校園推廣團隊</span></div>
@@ -347,7 +365,7 @@
               <a id="posterPreviewLink" href="images/banner.png?v=3" target="_blank" rel="noopener"><img id="posterPreviewImg" src="images/banner.png?v=3" alt="活動海報"></a>
             </div>
             <div class="surface mini-card">
-              <h3>家長最在意的事</h3>
+              <h3>本次活動會畫什麼？</h3>
               <p>免費參加、現場提供底圖、自備畫材即可，完成作品可參與評選。</p>
               <div style="margin-top:12px;"><a href="#faq" class="btn btn-outline btn-sm" style="width:100%;">看常見問題</a></div>
             </div>
@@ -365,6 +383,32 @@
           <p class="section-subtitle">這一頁只保留最重要的訊息：孩子適不適合、要準備什麼、值不值得帶來。</p>
         </div>
         <div class="features-grid fade-in" id="highlightsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Coloring Sheets -->
+    <section class="section alt" id="coloringSheets" style="display:none;">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <span class="section-kicker">本次活動底圖</span>
+          <h2 class="section-title">孩子當天會畫什麼？先看看著色底圖</h2>
+          <p class="section-subtitle">家長最需要的是畫面感。先看到題目與難易度，才更容易判斷孩子適不適合參加。</p>
+        </div>
+
+        <div class="coloring-preview-wrap fade-in">
+          <div class="surface coloring-message">
+            <h3>不用畫得很厲害，完成作品就很棒</h3>
+            <p>現場會提供著色底圖，孩子只要自備畫材，就能依照自己的想法完成作品。活動重點不是技巧高低，而是鼓勵孩子專心、表達與完成。</p>
+            <ul>
+              <li>幼兒園大班組：線條較簡單，適合輕鬆著色</li>
+              <li>國小低年級組：細節稍多，可以發揮更多創意</li>
+              <li>圖片可先預覽，正式活動以現場發放底圖為準</li>
+            </ul>
+            <div style="margin-top:18px;"><a href="#register" class="btn btn-primary btn-sm">看完底圖，立即報名</a></div>
+          </div>
+
+          <div class="coloring-grid" id="coloringSheetsGrid"></div>
+        </div>
       </div>
     </section>
 
@@ -434,7 +478,7 @@
         </div>
 
         <div class="faq-wrap">
-          <div class="surface faq-item fade-in"><div class="faq-q"><span>🎨 孩子沒畫過畫也可以參加嗎？</span><span class="faq-icon">＋</span></div><div class="faq-a">可以。這次活動重點是鼓勵孩子表達與參與，主辦方會提供著色底圖，孩子依自己喜歡的方式上色即可。</div></div>
+          <div class="surface faq-item fade-in"><div class="faq-q"><span>🎨 孩子沒畫過畫也可以參加嗎？</span><span class="faq-icon">＋</span></div><div class="faq-a">可以。這次活動重點是鼓勵孩子表達與參與，主辦方會提供著色底圖，孩子依自己喜歡的方式上色即可；不用畫得很厲害，願意完成作品就很棒。</div></div>
           <div class="surface faq-item fade-in"><div class="faq-q"><span>🖍️ 需要準備什麼東西？</span><span class="faq-icon">＋</span></div><div class="faq-a">主辦方提供：著色底圖、桌椅與場地設施。<br>請自備：畫材（彩色筆、蠟筆、色鉛筆皆可）。</div></div>
           <div class="surface faq-item fade-in"><div class="faq-q"><span>📱 報名後怎麼知道是錄取還是候補？</span><span class="faq-icon">＋</span></div><div class="faq-a">表單送出後會立即顯示專屬報名序號。主辦方將於指定日期發送簡訊通知，請於期限前回覆確認，逾時未回覆將釋出名額給候補家庭。</div></div>
           <div class="surface faq-item fade-in"><div class="faq-q"><span>👨‍👩‍👧 可以幾位家長一起陪同孩子入場？</span><span class="faq-icon">＋</span></div><div class="faq-a">考量場地空間有限，每位孩子限一位家長陪同入場。</div></div>
@@ -644,6 +688,7 @@
 
     function renderFallback(){
       renderHighlights();
+      renderColoringSheets();
       renderDefaultSchedule();
       renderDefaultPrizes();
     }
@@ -665,6 +710,7 @@
       }
 
       renderHighlights();
+      renderColoringSheets();
       renderSchedule();
       renderPrizes();
       renderDeadline();
@@ -686,6 +732,37 @@
       if(!hGrid) return;
       hGrid.innerHTML = items.map(function(h){
         return '<div class="surface feature-card"><div class="feature-icon">' + h.icon + '</div><h3>' + h.title + '</h3><p>' + h.desc + '</p></div>';
+      }).join('');
+    }
+
+    function renderColoringSheets(){
+      var section = $('coloringSheets');
+      var grid = $('coloringSheetsGrid');
+      if(!section || !grid) return;
+
+      // 預設不顯示底圖區塊。
+      // 等底圖準備好後，在 Config.gs 加上：
+      // showColoringSheets: true,
+      // coloringSheets: [
+      //   { title:'幼兒園大班組底圖', image:'images/coloring-k.png' },
+      //   { title:'國小低年級組底圖', image:'images/coloring-e.png' }
+      // ]
+      var enabled = cfg && cfg.showColoringSheets === true;
+      var sheets = (cfg && Array.isArray(cfg.coloringSheets)) ? cfg.coloringSheets.filter(function(item){
+        return item && hasValue(item.image);
+      }).slice(0, 2) : [];
+
+      if(!enabled || sheets.length === 0){
+        section.style.display = 'none';
+        grid.innerHTML = '';
+        return;
+      }
+
+      section.style.display = '';
+      grid.innerHTML = sheets.map(function(item, idx){
+        var title = item.title || (idx === 0 ? '幼兒園大班組底圖' : '國小低年級組底圖');
+        var image = item.image;
+        return '<div class="coloring-card"><a href="' + image + '" target="_blank" rel="noopener"><img src="' + image + '" alt="' + title + '" onerror="this.closest(\'.coloring-card\').style.display=\'none\'"></a><div class="coloring-card-title">' + title + '</div></div>';
       }).join('');
     }
 
