@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>5/30 免費兒童著色活動｜不用會畫畫也沒關係</title>
+
+  <!-- OG / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="5/30 免費兒童著色活動｜不用會畫畫也沒關係">
+  <meta property="og:description" content="免費參加，現場提供著色底圖，自備畫材即可。適合幼兒園大班與國小低年級，不用畫得很厲害，完成作品就很棒。">
+  <meta property="og:url" content="https://socialimpactlab0.github.io/TNNGACPAINT/">
+  <meta property="og:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="zh_TW">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="5/30 免費兒童著色活動｜不用會畫畫也沒關係">
+  <meta name="twitter:description" content="現場提供著色底圖，自備畫材即可。不用畫得很厲害，完成作品就很棒。">
+  <meta name="twitter:image" content="https://socialimpactlab0.github.io/TNNGACPAINT/images/banner.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#ff6b9d;
+      --primary-dark:#e91e7a;
+      --primary-soft:#fff0f5;
+      --secondary:#ff8a66;
+      --text:#453b47;
+      --text-muted:#756678;
+      --line:#ffe0eb;
+      --white:#ffffff;
+      --green:#059669;
+      --green-bg:#ecfdf5;
+      --yellow:#d97706;
+      --yellow-bg:#fffbeb;
+      --red:#dc2626;
+      --red-bg:#fef2f2;
+      --shadow:0 16px 38px rgba(255,107,157,.10);
+      --radius:24px;
+      --radius-lg:32px;
+    }
+
+    *{ box-sizing:border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    body{
+      font-family:'Nunito','Noto Sans TC',sans-serif;
+      color:var(--text);
+      line-height:1.75;
+      background:
+        radial-gradient(circle at 10% 8%, rgba(255,142,173,.18), transparent 28%),
+        radial-gradient(circle at 88% 12%, rgba(255,186,135,.15), transparent 24%),
+        radial-gradient(circle at 50% 100%, rgba(255,255,255,.70), transparent 40%),
+        #fff7fa;
+      overflow-x:hidden;
+      font-size:15.5px;
+    }
+
+    h1,h2,h3,.title-font{ font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif; }
+    img{ display:block; max-width:100%; height:auto; }
+    a{ color:inherit; text-decoration:none; }
+
+    .container{ width:min(1120px, calc(100% - 32px)); margin:0 auto; }
+    .section{ padding:72px 0; position:relative; }
+    .section.alt{ padding:68px 0; background:rgba(255,255,255,.28); }
+    .section-heading{ text-align:center; margin-bottom:28px; }
+    .section-kicker{ display:inline-block; padding:8px 14px; border-radius:999px; background:#fff; color:#d63373; font-size:.84rem; font-weight:900; box-shadow:0 8px 20px rgba(255,107,157,.08); margin-bottom:12px; }
+    .section-title{ font-size:clamp(1.7rem,4vw,2.5rem); font-weight:900; line-height:1.25; margin-bottom:8px; background:linear-gradient(135deg, var(--primary-dark), var(--secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; display:inline-block; }
+    .section-subtitle{ max-width:700px; margin:0 auto; color:var(--text-muted); font-size:.98rem; font-weight:700; }
+    .surface{ background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
+
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:50px; padding:14px 24px; border:none; border-radius:999px; font-weight:900; font-size:.98rem; cursor:pointer; transition:.25s ease; font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif; white-space:nowrap; }
+    .btn:hover{ transform:translateY(-2px); }
+    .btn-primary{ color:#fff; background:linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow:0 14px 28px rgba(255,107,157,.28); }
+    .btn-outline{ color:var(--primary-dark); background:#fff; border:1px solid var(--line); box-shadow:0 10px 24px rgba(255,107,157,.08); }
+    .btn-sm{ min-height:42px; padding:10px 18px; font-size:.9rem; }
+
+    .topbar{ position:sticky; top:0; z-index:40; backdrop-filter:blur(10px); background:rgba(255,255,255,.72); border-bottom:1px solid rgba(255,224,235,.9); }
+    .topbar-inner{ width:min(1120px, calc(100% - 24px)); margin:0 auto; padding:12px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand-mini{ display:flex; align-items:center; gap:10px; min-width:0; }
+    .brand-mini img{ width:44px; height:44px; object-fit:contain; border-radius:12px; background:#fff; border:1px solid var(--line); }
+    .brand-mini span{ font-size:.92rem; font-weight:900; color:#9f315f; line-height:1.35; }
+    .topbar-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
+
+    .hero{ padding:34px 0 58px; }
+    .hero-grid{ display:grid; grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr); gap:34px; align-items:center; }
+    .hero-copy{ text-align:left; }
+    .eyebrow{ display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:999px; background:#fff; color:#d63373; font-size:.92rem; font-weight:900; box-shadow:0 10px 24px rgba(255,107,157,.10); margin-bottom:20px; }
+    .hero-title{ font-size:clamp(2.2rem,5.5vw,4.6rem); line-height:1.12; letter-spacing:-.03em; font-weight:900; color:#3f3442; margin-bottom:16px; }
+    .hero-title .accent{ background:linear-gradient(135deg, var(--primary-dark), var(--secondary)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .hero-lead{ max-width:660px; color:#695a6d; font-size:clamp(1rem,1.8vw,1.14rem); font-weight:700; line-height:1.9; margin-bottom:16px; }
+    .hero-meta{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:14px; }
+    .hero-meta span{ background:#fff; border:1px solid var(--line); border-radius:999px; padding:9px 14px; font-size:.9rem; font-weight:800; color:#8f315f; box-shadow:0 8px 20px rgba(255,107,157,.08); }
+    .hero-info-pill{ display:inline-flex; align-items:center; gap:8px; min-height:44px; padding:10px 16px; border-radius:999px; background:rgba(255,255,255,.92); border:1px solid var(--line); color:#8b4a69; font-size:.92rem; font-weight:900; margin:0 0 20px; }
+    .hero-actions{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:18px; }
+    .hero-note{ color:#8a7280; font-size:.92rem; font-weight:700; margin-bottom:18px; }
+    .trust-strip{ display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:12px; margin-bottom:20px; }
+    .trust-item{ background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:18px; padding:15px 16px; box-shadow:0 12px 26px rgba(255,107,157,.08); }
+    .trust-item strong{ display:block; font-size:.8rem; color:#a35c79; margin-bottom:4px; }
+    .trust-item span{ display:block; font-size:.92rem; color:#4a3f4c; font-weight:800; line-height:1.55; }
+    .hero-side{ display:grid; gap:16px; }
+    .hero-photo{ overflow:hidden; border-radius:30px; padding:12px; }
+    .hero-photo img{ width:100%; aspect-ratio:4 / 3; object-fit:cover; border-radius:22px; border:4px solid #fff; box-shadow:0 18px 36px rgba(0,0,0,.08); }
+    .hero-caption{ margin-top:12px; background:#fff; border:1px solid var(--line); border-radius:18px; padding:12px 14px; font-size:.9rem; font-weight:800; color:#5d4d60; text-align:center; }
+    .hero-mini-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .mini-card{ padding:16px; border-radius:22px; }
+    .mini-card h3{ font-size:1rem; color:#3f3442; font-weight:900; margin-bottom:8px; }
+    .mini-card p{ color:var(--text-muted); font-size:.88rem; font-weight:700; line-height:1.7; }
+    .mini-card img{ width:100%; border-radius:16px; border:3px solid #fff; margin-top:10px; }
+
+    .quota-countdown{ display:flex; flex-wrap:wrap; gap:14px; margin-top:10px; }
+    .quota-countdown-item{ min-width:160px; padding:16px 18px; border-radius:22px; background:#fff; border:1px solid var(--line); box-shadow:0 12px 28px rgba(255,107,157,.10); position:relative; overflow:hidden; }
+    .quota-countdown-item::before{ content:''; position:absolute; inset:0 0 auto 0; height:4px; background:linear-gradient(90deg, var(--primary), var(--secondary)); }
+    .quota-countdown-label{ font-size:.82rem; color:var(--text-muted); font-weight:800; margin-bottom:4px; }
+    .quota-countdown-number{ font-size:2.1rem; line-height:1; font-weight:900; color:var(--primary-dark); margin-bottom:4px; }
+    .quota-countdown-sub{ font-size:.76rem; color:#8a7b8c; font-weight:800; }
+    .quota-badge{ display:inline-block; margin-top:8px; padding:6px 12px; border-radius:999px; font-size:.75rem; font-weight:900; letter-spacing:.02em; }
+    .quota-badge.open{ background:var(--green-bg); color:var(--green); }
+    .deadline-banner{ display:none; margin-top:18px; padding:11px 18px; border-radius:999px; background:var(--yellow-bg); border:1px solid #fde68a; color:#92400e; font-size:.92rem; font-weight:900; box-shadow:0 6px 16px rgba(251,191,36,.12); max-width:max-content; }
+
+    .features-grid{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px; margin-top:28px; }
+    .feature-card{ padding:24px 20px; border-radius:26px; text-align:left; }
+    .feature-icon{ width:48px; height:48px; border-radius:16px; display:flex; align-items:center; justify-content:center; background:#fff0f5; font-size:1.5rem; margin-bottom:12px; }
+    .feature-card h3{ font-size:1.05rem; font-weight:900; color:#3f3442; margin-bottom:6px; }
+    .feature-card p{ color:var(--text-muted); font-size:.9rem; font-weight:700; line-height:1.75; }
+
+    .coloring-preview-wrap{ display:grid; grid-template-columns:1.05fr .95fr; gap:18px; align-items:start; margin-top:28px; }
+    .coloring-message{ padding:28px 24px; border-radius:28px; position:relative; overflow:hidden; }
+    .coloring-message::after{ content:'🖍️'; position:absolute; right:18px; bottom:2px; font-size:4.2rem; opacity:.12; transform:rotate(-12deg); }
+    .coloring-message h3{ font-size:1.35rem; font-weight:900; color:#3f3442; margin-bottom:10px; }
+    .coloring-message p{ color:var(--text-muted); font-size:.96rem; font-weight:700; line-height:1.9; margin-bottom:14px; }
+    .coloring-message ul{ list-style:none; display:grid; gap:8px; margin-top:12px; }
+    .coloring-message li{ color:#55485a; font-size:.9rem; font-weight:800; padding-left:26px; position:relative; }
+    .coloring-message li::before{ content:'✓'; position:absolute; left:0; top:0; color:var(--green); font-weight:900; }
+    .coloring-grid{ display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+    .coloring-card{ background:#fff; border:1px solid var(--line); border-radius:22px; padding:12px; box-shadow:0 12px 28px rgba(255,107,157,.08); overflow:hidden; }
+    .coloring-card a{ display:block; }
+    .coloring-card img{ width:100%; aspect-ratio:1 / 1.25; object-fit:cover; border-radius:16px; border:3px solid #fff; background:#fff8fb; }
+    .coloring-card-title{ margin-top:9px; color:#4a3f4c; font-size:.88rem; font-weight:900; line-height:1.5; text-align:center; }
+    .coloring-placeholder{ aspect-ratio:1 / 1.25; border-radius:16px; border:2px dashed #ffc6dc; background:linear-gradient(135deg,#fffafd,#fff1f7); display:flex; align-items:center; justify-content:center; text-align:center; padding:18px; color:#b14d78; font-size:.86rem; font-weight:900; line-height:1.7; }
+
+    .review-layout{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:20px; align-items:start; }
+    .video-card{ padding:20px; border-radius:28px; }
+    .video-card h3{ font-size:1.12rem; font-weight:900; color:#3f3442; margin-bottom:10px; }
+    .video-card p{ color:var(--text-muted); font-size:.92rem; font-weight:700; margin-bottom:14px; }
+    .video-frame{ width:100%; aspect-ratio:16 / 9; overflow:hidden; border-radius:20px; background:#000; margin-bottom:14px; }
+    .video-frame iframe{ width:100%; height:100%; border:0; }
+    .photo-grid{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; margin-bottom:16px; }
+    .review-photo{ overflow:hidden; border-radius:22px; border:3px solid #fff; box-shadow:0 10px 26px rgba(0,0,0,.06); background:#fff; }
+    .review-photo img{ width:100%; aspect-ratio:4 / 3; object-fit:cover; transition:transform .4s ease; }
+    .review-photo:hover img{ transform:scale(1.05); }
+    .testimonial-card{ padding:22px; border-radius:24px; position:relative; }
+    .testimonial-card .quote{ position:absolute; top:10px; right:18px; color:#ffe0eb; font-size:2.4rem; font-family:serif; line-height:1; }
+    .testimonial-card p{ position:relative; z-index:1; color:#55485a; font-size:.95rem; line-height:1.9; font-weight:700; margin-bottom:14px; }
+    .testimonial-card .who{ color:var(--primary-dark); font-size:.84rem; font-weight:900; }
+
+    .timeline{ max-width:760px; margin:28px auto 0; position:relative; padding-left:20px; }
+    .timeline::before{ content:''; position:absolute; left:32px; top:14px; bottom:14px; width:4px; background:#ffd7e6; border-radius:4px; }
+    .timeline-item{ display:flex; gap:18px; margin-bottom:22px; position:relative; }
+    .timeline-dot{ width:40px; height:40px; flex-shrink:0; border-radius:50%; border:4px solid var(--primary); background:#fff; display:flex; align-items:center; justify-content:center; font-size:1rem; box-shadow:0 4px 12px rgba(255,107,157,.15); z-index:1; }
+    .timeline-content{ flex:1; background:#fff; border:1px solid var(--line); border-radius:22px; padding:16px 18px; text-align:left; box-shadow:0 10px 26px rgba(255,107,157,.08); }
+    .timeline-time{ color:var(--primary-dark); font-size:.88rem; font-weight:900; margin-bottom:4px; }
+    .timeline-title{ font-size:1rem; font-weight:900; margin-bottom:4px; color:#3f3442; }
+    .timeline-desc{ color:var(--text-muted); font-size:.88rem; font-weight:700; line-height:1.7; }
+
+    .prize-grid{ display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; margin-top:22px; }
+    .prize-card{ padding:22px 12px; border-radius:22px; text-align:center; color:#4b3f4a; border:1px solid rgba(255,255,255,.7); box-shadow:0 12px 28px rgba(0,0,0,.05); transition:.25s ease; }
+    .prize-card:hover{ transform:translateY(-4px); }
+    .prize-card.gold{ background:linear-gradient(135deg,#ffe088,#f5b041); color:#6e4100; }
+    .prize-card.silver{ background:linear-gradient(135deg,#ececec,#bcc4f4); color:#334; }
+    .prize-card.bronze{ background:linear-gradient(135deg,#ffd1b0,#e67e22); color:#6d3712; }
+    .prize-icon{ font-size:2rem; margin-bottom:8px; }
+    .prize-name{ font-size:.92rem; font-weight:900; margin-bottom:4px; }
+    .prize-amount{ font-size:1.08rem; font-weight:900; }
+
+    .faq-wrap{ max-width:760px; margin:24px auto 0; display:grid; gap:12px; }
+    .faq-item{ overflow:hidden; border-radius:20px; }
+    .faq-q{ padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:12px; cursor:pointer; font-weight:900; font-size:.96rem; color:#4a3f4c; user-select:none; }
+    .faq-icon{ color:var(--primary); font-size:1.35rem; transition:transform .25s ease; flex-shrink:0; }
+    .faq-a{ max-height:0; overflow:hidden; padding:0 20px; color:var(--text-muted); font-size:.9rem; font-weight:700; line-height:1.8; transition:max-height .35s ease, padding .35s ease; }
+    .faq-more{ max-width:760px; margin:18px auto 0; padding:18px 20px; border-radius:20px; text-align:center; }
+    .faq-more p{ color:var(--text-muted); font-size:.92rem; font-weight:700; }
+
+    .notice{ padding:16px 18px; border-radius:20px; margin-bottom:14px; text-align:left; position:relative; overflow:hidden; border:1px solid transparent; }
+    .notice::before{ content:''; position:absolute; left:0; top:0; bottom:0; width:5px; }
+    .notice.notice-pink{ background:linear-gradient(135deg, #fffafb, #fff2f7); border-color:#ffd6e6; }
+    .notice.notice-pink::before{ background:var(--primary); }
+    .notice.notice-green{ background:linear-gradient(135deg, #f0fdf4, #dcfce7); border-color:#bbf7d0; }
+    .notice.notice-green::before{ background:#22c55e; }
+    .notice.notice-yellow{ background:linear-gradient(135deg, #fffbeb, #fef3c7); border-color:#fde68a; }
+    .notice.notice-yellow::before{ background:#f59e0b; }
+    .notice-title{ font-size:1rem; font-weight:900; margin-bottom:8px; color:#3f3442; }
+    .notice ul{ list-style:none; display:grid; gap:6px; }
+    .notice li{ color:#55485a; font-size:.88rem; font-weight:700; padding-left:18px; position:relative; line-height:1.7; }
+    .notice li::before{ content:'•'; position:absolute; left:0; top:0; color:var(--primary); font-weight:900; }
+
+    .form-shell{ max-width:560px; margin:0 auto; }
+    .form-card{ padding:34px 24px 24px; border-radius:28px; position:relative; }
+    .form-badge{ position:absolute; top:-18px; left:50%; transform:translateX(-50%); background:#fff; border:1px solid var(--line); box-shadow:0 8px 18px rgba(255,107,157,.08); border-radius:999px; padding:6px 14px; font-size:1.15rem; }
+    .progress{ display:none; height:6px; background:#ffe4ef; border-radius:999px; overflow:hidden; margin-bottom:18px; }
+    .progress.show{ display:block; }
+    .progress-bar{ width:60%; height:100%; border-radius:999px; background:linear-gradient(90deg, var(--primary), var(--secondary), var(--primary)); background-size:200% 100%; animation:progressAnim 1.2s linear infinite; }
+    .form-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .form-group{ margin-bottom:16px; text-align:left; }
+    .form-group.full{ grid-column:1 / -1; }
+    .form-group label{ display:flex; align-items:center; gap:6px; margin-bottom:8px; font-size:.92rem; font-weight:800; color:#5a4b5d; }
+    .required{ color:var(--primary); }
+    .hint{ margin-top:5px; font-size:.75rem; color:#9b8c9e; font-weight:700; }
+    .form-control{ width:100%; min-height:50px; padding:13px 16px; font:inherit; color:var(--text); background:#fff; border:1.5px solid #ffd8e6; border-radius:16px; transition:.2s ease; outline:none; }
+    .form-control:focus{ border-color:var(--primary); box-shadow:0 0 0 4px rgba(255,107,157,.12); }
+    textarea.form-control{ min-height:92px; resize:vertical; }
+    .group-status-hint{ margin-top:2px; padding:12px 14px; border-radius:14px; font-size:.88rem; font-weight:800; line-height:1.6; }
+    .group-status-hint.default{ background:#fff5f9; color:#8f5c73; border:1px solid #ffd8e6; }
+    .group-status-hint.open{ background:var(--green-bg); color:var(--green); border:1px solid #bbf7d0; }
+    .group-status-hint.almostFull{ background:var(--yellow-bg); color:var(--yellow); border:1px solid #fde68a; }
+    .group-status-hint.waitlist{ background:var(--red-bg); color:var(--red); border:1px solid #fecaca; }
+    .consent-box{ background:#fff8fb; border:1px solid #ffd8e6; border-radius:18px; padding:14px 16px; margin:8px 0 22px; text-align:left; }
+    .consent-check{ display:flex; align-items:flex-start; gap:10px; color:#5a4b5d; font-size:.9rem; font-weight:800; line-height:1.8; }
+    .consent-check input{ margin-top:4px; accent-color:var(--primary-dark); width:18px; height:18px; flex-shrink:0; }
+    #formError{ display:none; background:#fef2f2; border:1px solid #fecaca; color:#dc2626; padding:14px 16px; border-radius:16px; margin-bottom:18px; text-align:left; font-size:.9rem; font-weight:800; }
+    #successCard{ display:none; background:#fff; border:1px solid var(--line); border-radius:28px; padding:32px 24px; box-shadow:0 18px 42px rgba(255,107,157,.12); text-align:center; margin-top:16px; }
+    #successRid{ display:inline-block; margin:10px 0; padding:10px 20px; border-radius:14px; background:#fff0f5; color:var(--primary-dark); border:2px dashed #ffb7d2; font-family:'Nunito', monospace; font-size:1.15rem; font-weight:900; letter-spacing:2px; cursor:pointer; }
+    #copyRidMsg{ display:none; color:var(--green); font-size:.84rem; font-weight:900; margin-bottom:8px; }
+    #successInfo{ background:#fff9fb; border:1px solid #ffe3ec; border-radius:18px; padding:18px; text-align:left; margin:18px 0; color:#5a4b5d; font-size:.9rem; font-weight:700; line-height:1.85; }
+    #successConfirmBox,#successWaitlistBox{ border-radius:16px; padding:16px; text-align:left; margin-bottom:20px; }
+    #successConfirmBox{ background:var(--green-bg); border-left:4px solid #10b981; }
+    #successWaitlistBox{ display:none; background:var(--yellow-bg); border-left:4px solid #f59e0b; }
+
+    .contact-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:16px; align-items:stretch; max-width:900px; margin:0 auto; }
+    .contact-card{ padding:24px 20px; border-radius:26px; text-align:left; }
+    .contact-card h3{ font-size:1.08rem; font-weight:900; color:#3f3442; margin-bottom:8px; }
+    .contact-card p{ color:var(--text-muted); font-size:.92rem; font-weight:700; line-height:1.8; margin-bottom:12px; }
+    .contact-mini{ display:grid; gap:12px; }
+    .contact-mini-item{ padding:18px 16px; border-radius:22px; }
+    .contact-mini-item strong{ display:block; font-size:.8rem; color:#9a6b7e; margin-bottom:4px; }
+    .contact-mini-item span{ display:block; color:#453b47; font-size:.95rem; font-weight:900; line-height:1.6; }
+
+    footer{ background:#fff; border-top:1px solid #f2dfe7; padding:38px 16px 96px; text-align:center; }
+    .footer-title{ color:var(--primary-dark); font-size:1rem; font-weight:900; margin-bottom:18px; }
+    .footer-grid{ max-width:640px; margin:0 auto; display:grid; gap:10px; color:var(--text-muted); font-size:.85rem; font-weight:700; line-height:1.7; }
+    .footer-grid strong{ color:#4b3f4a; }
+    .footer-copy{ margin-top:24px; padding-top:16px; border-top:1px solid #f5e8ed; color:#b09dac; font-size:.78rem; font-weight:700; }
+
+    .sticky-cta{ display:none; }
+    .sticky-phone-btn{ width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:#fff; border:1px solid var(--line); box-shadow:0 8px 20px rgba(255,107,157,.12); font-size:1.2rem; flex-shrink:0; }
+    .fade-in{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+    .fade-in.visible{ opacity:1; transform:translateY(0); }
+    @keyframes bounce{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-8px); } }
+    @keyframes progressAnim{ 0%{ background-position:0 0; } 100%{ background-position:200% 0; } }
+
+    @media (max-width: 980px){
+      .hero-grid,.review-layout,.contact-grid{ grid-template-columns:1fr; }
+      .hero-copy{ text-align:center; }
+      .hero-lead{ margin-left:auto; margin-right:auto; }
+      .hero-actions{ justify-content:center; }
+      .hero-info-pill,.deadline-banner{ margin-left:auto; margin-right:auto; }
+      .trust-strip{ grid-template-columns:1fr; }
+      .features-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
+      .coloring-preview-wrap{ grid-template-columns:1fr; }
+      .photo-grid{ grid-template-columns:repeat(3, minmax(0,1fr)); }
+    }
+    @media (max-width: 767px){
+      .topbar-inner{ padding:10px 0; }
+      .topbar-actions .btn-outline{ display:none; }
+      .hero{ padding:22px 0 42px; }
+      .hero-title{ font-size:clamp(2rem, 10vw, 3.25rem); }
+      .hero-meta{ justify-content:center; }
+      .hero-mini-grid{ grid-template-columns:1fr; }
+      .features-grid,.photo-grid,.prize-grid,.form-grid{ grid-template-columns:1fr; }
+      .coloring-grid{ grid-template-columns:1fr 1fr; gap:10px; }
+      .coloring-message{ padding:22px 18px; }
+      .section{ padding:56px 0; }
+      .timeline{ padding-left:8px; }
+      .timeline::before{ left:20px; }
+      .timeline-dot{ width:34px; height:34px; font-size:.95rem; }
+      .hero-actions .btn{ width:100%; }
+      .sticky-cta{ display:flex; align-items:center; gap:10px; position:fixed; left:0; right:0; bottom:0; z-index:60; background:rgba(255,255,255,.92); backdrop-filter:blur(10px); border-top:1px solid #f2dfe7; padding:10px 16px calc(10px + env(safe-area-inset-bottom)); box-shadow:0 -8px 24px rgba(255,107,157,.08); }
+      .sticky-cta .btn{ flex:1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader" style="position:fixed; inset:0; background:#fff7fa; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:9999; transition:opacity .35s;">
+    <div style="font-size:3.3rem; margin-bottom:14px; animation:bounce 1s ease infinite;">🎨</div>
+    <div style="font-size:1.05rem; color:var(--primary-dark); font-weight:900; font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;">活動資料載入中，請稍候...</div>
+  </div>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-mini">
+        <img src="images/logo.png" alt="乾淨校園推廣團隊">
+        <span>乾淨校園推廣團隊</span>
+      </div>
+      <div class="topbar-actions">
+        <a href="#highlights" class="btn btn-outline btn-sm">看活動特色</a>
+        <a href="#register" class="btn btn-primary btn-sm">立即免費報名</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">5/30 免費親子活動・著色創作・互動遊戲</div>
+          <h1 class="hero-title">孩子心中的「家」<br><span class="accent">會是什麼顏色？</span></h1>
+          <p class="hero-lead">一場結合著色創作、親子互動與趣味闖關的溫暖活動。讓孩子用顏色畫出心中的家，在創作與遊戲中感受家人的愛與陪伴。</p>
+
+          <div class="hero-meta">
+            <span id="heroDateChip">📅 5/30（六）09:00–12:00</span>
+            <span id="heroVenueChip">📍 彰南里活動中心</span>
+            <span>👧 幼兒園大班～國小二年級</span>
+            <span>💰 免費參加</span>
+          </div>
+
+          <p id="heroInfo" class="hero-info-pill">5/30（六）｜09:00–12:00｜彰南里活動中心 大禮堂</p>
+
+          <div class="hero-actions">
+            <a href="#register" class="btn btn-primary">立即免費報名</a>
+            <a href="#highlights" class="btn btn-outline">看活動特色</a>
+          </div>
+
+          <p class="hero-note">不是只有畫畫，也有親子互動與趣味闖關；表單約 1 分鐘完成。</p>
+
+          <div class="trust-strip">
+            <div class="trust-item"><strong>活動地點</strong><span id="heroAddressMini">彰南里活動中心 大禮堂</span></div>
+            <div class="trust-item"><strong>活動亮點</strong><span id="heroHighlightMini">著色創作｜親子互動｜趣味闖關</span></div>
+            <div class="trust-item"><strong>聯絡專線</strong><span id="heroContactMini">陳小姐 0913-837-389</span></div>
+          </div>
+
+          <div class="quota-countdown" id="quotaCountdown">
+            <div class="quota-countdown-item">
+              <div class="quota-countdown-label">幼兒園大班組</div>
+              <div class="quota-countdown-number" id="countdownK">—</div>
+              <div class="quota-countdown-sub" id="countdownKSub">以送出結果為準</div>
+              <div><span class="quota-badge open" id="quotaK">🟢 開放報名</span></div>
+            </div>
+            <div class="quota-countdown-item">
+              <div class="quota-countdown-label">國小低年級組</div>
+              <div class="quota-countdown-number" id="countdownE">—</div>
+              <div class="quota-countdown-sub" id="countdownESub">以送出結果為準</div>
+              <div><span class="quota-badge open" id="quotaE">🟢 開放報名</span></div>
+            </div>
+          </div>
+
+          <div class="deadline-banner" id="deadlineBanner"><span id="deadlineText">報名截止：—</span></div>
+        </div>
+
+        <div class="hero-side">
+          <div class="surface hero-photo">
+            <img src="images/hero-family-coloring.png" alt="親子一起著色畫畫">
+            <div class="hero-caption">讓孩子用顏色畫出心中的家，也在陪伴與遊戲中留下溫暖記憶</div>
+          </div>
+
+          <div class="hero-mini-grid">
+            <div class="surface mini-card">
+              <h3>正式活動海報</h3>
+              <p>想快速查看完整資訊，可直接開啟活動海報。</p>
+              <a id="posterPreviewLink" href="images/banner.png?v=3" target="_blank" rel="noopener"><img id="posterPreviewImg" src="images/banner.png?v=3" alt="活動海報"></a>
+            </div>
+            <div class="surface mini-card">
+              <h3>不是只有畫畫</h3>
+              <p>活動結合著色創作、親子互動與趣味闖關，讓孩子更認識家，也感受家人的陪伴。</p>
+              <div style="margin-top:12px;"><a href="#highlights" class="btn btn-outline btn-sm" style="width:100%;">看活動特色</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section" id="highlights">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <span class="section-kicker">活動特色</span>
+          <h2 class="section-title">這不只是一場著色活動</h2>
+          <p class="section-subtitle">孩子透過畫畫思考「家」是什麼，也在親子互動與趣味闖關中，感受家人的陪伴與照顧。</p>
+        </div>
+        <div class="features-grid fade-in" id="highlightsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Coloring Sheets -->
+    <section class="section alt" id="coloringSheets" style="display:none;">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <span class="section-kicker">本次活動底圖</span>
+          <h2 class="section-title">可以先看看孩子會畫的題目</h2>
+          <p class="section-subtitle">底圖只是活動的一部分，真正重要的是孩子在創作、陪伴與互動中，完成屬於自己的作品。</p>
+        </div>
+
+        <div class="coloring-preview-wrap fade-in">
+          <div class="surface coloring-message">
+            <h3>不要求畫得最漂亮，只鼓勵孩子願意表達</h3>
+            <p>現場會提供著色底圖，孩子只要自備畫材，就能依照自己的想法完成作品。活動重點不是技巧高低，而是讓孩子在創作中感受「家」的溫暖。</p>
+            <ul>
+              <li>幼兒園大班組：線條較簡單，適合輕鬆著色</li>
+              <li>國小低年級組：細節稍多，可以發揮更多創意</li>
+              <li>圖片可先預覽，正式活動以現場發放底圖為準</li>
+            </ul>
+            <div style="margin-top:18px;"><a href="#register" class="btn btn-primary btn-sm">看完底圖，立即報名</a></div>
+          </div>
+
+          <div class="coloring-grid" id="coloringSheetsGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Review -->
+    <section class="section alt" id="reviewGallery">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <span class="section-kicker">上屆活動回顧</span>
+          <h2 class="section-title">看看孩子參與活動的真實氛圍</h2>
+          <p class="section-subtitle">比文字更有說服力的是實景。先看看孩子創作、親子互動與活動現場的溫暖畫面。</p>
+        </div>
+
+        <div class="review-layout fade-in">
+          <div class="surface video-card">
+            <h3>上屆活動花絮影片</h3>
+            <p>用一支影片快速了解活動現場的氣氛、流程與家長回饋。</p>
+            <div class="video-frame"><iframe src="https://www.youtube.com/embed/eAzaLqsKM9s" title="乾淨校園・我愛我家著色畫比賽｜家長反饋" allowfullscreen></iframe></div>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;">
+              <a href="https://www.ganjingworld.com/s/bzNW8NQKJq" target="_blank" rel="noopener" class="btn btn-outline btn-sm">🎬 看完整活動影片</a>
+              <a href="#register" class="btn btn-primary btn-sm">立即卡位報名</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="photo-grid">
+              <div class="review-photo"><img src="images/孩子專心畫畫的特寫.jpg" alt="孩子專心創作"></div>
+              <div class="review-photo"><img src="images/親子一起創作的畫面.jpg" alt="親子一起創作"></div>
+              <div class="review-photo"><img src="images/歡樂氣氛照.jpg" alt="歡樂氣氛"></div>
+            </div>
+            <div class="surface testimonial-card">
+              <div class="quote">❝</div>
+              <p>您們辦得很用心，有家長回饋希望能多辦，形成更多善的循環；來的孩子都很乖，畫畫時的背景音樂也選得很好。</p>
+              <div class="who">⭐⭐⭐⭐⭐ 上屆參與家長</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="section" id="schedule">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <span class="section-kicker">活動流程</span>
+          <h2 class="section-title">當天流程很單純，家長好安排</h2>
+          <p class="section-subtitle" id="scheduleSubtitle"></p>
+        </div>
+        <div class="timeline fade-in" id="timelineContainer"></div>
+        <p class="fade-in" style="margin-top:18px; text-align:center; color:#a092a1; font-size:.8rem; font-weight:700;">＊活動流程僅供參考，主辦單位保留調整權利</p>
+
+        <div class="section-heading fade-in" style="margin-top:52px;">
+          <span class="section-kicker">專屬獎項</span>
+          <h2 class="section-title">完成作品可參與評選</h2>
+          <p class="section-subtitle">各組皆設有獎勵，鼓勵孩子自在創作、開心參與。</p>
+        </div>
+        <div class="prize-grid fade-in" id="prizeGrid"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <span class="section-kicker">常見問題</span>
+          <h2 class="section-title">報名前最常問的 6 件事</h2>
+          <p class="section-subtitle">先把最常見的疑問說清楚，家長就更放心報名。</p>
+        </div>
+
+        <div class="faq-wrap">
+          <div class="surface faq-item fade-in"><div class="faq-q"><span>🎨 孩子沒畫過畫也可以參加嗎？</span><span class="faq-icon">＋</span></div><div class="faq-a">可以。這次活動重點是鼓勵孩子表達與參與，主辦方會提供著色底圖，孩子依自己喜歡的方式上色即可；不用畫得很厲害，願意完成作品就很棒。</div></div>
+          <div class="surface faq-item fade-in"><div class="faq-q"><span>🖍️ 需要準備什麼東西？</span><span class="faq-icon">＋</span></div><div class="faq-a">主辦方提供：著色底圖、桌椅與場地設施。<br>請自備：畫材（彩色筆、蠟筆、色鉛筆皆可）。</div></div>
+          <div class="surface faq-item fade-in"><div class="faq-q"><span>📱 報名後怎麼知道是錄取還是候補？</span><span class="faq-icon">＋</span></div><div class="faq-a">表單送出後會立即顯示專屬報名序號。主辦方將於指定日期發送簡訊通知，請於期限前回覆確認，逾時未回覆將釋出名額給候補家庭。</div></div>
+          <div class="surface faq-item fade-in"><div class="faq-q"><span>👨‍👩‍👧 可以幾位家長一起陪同孩子入場？</span><span class="faq-icon">＋</span></div><div class="faq-a">考量場地空間有限，每位孩子限一位家長陪同入場。</div></div>
+          <div class="surface faq-item fade-in"><div class="faq-q"><span>💰 參加費用與名額是多少？</span><span class="faq-icon">＋</span></div><div class="faq-a">免費參加。名額有限：幼兒園大班組 15 名，國小低年級組 35 名；額滿後開放候補登記。</div></div>
+        </div>
+
+        <div class="surface faq-more fade-in">
+          <p>還有舊生、非台南市民、遲到處理等細節問題嗎？<br>可直接撥打 <a id="faqPhoneLink" href="tel:0913837389" style="color:var(--primary-dark); font-weight:900;">活動洽詢專線</a> 詢問主辦單位。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register -->
+    <section class="section" id="register">
+      <div class="container">
+        <div class="form-shell">
+          <div class="section-heading fade-in" style="margin-bottom:22px;">
+            <span class="section-kicker">立即報名</span>
+            <h2 class="section-title" id="registerTitle">立即幫孩子報名</h2>
+            <p class="section-subtitle">欄位精簡，約 1 分鐘完成。送出後會立即產生報名序號。</p>
+          </div>
+
+          <div class="notice notice-pink fade-in" id="noticePink">
+            <div class="notice-title">著色創作｜親子互動｜趣味闖關｜免費參加</div>
+            <ul><li>報名表送出後，會立即顯示專屬報名序號。</li><li>更多活動細節，可先參考上方常見問題。</li></ul>
+          </div>
+          <div class="notice notice-green fade-in" id="noticeGreen">
+            <div class="notice-title">✅ 出席確認機制</div>
+            <ul><li><strong id="confirmSendDateText"></strong> 將發送確認簡訊</li><li>請於 <strong id="confirmDeadlineText"></strong> 前回覆確認</li><li>逾時未回覆將自動釋出名額給候補家庭</li></ul>
+          </div>
+          <div class="notice notice-yellow fade-in" id="waitlistNotice" style="display:none;">
+            <div class="notice-title">📋 候補說明</div>
+            <ul><li>目前部分或全部組別已額滿，開放候補登記中。</li><li>若有名額釋出，將依序以簡訊通知。</li></ul>
+          </div>
+
+          <!-- Success -->
+          <div id="successCard">
+            <div id="successIcon" style="font-size:3.8rem; margin-bottom:10px;">🎉</div>
+            <div id="successTitle" style="font-size:1.7rem; font-weight:900; color:var(--primary-dark); margin-bottom:8px; font-family:'Zen Maru Gothic','Noto Sans TC',sans-serif;">報名成功！</div>
+            <div style="font-size:.88rem; color:var(--text-muted); font-weight:700;">您的專屬報名序號</div>
+            <div id="successRid" onclick="copyRid()" title="點擊複製序號">---</div>
+            <div id="copyRidMsg">✅ 序號已複製！</div>
+            <div id="successInfo"></div>
+            <div id="successConfirmBox"><p style="font-weight:900; color:#065f46; margin-bottom:8px;">📱 留意手機簡訊</p><p id="successConfirmText1" style="font-size:.86rem; color:#065f46; font-weight:800; margin-bottom:4px;"></p><p id="successConfirmText2" style="font-size:.86rem; color:#065f46; font-weight:800;"></p></div>
+            <div id="successWaitlistBox"><p style="font-weight:900; color:#92400e; margin-bottom:8px;">📋 候補通知</p><p style="font-size:.86rem; color:#92400e; font-weight:800;">您目前列為候補，若有名額釋出將以簡訊通知。請保持手機暢通！</p></div>
+            <div style="display:grid; gap:10px;"><a href="thanks.html" id="successThanksLink" class="btn btn-primary">👉 查看完整報名資訊</a><button type="button" class="btn btn-outline" onclick="resetForm()">再報名一位孩子</button></div>
+          </div>
+
+          <!-- Form -->
+          <div class="surface form-card fade-in" id="formCard">
+            <div class="form-badge">✍️ 立即填表</div>
+            <div class="progress" id="progress"><div class="progress-bar"></div></div>
+            <div id="formError"></div>
+
+            <form id="registerForm" novalidate>
+              <div style="position:absolute; left:-9999px;"><input type="text" id="honeypot" tabindex="-1" autocomplete="off"></div>
+              <input type="hidden" id="fullJoin" value="是">
+              <input type="hidden" id="group" value="">
+
+              <div class="form-grid">
+                <div class="form-group"><label for="parentName">家長姓名 <span class="required">*</span></label><input id="parentName" type="text" class="form-control" placeholder="例如：王小明" required></div>
+                <div class="form-group"><label for="phone">聯絡手機 <span class="required">*</span></label><input id="phone" type="tel" class="form-control" placeholder="09xxxxxxxx" inputmode="numeric" maxlength="10" required></div>
+                <div class="form-group"><label for="childName">孩子姓名 <span class="required">*</span></label><input id="childName" type="text" class="form-control" placeholder="例如：王大寶" required></div>
+                <div class="form-group"><label for="childAge">孩子年級 <span class="required">*</span></label><select id="childAge" class="form-control" required><option value="">請選擇</option><option value="幼兒園大班組">幼兒園（大班）</option><option value="國小低年級">國小（一、二年級）</option></select></div>
+                <div class="form-group full"><div id="groupStatusHint" class="group-status-hint default">請先選擇孩子年級，系統會自動帶入參賽組別。</div></div>
+                <div class="form-group"><label for="resident">是否為台南市民 <span class="required">*</span></label><select id="resident" class="form-control" required><option value="">請選擇</option><option value="是">是</option><option value="否">否</option></select><div class="hint">台南市民享有優先錄取權。</div></div>
+                <div class="form-group"><label for="school">就讀學校 <span style="color:#a196a3; font-weight:normal; font-size:.8rem;">(選填)</span></label><input id="school" type="text" class="form-control" placeholder="例如：台南市○○國小"></div>
+                <div class="form-group full"><label for="note">備註留言 <span style="color:#a196a3; font-weight:normal; font-size:.8rem;">(選填)</span></label><textarea id="note" class="form-control" placeholder="有什麼想告訴我們的嗎？"></textarea></div>
+              </div>
+
+              <div class="consent-box">
+                <label class="consent-check"><input type="checkbox" id="attendanceConfirm"><span>我了解活動需準時報到，並建議全程參與；若無法出席，會提前告知主辦單位。</span></label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%; font-size:1.08rem; padding:17px;">確認送出報名表</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section alt" id="contact">
+      <div class="container">
+        <div class="section-heading fade-in">
+          <span class="section-kicker">聯絡資訊</span>
+          <h2 class="section-title">活動地點與洽詢方式</h2>
+          <p class="section-subtitle">若對報名、候補或活動當天流程有疑問，可直接聯繫主辦單位。</p>
+        </div>
+        <div class="contact-grid fade-in">
+          <div class="surface contact-card">
+            <h3 id="venueText">彰南里活動中心 大禮堂</h3>
+            <p id="addressText">台南市南區彰南街一段107號</p>
+            <div style="display:flex; flex-wrap:wrap; gap:10px;"><button type="button" class="btn btn-outline btn-sm" id="copyAddressBtn">📋 複製地址</button><a href="#" class="btn btn-primary btn-sm" id="mapLink" target="_blank" rel="noopener">🗺️ 開啟導航</a></div>
+          </div>
+          <div class="contact-mini">
+            <div class="surface contact-mini-item">
+              <strong>主辦單位</strong>
+              <span id="organizerText">乾淨校園推廣團隊</span>
+            </div>
+
+            <div class="surface contact-mini-item" id="coOrganizerBox" style="display:none;">
+              <strong>協辦單位</strong>
+              <span id="coOrganizerText"></span>
+            </div>
+
+            <div class="surface contact-mini-item" id="coOrganizerSubBox" style="display:none;">
+              <strong>協力單位</strong>
+              <span id="coOrganizerSubText"></span>
+            </div>
+
+            <div class="surface contact-mini-item">
+              <strong>活動洽詢</strong>
+              <span id="contactText">陳小姐 0913-837-389</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="footer-title" id="footerText">💕 乾淨校園我愛我家，期待您的參與</p>
+    <div class="footer-grid">
+      <div>乾淨校園推廣團隊｜公益兒童著色畫比賽</div>
+    </div>
+    <div class="footer-copy">© 2026 乾淨校園推廣團隊．保留所有權利</div>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta">
+    <a href="#register" class="btn btn-primary">立即免費報名</a>
+    <a href="tel:0913837389" class="sticky-phone-btn" id="stickyPhone" aria-label="電話洽詢">📞</a>
+  </div>
+
+  <script>
+  (function(){
+    'use strict';
+
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.addEventListener('pageshow', function(){ window.scrollTo(0, 0); });
+
+    var GAS_URL = 'https://script.google.com/macros/s/AKfycbwqKpnXIKF4WnUND163KJ08VzwosekgN3h-9DrV_iDNjpDqLxi4vNantjMIouznQIc/exec';
+    var cfg = null;
+    var groupStatus = null;
+    var $ = function(id){ return document.getElementById(id); };
+
+    var STATUS_DISPLAY = { open:'🟢 熱烈報名中', almostFull:'🔥 即將額滿', waitlist:'⚠️ 已滿（候補中）' };
+
+    function hasValue(value){
+      return value !== undefined && value !== null && String(value).trim() !== '';
+    }
+
+    // 不讓空值把 HTML 裡的預設文字覆蓋掉，避免 GAS 還沒回來時畫面出現空白。
+    function setText(id, value){
+      var el = $(id);
+      if (el && hasValue(value)) el.textContent = value;
+    }
+
+    function setHref(id, value){
+      var el = $(id);
+      if (el && hasValue(value)) el.href = value;
+    }
+
+    function getCfgValue(keys, fallback){
+      if (!cfg) return fallback || '';
+      for (var i = 0; i < keys.length; i++){
+        var v = cfg[keys[i]];
+        if (hasValue(v)) return String(v).trim();
+      }
+      return fallback || '';
+    }
+
+    function getOrganizer(){
+      return getCfgValue(['organizer','host','mainOrganizer'], '乾淨校園推廣團隊');
+    }
+    function getCoOrganizer(){
+      return getCfgValue(['coOrganizer','coorganizer','co_organizer','coOrganizerName','協辦','協辦單位'], '國際獅子會300E-1區 第22分區主席林淑珍');
+    }
+    function getCoOrganizerSub(){
+      return getCfgValue(['coOrganizerSub','coorganizerSub','co_organizer_sub','cooperationUnit','supportOrganizer','協力','協力單位'], '明林蕾絲');
+    }
+
+    function show(el){ if(el) el.style.display = ''; }
+    function hide(el){ if(el) el.style.display = 'none'; }
+
+    var loaderHidden = false;
+    function hideLoader(){
+      if (loaderHidden) return;
+      loaderHidden = true;
+      var loader = $('loader');
+      if(loader){ loader.style.opacity = '0'; setTimeout(function(){ loader.style.display = 'none'; }, 350); }
+    }
+
+    function formatDateChip(){
+      var date = (cfg && cfg.eventDate) ? cfg.eventDate : '5/30（六）';
+      var time = (cfg && cfg.eventTime) ? cfg.eventTime : '09:00–12:00';
+      return '📅 ' + date + ' ' + time;
+    }
+
+    function loadConfig(){
+      fetch(GAS_URL + '?action=getConfig')
+        .then(function(r){
+          if(!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function(data){
+          if(data && data.error) throw new Error(data.error);
+          cfg = data || {};
+          renderPage();
+          hideLoader();
+
+          // 名額狀態和瀏覽紀錄不阻擋首屏顯示，延後一點點再跑。
+          setTimeout(function(){
+            loadGroupStatus();
+            setInterval(loadGroupStatus, 30000);
+            logView();
+          }, 150);
+        })
+        .catch(function(err){
+          console.error('載入設定失敗', err);
+          renderFallback();
+          hideLoader();
+        });
+    }
+
+    function renderFallback(){
+      renderHighlights();
+      renderColoringSheets();
+      renderDefaultSchedule();
+      renderDefaultPrizes();
+    }
+
+    function renderPage(){
+      if(!cfg) return;
+
+      document.title = cfg.eventName || '孩子心中的「家」會是什麼顏色？｜5/30 免費親子活動';
+      setText('heroDateChip', formatDateChip());
+      setText('heroVenueChip', '📍 ' + (cfg.eventVenue || '彰南里活動中心 大禮堂'));
+      setText('heroInfo', (cfg.eventDate || '5/30（六）') + ' ｜ ' + (cfg.eventTime || '09:00–12:00') + ' ｜ ' + (cfg.eventVenue || '彰南里活動中心 大禮堂'));
+      setText('heroAddressMini', cfg.eventVenue || cfg.eventAddress || '彰南里活動中心 大禮堂');
+      setText('heroHighlightMini', '著色創作｜親子互動｜趣味闖關');
+      setText('heroContactMini', ((cfg.contactName || '陳小姐') + ' ' + (cfg.contactPhone || '0913-837-389')).trim());
+
+      if(cfg.posterImage){
+        if($('posterPreviewImg')) $('posterPreviewImg').src = cfg.posterImage;
+        if($('posterPreviewLink')) $('posterPreviewLink').href = cfg.posterImage;
+      }
+
+      renderHighlights();
+      renderColoringSheets();
+      renderSchedule();
+      renderPrizes();
+      renderDeadline();
+      renderContact();
+      renderSuccessInfo();
+    }
+
+    function renderHighlights(){
+      var fallback = [
+        { icon:'🎨', title:'著色創作', desc:'讓孩子用顏色畫出心中的家，透過作品表達對家的想像與感受。' },
+        { icon:'❤️', title:'親子互動', desc:'家長陪孩子一起完成作品，也讓孩子感受家人的陪伴與照顧。' },
+        { icon:'🎲', title:'趣味闖關', desc:'不是只有坐著畫畫，也有互動遊戲，讓活動更有參與感。' },
+        { icon:'🏆', title:'完成作品有鼓勵', desc:'不比誰最厲害，重點是鼓勵孩子願意表達、願意完成。' }
+      ];
+      var items = fallback;
+      var hGrid = $('highlightsGrid');
+      if(!hGrid) return;
+      hGrid.innerHTML = items.map(function(h){
+        return '<div class="surface feature-card"><div class="feature-icon">' + h.icon + '</div><h3>' + h.title + '</h3><p>' + h.desc + '</p></div>';
+      }).join('');
+    }
+
+    function renderColoringSheets(){
+      var section = $('coloringSheets');
+      var grid = $('coloringSheetsGrid');
+      if(!section || !grid) return;
+
+      // 顯示邏輯：
+      // 1. Config.gs 有 showColoringSheets:true + coloringSheets，就用 Config 的設定。
+      // 2. 如果 Code.gs 還沒把 showColoringSheets / coloringSheets 回傳出來，
+      //    也會自動偵測 GitHub images 資料夾裡是否已存在這兩張圖。
+      // 3. 圖片不存在時，區塊仍維持隱藏，不會出現破圖。
+      var sheets = (cfg && Array.isArray(cfg.coloringSheets)) ? cfg.coloringSheets.filter(function(item){
+        return item && hasValue(item.image);
+      }).slice(0, 2) : [];
+
+      if(cfg && cfg.showColoringSheets === true && sheets.length > 0){
+        showColoringSheetCards(sheets);
+        return;
+      }
+
+      // 預設檔名：請將底圖放在 GitHub 的 images 資料夾。
+      var defaultSheets = [
+        { title:'幼兒園大班組底圖', image:'images/coloring-k.png' },
+        { title:'國小低年級組底圖', image:'images/coloring-e.png' }
+      ];
+
+      // 自動偵測圖片是否存在；至少有 1 張存在才顯示。
+      checkExistingImages(defaultSheets, function(existingSheets){
+        if(existingSheets.length){
+          showColoringSheetCards(existingSheets);
+        } else {
+          section.style.display = 'none';
+          grid.innerHTML = '';
+        }
+      });
+    }
+
+    function showColoringSheetCards(sheets){
+      var section = $('coloringSheets');
+      var grid = $('coloringSheetsGrid');
+      if(!section || !grid) return;
+      section.style.display = '';
+      grid.innerHTML = sheets.map(function(item, idx){
+        var title = item.title || (idx === 0 ? '幼兒園大班組底圖' : '國小低年級組底圖');
+        var image = item.image;
+        return '<div class="coloring-card"><a href="' + image + '" target="_blank" rel="noopener"><img src="' + image + '" alt="' + title + '" onerror="this.closest(\'.coloring-card\').style.display=\'none\'"></a><div class="coloring-card-title">' + title + '</div></div>';
+      }).join('');
+    }
+
+    function checkExistingImages(sheets, callback){
+      var results = [];
+      var pending = sheets.length;
+      if(!pending){ callback(results); return; }
+
+      sheets.forEach(function(item){
+        var img = new Image();
+        var done = false;
+        function finish(ok){
+          if(done) return;
+          done = true;
+          if(ok) results.push(item);
+          pending -= 1;
+          if(pending === 0) callback(results);
+        }
+        img.onload = function(){ finish(true); };
+        img.onerror = function(){ finish(false); };
+        img.src = item.image + '?v=' + Date.now();
+        setTimeout(function(){ finish(false); }, 2500);
+      });
+    }
+
+    function renderSchedule(){
+      setText('scheduleSubtitle', (cfg.eventDate || '5/30（六）') + ' ｜ ' + (cfg.eventTime || '09:00–12:00'));
+      var tl = $('timelineContainer');
+      if(!tl) return;
+      if(cfg && Array.isArray(cfg.schedule) && cfg.schedule.length){
+        tl.innerHTML = cfg.schedule.map(function(s){
+          return '<div class="timeline-item"><div class="timeline-dot">' + (s.icon || '🎨') + '</div><div class="timeline-content"><div class="timeline-time">' + (s.time || '') + '</div><div class="timeline-title">' + (s.title || '') + '</div><div class="timeline-desc">' + (s.desc || '') + '</div></div></div>';
+        }).join('');
+      } else {
+        renderDefaultSchedule();
+      }
+    }
+
+    function renderDefaultSchedule(){
+      var tl = $('timelineContainer');
+      if(!tl) return;
+      var data = [
+        { icon:'🕣', time:'08:30–09:00', title:'報到入場', desc:'確認報名資料，孩子與家長準備入場。' },
+        { icon:'🎨', time:'09:20–11:10', title:'兒童著色創作', desc:'現場提供底圖，孩子依組別進行著色創作。' },
+        { icon:'🏆', time:'11:10–11:30', title:'作品評選', desc:'主辦單位進行作品整理與評選。' },
+        { icon:'🎁', time:'11:30–12:00', title:'頒獎與合影', desc:'公布評選結果，留下活動紀念。' }
+      ];
+      tl.innerHTML = data.map(function(s){ return '<div class="timeline-item"><div class="timeline-dot">' + s.icon + '</div><div class="timeline-content"><div class="timeline-time">' + s.time + '</div><div class="timeline-title">' + s.title + '</div><div class="timeline-desc">' + s.desc + '</div></div></div>'; }).join('');
+    }
+
+    function renderPrizes(){
+      var pg = $('prizeGrid');
+      if(!pg) return;
+      if(cfg && Array.isArray(cfg.prizes) && cfg.prizes.length){
+        pg.innerHTML = cfg.prizes.map(function(p){ return '<div class="prize-card ' + (p.class || '') + '"><div class="prize-icon">' + (p.icon || '🏆') + '</div><div class="prize-name">' + (p.name || '') + '</div><div class="prize-amount">' + (p.amount || '') + '</div></div>'; }).join('');
+      } else {
+        renderDefaultPrizes();
+      }
+    }
+
+    function renderDefaultPrizes(){
+      var pg = $('prizeGrid');
+      if(!pg) return;
+      var data = [
+        { class:'gold', icon:'🥇', name:'第一名', amount:'獎勵鼓勵' },
+        { class:'silver', icon:'🥈', name:'第二名', amount:'獎勵鼓勵' },
+        { class:'bronze', icon:'🥉', name:'第三名', amount:'獎勵鼓勵' }
+      ];
+      pg.innerHTML = data.map(function(p){ return '<div class="prize-card ' + p.class + '"><div class="prize-icon">' + p.icon + '</div><div class="prize-name">' + p.name + '</div><div class="prize-amount">' + p.amount + '</div></div>'; }).join('');
+    }
+
+    function renderDeadline(){
+      if(!cfg || !cfg.registrationDeadline || !$('deadlineBanner')) return;
+      try{
+        var dl = new Date(cfg.registrationDeadline);
+        if(isNaN(dl.getTime())) return;
+        var now = new Date();
+        var diffMs = dl.getTime() - now.getTime();
+        var diffDays = Math.ceil(diffMs / (1000*60*60*24));
+        var week = ['日','一','二','三','四','五','六'];
+        var dlStr = (dl.getMonth()+1) + '/' + dl.getDate() + '（' + week[dl.getDay()] + '）' + String(dl.getHours()).padStart(2,'0') + ':' + String(dl.getMinutes()).padStart(2,'0');
+        var banner = $('deadlineBanner');
+        var txt = '';
+        if(diffMs <= 0){
+          txt = '⏰ 報名已截止'; banner.style.background = 'var(--red-bg)'; banner.style.borderColor = '#fecaca'; banner.style.color = 'var(--red)';
+        } else if(diffDays <= 3){
+          txt = '🔥 倒數 ' + diffDays + ' 天・' + dlStr + ' 截止報名'; banner.style.background = '#fff1f2'; banner.style.borderColor = '#fecdd3'; banner.style.color = '#be123c';
+        } else {
+          txt = '⏰ 報名截止：' + dlStr + '（還有 ' + diffDays + ' 天）';
+        }
+        setText('deadlineText', txt);
+        banner.style.display = 'inline-block';
+      } catch(e){}
+    }
+
+    function renderContact(){
+      setText('venueText', cfg.eventVenue || '彰南里活動中心 大禮堂');
+      setText('addressText', cfg.eventAddress || '台南市南區彰南街一段107號');
+      setHref('mapLink', cfg.eventMapUrl || '#');
+
+      // 主辦單位
+      setText('organizerText', getOrganizer());
+
+      // 協辦單位：優先讀 Config.gs；若 GAS 暫時沒回傳，先顯示本活動預設協辦，避免頁面看不到。
+      var co = getCoOrganizer();
+      if (hasValue(co)) {
+        setText('coOrganizerText', co);
+        show($('coOrganizerBox'));
+      } else {
+        hide($('coOrganizerBox'));
+      }
+
+      // 協力單位：優先讀 Config.gs；若 GAS 暫時沒回傳，先顯示本活動預設協力，避免頁面看不到。
+      var coSub = getCoOrganizerSub();
+      if (hasValue(coSub)) {
+        setText('coOrganizerSubText', coSub);
+        show($('coOrganizerSubBox'));
+      } else {
+        hide($('coOrganizerSubBox'));
+      }
+
+      // 活動洽詢
+      setText('contactText', ((cfg.contactName || '陳小姐') + ' ' + (cfg.contactPhone || '0913-837-389')).trim());
+
+      // Footer 簡化，不再重複列主辦／協辦／電話
+      setText('footerText', '💕 ' + (cfg.eventName || '乾淨校園我愛我家兒童著色畫比賽') + ' 期待您的參與');
+
+      var tel = cfg.contactPhoneTel || (cfg.contactPhone || '0913837389').replace(/[^0-9]/g, '');
+      setHref('stickyPhone', 'tel:' + tel);
+      setHref('faqPhoneLink', 'tel:' + tel);
+    }
+
+    function renderSuccessInfo(){
+      setText('confirmSendDateText', cfg.confirmSendDate || '指定日期');
+      setText('confirmDeadlineText', cfg.confirmDeadline || '指定期限');
+      if($('successInfo')){
+        $('successInfo').innerHTML = '📅 <strong>' + (cfg.eventDate || '5/30（六）') + '</strong>（' + (cfg.eventTime || '09:00–12:00') + '）<br>📍 ' + (cfg.eventVenue || '彰南里活動中心 大禮堂') + '<br>🕣 08:30 開始報到，請準時到場<br>🖍️ 請自備畫材（彩色筆、蠟筆等）';
+      }
+      setText('successConfirmText1', (cfg.confirmSendDate || '指定日期') + ' 將發送簡訊確認出席。');
+      setText('successConfirmText2', (cfg.confirmDeadline || '指定期限') + ' 前未回覆將視為取消，名額釋出給候補者。');
+    }
+
+    function getGroupLimitFromConfig(groupName, fallback){
+      if(cfg && Array.isArray(cfg.groups)){
+        for(var i=0; i<cfg.groups.length; i++){
+          var g = cfg.groups[i] || {};
+          var name = g.name || g.group || g.title || '';
+          if(name === groupName || name.indexOf(groupName.replace('組','')) >= 0){
+            return Number(g.displayLimit || g.limit || g.quota || g.capacity || fallback) || fallback;
+          }
+        }
+      }
+      return fallback;
+    }
+
+    function buildFallbackGroupStatus(){
+      return {
+        '幼兒園大班組': { status:'open', displayLimit:getGroupLimitFromConfig('幼兒園大班組', 15), displayCount:0, fallback:true },
+        '國小低年級組': { status:'open', displayLimit:getGroupLimitFromConfig('國小低年級組', 35), displayCount:0, fallback:true }
+      };
+    }
+
+    function normalizeStatusData(raw){
+      var source = raw || {};
+      if(source.status && typeof source.status === 'object') source = source.status;
+      if(source.groupStatus && typeof source.groupStatus === 'object') source = source.groupStatus;
+      var result = {};
+
+      function toInfo(item, fallbackLimit){
+        item = item || {};
+        var limit = Number(item.displayLimit || item.limit || item.quota || item.capacity || fallbackLimit) || fallbackLimit;
+        var count = Number(item.displayCount || item.count || item.used || item.registered || 0) || 0;
+        var status = item.status || (count >= limit ? 'waitlist' : (limit - count <= 3 ? 'almostFull' : 'open'));
+        return { status:status, displayLimit:limit, displayCount:count };
+      }
+
+      function pick(names, fallbackLimit){
+        for(var i=0; i<names.length; i++){
+          if(source[names[i]]) return toInfo(source[names[i]], fallbackLimit);
+        }
+        if(Array.isArray(source.groups)){
+          for(var j=0; j<source.groups.length; j++){
+            var g = source.groups[j] || {};
+            var name = g.name || g.group || g.title || '';
+            for(var k=0; k<names.length; k++){
+              if(name === names[k] || name.indexOf(names[k].replace('組','')) >= 0) return toInfo(g, fallbackLimit);
+            }
+          }
+        }
+        return null;
+      }
+
+      result['幼兒園大班組'] = pick(['幼兒園大班組','幼兒園組','幼兒園大班'], getGroupLimitFromConfig('幼兒園大班組', 15));
+      result['國小低年級組'] = pick(['國小低年級組','國小低年級','國小組'], getGroupLimitFromConfig('國小低年級組', 35));
+
+      if(!result['幼兒園大班組'] && !result['國小低年級組']) return null;
+      var fallback = buildFallbackGroupStatus();
+      result['幼兒園大班組'] = result['幼兒園大班組'] || fallback['幼兒園大班組'];
+      result['國小低年級組'] = result['國小低年級組'] || fallback['國小低年級組'];
+      return result;
+    }
+
+    function loadGroupStatus(){
+      fetch(GAS_URL + '?action=checkStatus&ts=' + Date.now(), { cache:'no-store' })
+        .then(function(r){
+          if(!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function(data){
+          groupStatus = normalizeStatusData(data) || buildFallbackGroupStatus();
+          updateUI(groupStatus);
+        })
+        .catch(function(err){
+          console.log('無法取得狀態，改用前端預設名額顯示', err);
+          groupStatus = buildFallbackGroupStatus();
+          updateUI(groupStatus);
+        });
+    }
+
+    function updateUI(data){
+      if(!data) return;
+      var kInfo = data['幼兒園大班組'];
+      var eInfo = data['國小低年級組'];
+      updateBadge($('quotaK'), kInfo);
+      updateBadge($('quotaE'), eInfo);
+      updateCountdown($('countdownK'), $('countdownKSub'), kInfo);
+      updateCountdown($('countdownE'), $('countdownESub'), eInfo);
+      updateRegisterSection(data);
+      updateGroupStatusHint();
+    }
+
+    function updateCountdown(numEl, subEl, info){
+      if(!numEl || !info) return;
+      var remain = (Number(info.displayLimit) || 0) - (Number(info.displayCount) || 0);
+      if(info.status === 'waitlist'){
+        numEl.textContent = '0'; numEl.style.color = 'var(--red)'; if(subEl) subEl.textContent = '名額已滿';
+      } else if(info.status === 'almostFull'){
+        numEl.textContent = remain > 0 ? remain : '—'; numEl.style.color = 'var(--yellow)'; if(subEl) subEl.textContent = '即將額滿';
+      } else {
+        numEl.textContent = remain > 0 ? remain : '—'; numEl.style.color = 'var(--primary-dark)'; if(subEl) subEl.textContent = info.fallback ? '可報名（以送出結果為準）' : '名額剩餘';
+      }
+    }
+
+    function updateBadge(el, info){
+      if(!el || !info) return;
+      el.textContent = info.fallback ? '🟢 開放報名' : (STATUS_DISPLAY[info.status] || '查詢中');
+      el.className = 'quota-badge';
+      if(info.status === 'open'){ el.classList.add('open'); el.style.background='var(--green-bg)'; el.style.color='var(--green)'; }
+      else if(info.status === 'almostFull'){ el.style.background='var(--yellow-bg)'; el.style.color='var(--yellow)'; }
+      else if(info.status === 'waitlist'){ el.style.background='var(--red-bg)'; el.style.color='var(--red)'; }
+    }
+
+    function updateRegisterSection(data){
+      var title = $('registerTitle'), notice = $('waitlistNotice'), btn = $('submitBtn');
+      var kWait = data['幼兒園大班組'] && data['幼兒園大班組'].status === 'waitlist';
+      var eWait = data['國小低年級組'] && data['國小低年級組'].status === 'waitlist';
+      if(kWait && eWait){ if(title) title.textContent = '⚠️ 名額已滿｜開放候補登記'; show(notice); if(btn) btn.innerHTML = '📋 登記候補'; }
+      else if(kWait || eWait){ if(title) title.textContent = '🔥 部分組別即將額滿'; show(notice); if(btn) btn.innerHTML = '確認送出報名表'; }
+      else { if(title) title.textContent = '立即幫孩子報名'; hide(notice); if(btn) btn.innerHTML = '確認送出報名表'; }
+    }
+
+    function updateGroupStatusHint(){
+      var hint = $('groupStatusHint');
+      var group = $('group') ? $('group').value : '';
+      if(!hint) return;
+      if(!group){ hint.textContent = '請先選擇孩子年級，系統會自動帶入參賽組別。'; hint.className = 'group-status-hint default'; return; }
+      var info = groupStatus ? groupStatus[group] : null;
+      if(!info){ hint.textContent = '已自動帶入組別：' + group; hint.className = 'group-status-hint default'; return; }
+      var remain = (Number(info.displayLimit)||0) - (Number(info.displayCount)||0);
+      if(info.status === 'waitlist'){ hint.textContent = group + '目前已額滿，仍可登記候補。'; hint.className = 'group-status-hint waitlist'; }
+      else if(info.status === 'almostFull'){ hint.textContent = group + '即將額滿，目前剩餘約 ' + Math.max(remain,0) + ' 名。'; hint.className = 'group-status-hint almostFull'; }
+      else { hint.textContent = group + '目前可報名，剩餘約 ' + Math.max(remain,0) + ' 名。'; hint.className = 'group-status-hint open'; }
+    }
+
+    function logView(){ fetch(GAS_URL + '?action=logView').catch(function(){}); }
+
+    function validateForm(){
+      var errors = [];
+      if(!$('parentName').value.trim()) errors.push('請填寫家長姓名');
+      if(!$('phone').value.trim()) errors.push('請填寫聯絡手機');
+      if($('phone').value && !/^09\d{8}$/.test($('phone').value.trim())) errors.push('手機號碼格式錯誤（09xxxxxxxx）');
+      if(!$('childName').value.trim()) errors.push('請填寫孩子姓名');
+      if(!$('childAge').value) errors.push('請選擇孩子年級');
+      if(!$('group').value) errors.push('系統尚未帶入參賽組別，請重新選擇孩子年級');
+      if(!$('resident').value) errors.push('請選擇是否為台南市民');
+      if(!$('attendanceConfirm').checked) errors.push('請勾選已了解活動報到與出席提醒');
+      return errors;
+    }
+
+    function showError(messages){
+      var el = $('formError');
+      if(!el) return;
+      el.innerHTML = messages.map(function(m){ return '<p>⚠️ ' + m + '</p>'; }).join('');
+      el.style.display = 'block';
+      el.scrollIntoView({ behavior:'smooth', block:'center' });
+    }
+    function hideError(){ if($('formError')) $('formError').style.display = 'none'; }
+
+    function showSuccessCard(regId, status){
+      hide($('formCard')); hide($('registerTitle')); hide($('noticePink')); hide($('noticeGreen')); hide($('waitlistNotice'));
+      setText('successRid', regId);
+      if($('successThanksLink')) $('successThanksLink').href = 'thanks.html?rid=' + encodeURIComponent(regId) + '&status=' + encodeURIComponent(status || '');
+      if(status === '候補'){
+        setText('successIcon','📋'); setText('successTitle','候補登記成功！'); if($('successTitle')) $('successTitle').style.color = 'var(--yellow)'; hide($('successConfirmBox')); show($('successWaitlistBox'));
+      } else {
+        setText('successIcon','🎉'); setText('successTitle','報名成功！'); if($('successTitle')) $('successTitle').style.color = 'var(--primary-dark)'; show($('successConfirmBox')); hide($('successWaitlistBox'));
+      }
+      show($('successCard'));
+      var reg = $('register'); if(reg) reg.scrollIntoView({ behavior:'smooth', block:'start' });
+    }
+
+    window.copyRid = function(){
+      var rid = $('successRid') ? $('successRid').textContent : '';
+      if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(rid);
+      else { var ta=document.createElement('textarea'); ta.value=rid; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); }
+      var msg = $('copyRidMsg'); if(msg){ msg.style.display='block'; setTimeout(function(){ msg.style.display='none'; }, 2000); }
+    };
+
+    window.resetForm = function(){
+      hide($('successCard')); show($('formCard')); show($('registerTitle')); show($('noticePink')); show($('noticeGreen'));
+      if($('registerForm')) $('registerForm').reset();
+      if($('group')) $('group').value = '';
+      hideError();
+      var btn = $('submitBtn'); if(btn){ btn.disabled = false; btn.innerHTML = '確認送出報名表'; }
+      if($('progress')) $('progress').classList.remove('show');
+      updateGroupStatusHint();
+      loadGroupStatus();
+      var reg = $('register'); if(reg) reg.scrollIntoView({ behavior:'smooth', block:'start' });
+    };
+
+    function setupEvents(){
+      var age = $('childAge');
+      if(age){
+        age.addEventListener('change', function(){
+          if(this.value === '幼兒園大班組') $('group').value = '幼兒園大班組';
+          else if(this.value === '國小低年級') $('group').value = '國小低年級組';
+          else $('group').value = '';
+          updateGroupStatusHint();
+        });
+      }
+
+      var copyBtn = $('copyAddressBtn');
+      if(copyBtn){
+        copyBtn.addEventListener('click', function(){
+          var address = cfg && cfg.eventAddress ? cfg.eventAddress : ($('addressText') ? $('addressText').textContent : '');
+          if(navigator.clipboard && navigator.clipboard.writeText){
+            navigator.clipboard.writeText(address).then(function(){ copyBtn.textContent = '✅ 已複製'; setTimeout(function(){ copyBtn.textContent = '📋 複製地址'; }, 2000); });
+          } else { alert('請手動複製：' + address); }
+        });
+      }
+
+      document.querySelectorAll('.faq-q').forEach(function(q){
+        q.addEventListener('click', function(){
+          var item = q.parentElement;
+          var ans = item.querySelector('.faq-a');
+          var icon = item.querySelector('.faq-icon');
+          var isOpen = item.classList.toggle('open');
+          if(isOpen){ ans.style.maxHeight = ans.scrollHeight + 'px'; ans.style.padding = '0 20px 20px'; icon.style.transform = 'rotate(45deg)'; }
+          else { ans.style.maxHeight = '0'; ans.style.padding = '0 20px'; icon.style.transform = 'rotate(0)'; }
+        });
+      });
+
+      var form = $('registerForm');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var errors = validateForm();
+          if(errors.length){ showError(errors); return; }
+          hideError();
+          var btn = $('submitBtn'); var originalText = btn ? btn.innerHTML : '';
+          if(btn){ btn.disabled = true; btn.textContent = '🚀 資料傳送中，請稍候...'; }
+          if($('progress')) $('progress').classList.add('show');
+
+          var formData = {
+            honeypot: $('honeypot').value,
+            fullJoin: $('fullJoin').value || '是',
+            resident: $('resident').value,
+            parentName: $('parentName').value.trim(),
+            phone: $('phone').value.trim(),
+            childName: $('childName').value.trim(),
+            childAge: $('childAge').value,
+            group: $('group').value,
+            school: $('school').value.trim(),
+            note: $('note').value.trim()
+          };
+
+          fetch(GAS_URL, { method:'POST', headers:{ 'Content-Type':'text/plain' }, body:JSON.stringify(formData) })
+            .then(function(r){ return r.json(); })
+            .then(function(result){
+              if($('progress')) $('progress').classList.remove('show');
+              if(result && result.success) showSuccessCard(result.regId, result.status);
+              else { showError([result && result.error ? result.error : '報名失敗，請稍後再試']); if(btn){ btn.disabled=false; btn.innerHTML=originalText; } }
+            })
+            .catch(function(){
+              if($('progress')) $('progress').classList.remove('show');
+              showError(['系統網路錯誤，請稍後再試或聯繫主辦單位']);
+              if(btn){ btn.disabled=false; btn.innerHTML=originalText; }
+            });
+        });
+      }
+
+      var fadeEls = document.querySelectorAll('.fade-in');
+      if('IntersectionObserver' in window){
+        var obs = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){ if(entry.isIntersecting){ entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
+        }, { threshold:.1, rootMargin:'0px 0px -50px 0px' });
+        fadeEls.forEach(function(el){ obs.observe(el); });
+      } else { fadeEls.forEach(function(el){ el.classList.add('visible'); }); }
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      setupEvents();
+
+      // 先把可用的預設內容畫出來，避免 GAS 還沒回來時區塊空白。
+      renderFallback();
+
+      // 載入畫面最多顯示約 1.2 秒，讓家長先看到首頁內容。
+      setTimeout(hideLoader, 1200);
+
+      loadConfig();
+    });
+
+    // 保險機制：任何異常狀況下，最多 3 秒也要關閉載入畫面。
+    setTimeout(hideLoader, 3000);
+  })();
+  </script>
+</body>
+</html>
